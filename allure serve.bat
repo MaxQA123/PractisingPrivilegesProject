@@ -1,0 +1,1 @@
+allure serve C:\Automation\PractisingPrivilegesProject\allure-results

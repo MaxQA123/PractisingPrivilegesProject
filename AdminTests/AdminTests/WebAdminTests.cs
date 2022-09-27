@@ -3,10 +3,12 @@ using Allure.Commons;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using PractisingPrivilegesProject.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AdminTests
@@ -21,7 +23,7 @@ namespace AdminTests
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
-        [AllureSubSuite("CreateNewUserAdmin")]
+        [AllureSubSuite("LogInAsSuperAdmin")]
 
         //Date of publication:
         //Version\Build:
@@ -30,9 +32,12 @@ namespace AdminTests
         //This test case is doing checking: The successfully SignUp as tenant.
         //Comment: Bug: on email hasn't came a letter for confirming.
 
-        public void CreateNewUserAdmin()
+        public void LogInAsSuperAdmin()
         {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
 
+            Thread.Sleep(5000);
         }
     }
 
