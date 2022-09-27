@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MultiRoleTests\" />
-    <Folder Include="BaseMultiRole\" />
+    <ProjectReference Include="..\PractisingPrivilegesProject\PractisingPrivilegesProject.csproj" />
   </ItemGroup>
 
 </Project>

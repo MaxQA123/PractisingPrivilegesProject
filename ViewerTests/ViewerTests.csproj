@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BaseViewer\" />
-    <Folder Include="ViewerTests\" />
+    <ProjectReference Include="..\PractisingPrivilegesProject\PractisingPrivilegesProject.csproj" />
   </ItemGroup>
 
 </Project>

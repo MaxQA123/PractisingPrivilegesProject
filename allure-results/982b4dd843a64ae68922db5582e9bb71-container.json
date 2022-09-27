@@ -1,0 +1,76 @@
+{
+  "uuid": "fd07ec72-2e51-4d86-80b3-a8390cf227c8-tc-0-1000",
+  "name": "ClinicianTests.WebClinicianTests.CreateNewUserClinician",
+  "children": [
+    "7aef7040-5646-4263-a39e-83dfee46bf9e-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664285393748,
+      "stop": 1664285393748
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664285393748,
+      "stop": 1664285393748
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664285393748,
+      "stop": 1664285393748
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664285393748,
+      "stop": 1664285393748
+    }
+  ],
+  "links": [],
+  "start": 1664285391847,
+  "stop": 1664285393810
+}

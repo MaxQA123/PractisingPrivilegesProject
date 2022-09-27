@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AdminTests\" />
-    <Folder Include="BaseAdmin\" />
+    <ProjectReference Include="..\PractisingPrivilegesProject\PractisingPrivilegesProject.csproj" />
   </ItemGroup>
 
 </Project>

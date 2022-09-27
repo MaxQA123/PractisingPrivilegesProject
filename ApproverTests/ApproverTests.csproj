@@ -15,8 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ApproverTests\" />
-    <Folder Include="BaseApprover\" />
+    <ProjectReference Include="..\PractisingPrivilegesProject\PractisingPrivilegesProject.csproj" />
   </ItemGroup>
 
 </Project>
