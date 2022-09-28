@@ -4,6 +4,7 @@ using NUnit.Allure.Core;
 using NUnit.Framework;
 using PracticingPrivilegesApiTests.ApiHelpers;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
+using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,12 +38,38 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         {
             var email = CredentialsApiSuperAdmin.emailSuperAdmin;
 
-            var payload = LogInApi.GetUserData(email, CredentialsApiSuperAdmin.passwordSuperAdmin);
+            var responseLogIn = LogInApi.ExecuteLogIn(email, CredentialsApiSuperAdmin.passwordSuperAdmin);
 
-            var response = LogInApi.ExecuteLogIn(payload);
+            LogInApi.VerifyingLoggedUserConst(responseLogIn);
+        }
 
-            LogInApi.VerifyingLoggedUserConst(response);
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("ApiAdmin")]
+        [AllureSubSuite("LoginConstDataAsAdmin")]
+
+        //Date of publication:
+        //Version\Build:
+        //Willingness for testing: in progress.
+        //This test case is doing checking: The successfully LogIn.
+        //Comment: 
+        //Path to cheking's: 
+
+        public void MakeLogInAsAdmin()
+        {
+            var email = CredentialsApiAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.passwordGeneralCurrent);
+
+            string code = responseLogIn.code;
+
+            var responseTwoStep = TwoStepApiAdmin.ExecuteTwoStepLogIn(code, email, CredentialsApiAdmin.type);
+
+            TwoStepApiAdmin.VerifyingLoggedUserConst(responseTwoStep);
+
         }
     }
-
 }

@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using PractisingPrivilegesProject.PageObjects.HeaderPage;
 using PractisingPrivilegesProject.PageObjects.LogInPage;
+using PractisingPrivilegesProject.PageObjects.UsersManagementPage;
 using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -24,5 +25,6 @@ namespace PractisingPrivilegesProject.PageObjects
 
         public static LogIn LogIn => GetPage<LogIn>();
         public static Header Header => GetPage<Header>();
+        public static UsersManagement UsersManagement => GetPage<UsersManagement>();
     }
 }

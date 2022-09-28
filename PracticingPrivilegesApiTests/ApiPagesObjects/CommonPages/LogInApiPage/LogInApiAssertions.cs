@@ -9,11 +9,6 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
 {
     public partial class LogInApi
     {
-        public static void VerifyingLoggedUserRandom(ResponseLogIn response, string message)
-        {
-            Assert.AreEqual(message, response.message);
-        }
-
         public static void VerifyingLoggedUserConst(ResponseLogIn response)
         {
             Assert.AreEqual("Successful operation.", response.message);

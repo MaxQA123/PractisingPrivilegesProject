@@ -15,6 +15,7 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         {
             InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
+            Button.Click(IconShowPasswordLogInPg);
             Button.Click(ButtonSignInLogInPg);
 
             return this;

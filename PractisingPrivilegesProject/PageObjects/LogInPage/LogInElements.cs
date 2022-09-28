@@ -16,6 +16,9 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Password']")]
         public IWebElement FieldInputPasswordLogInPg;
 
+        [FindsBy(How = How.XPath, Using = "//mat-icon[@class = 'mat-icon notranslate pointer material-icons mat-icon-no-color ng-star-inserted']")]
+        public IWebElement IconShowPasswordLogInPg;
+
         [FindsBy(How = How.XPath, Using = "//button[@class= 'mat-focus-indicator w100 mat-flat-button mat-button-base mat-primary']")]
         public IWebElement ButtonSignInLogInPg;
 

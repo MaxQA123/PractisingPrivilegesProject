@@ -1,43 +1,34 @@
-﻿using Newtonsoft.Json;
-using PracticingPrivilegesApiTests.ApiHelpers;
-using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿    using Newtonsoft.Json;
+    using PracticingPrivilegesApiTests.ApiHelpers;
+    using RestSharp;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
 
 namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
 {
     public partial class LogInApi
     {
-        public static string GetUserData(string email, string password)
-        {
-            string payload = string.Format("{{" +
-                "\"email\"" + ":" + $"\"{email}\"" + "," +
-                "\"password\"" + ":" + $"\"{password}\"" + "}}");
-
-            return payload;
-        }
-
-        public static RequestLogIn UserConstData()
+        public static RequestLogIn RequestBody(string email, string password)
         {
             var payload = new RequestLogIn();
-            payload.email = CredentialsApiSuperAdmin.emailSuperAdmin;
-            payload.password = CredentialsApiSuperAdmin.passwordSuperAdmin;
+            payload.email = email;
+            payload.password = password;
 
             return payload;
         }
 
-        public static ResponseLogIn ExecuteLogIn(string payload)
+        public static ResponseLogIn ExecuteLogIn(string email, string password)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
 
             var restRequest = new RestRequest("/api/identity/signIn", Method.Post);
             restRequest.AddHeaders(Headers.HeadersCommon());
 
-            restRequest.AddJsonBody(payload);
+            restRequest.AddJsonBody(RequestBody(email, password));
 
             var response = restClient.Execute(restRequest);
 

@@ -8,7 +8,14 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
 {
     public class EndPointsApi
     {
+        
         public const string apiHost = "https://practicingprivilegesapi.azurewebsites.net";
+        public const string apiHostTwoStep = "https://practicingprivilegesapi.azurewebsites.net";
+    }
+
+    public class TestDataGeneral
+    {
+        public const string passwordGeneralCurrent = "Qwerty123!";
     }
     public class CredentialsApiSuperAdmin
     {
@@ -16,10 +23,10 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
         public const string passwordSuperAdmin = "Jupiter1405!";
     }
 
-    public class RequestGeneralTestDataProfileSetUp
+    public class CredentialsApiAdmin
     {
-        public const string firstNameTeacher = "TestTeacher";
-        public const string lastNameTeacher = "NewTeacher";
+        public const string emailAdminQatester = "qatester91311@xitroo.com";
+        public const string type = "[AUTH] verification code";
     }
 
     public class ResponseTestsData
