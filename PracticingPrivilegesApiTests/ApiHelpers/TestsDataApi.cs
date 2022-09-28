@@ -8,7 +8,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
 {
     public class EndPointsApi
     {
-        public const string apiHost = "https://practicingprivileges.azurewebsites.net/auth/sign-in";
+        public const string apiHost = "https://practicingprivilegesapi.azurewebsites.net";
     }
     public class CredentialsApiSuperAdmin
     {

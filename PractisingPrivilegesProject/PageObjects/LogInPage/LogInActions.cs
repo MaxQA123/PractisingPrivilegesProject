@@ -19,5 +19,15 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 
             return this;
         }
+
+        [AllureStep("SigningInAsAdmin")]
+        public LogIn SigningInAsAdmin()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminQatester);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
     }
 }

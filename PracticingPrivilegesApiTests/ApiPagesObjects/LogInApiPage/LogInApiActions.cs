@@ -30,12 +30,11 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
             return payload;
         }
 
-        // public static ResponseLogIn ExecuteLogIn(string email, string password)
         public static ResponseLogIn ExecuteLogIn(string payload)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
 
-            var restRequest = new RestRequest("//public/login", Method.Post);
+            var restRequest = new RestRequest("/api/identity/signIn", Method.Post);
             restRequest.AddHeaders(Headers.HeadersCommon());
 
             restRequest.AddJsonBody(payload);
@@ -55,6 +54,4 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
         }
 
     }
-}
-
 }

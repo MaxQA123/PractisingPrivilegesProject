@@ -1,5 +1,6 @@
 ﻿using CazamioProgect.Helpers;
 using OpenQA.Selenium;
+using PractisingPrivilegesProject.PageObjects.HeaderPage;
 using PractisingPrivilegesProject.PageObjects.LogInPage;
 using SeleniumExtras.PageObjects;
 using System;
@@ -22,5 +23,6 @@ namespace PractisingPrivilegesProject.PageObjects
         }
 
         public static LogIn LogIn => GetPage<LogIn>();
+        public static Header Header => GetPage<Header>();
     }
 }

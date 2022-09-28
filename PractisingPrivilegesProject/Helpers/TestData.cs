@@ -20,5 +20,10 @@ namespace PractisingPrivilegesProject.Helpers
     {
         public const string emailSuperAdmin = "super.admin@dev.com";
         public const string passwordSuperAdmin = "Jupiter1405!";
+
+        public const string emailAdminQatester = "qatester91311@xitroo.com";
+
+        public const string userNameRoleAdmin = "Admin";
+        public const string userNameRoleSuperAdmin = "Super Admin";
     }
 }
