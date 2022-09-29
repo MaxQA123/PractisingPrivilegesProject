@@ -31,7 +31,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         #endregion
 
-        #region MandatoryFildsToFillIn
+        #region MandatoryFieldsToFillIn
 
         [FindsBy(How = How.XPath, Using = "//input[@name = 'First name']")]
         public IWebElement FieldInputFirstNamePrflPg;
@@ -69,6 +69,12 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [FindsBy(How = How.XPath, Using = "//form//div[@class = 'column'][2]//div[@class = 'gmc'][2]//mat-icon")]
         public IWebElement IconForSaveImcPrflPg;
 
+        [FindsBy(How = How.XPath, Using = "//input[@name = 'Job Title']")]
+        public IWebElement FieldInputIJobTitlePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//textarea[@id = 'restriction']")]
+        public IWebElement FieldInputIRestrictionPrflPg;
+
         #endregion
 
         #region DropDownMenuSelectorOfTitle
@@ -87,7 +93,6 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         #endregion
 
-        
         [FindsBy(How = How.XPath, Using = "//app-list[@header = 'Specialty']//div[@class = 'actions ng-star-inserted']//mat-icon")]
         public IWebElement ButtonSpecialtyPrflPg;
 
@@ -96,6 +101,31 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing']")]
         public IWebElement AllPageProfileDetails;
+
+        [FindsBy(How = How.XPath, Using = "//form//div[@class = 'column'][2]//mat-form-field//mat-select//div[contains(@class, 'mat-select-arrow-wrapper ng-tns')]")]
+        public IWebElement DropDownSelectorContactPrflPg;
+
+        #region DropDownMenuSelectorOfConsultingType
+
+        [FindsBy(How = How.XPath, Using = "//ng-component//mat-form-field[2]//div[contains(@class, 'mat-select-arrow-wrapper')]")]
+        public IWebElement DropDownMenuSelectorConsultingTypePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(), 'Both ')]")]
+        public IWebElement ItemBothPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(), 'Private ')]")]
+        public IWebElement ItemPrivatePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(), 'WLI ')]")]
+        public IWebElement ItemWliPrflPg;
+
+        #endregion
+
+        [FindsBy(How = How.XPath, Using = "//form//div[@class = 'row'][3]//div[@class = 'column']//mat-select//div[contains(@class, 'mat-select-arrow-wrapper ng-tns')]")]
+        public IWebElement DropDownCurrentEmployerPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator create mat-stroked-button mat-button-base mat-primary ng-star-inserted']")]
+        public IWebElement ButtonCreatePrflPg;
 
     }
 }

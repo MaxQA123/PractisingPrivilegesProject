@@ -112,7 +112,14 @@ namespace AdminTests
             Pages.MdlWndwSelectSpecialties
                 .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
                 .ClickButtonAddMdlWndwSpecialtiesLocations();
-
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction();
 
             Thread.Sleep(5000);
         }

@@ -1,0 +1,233 @@
+{
+  "uuid": "444cd29a-1edd-4d53-8b34-d65f773e6aa7-tr-0-1003",
+  "historyId": "AdminTests.WebSiteAdminTests.SuperAdminCreateClinician",
+  "fullName": "AdminTests.WebSiteAdminTests.SuperAdminCreateClinician",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "SuperAdminCreateClinician"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "SuperAdminCreateClinician"
+    }
+  ],
+  "links": [],
+  "name": "SuperAdminCreateClinician",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 11 but was 0. Strings differ at index 0.\r\n  Expected: \"Super Admin\"\r\n  But was:  <string.Empty>\r\n  -----------^\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 32\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleSuperAdmin(String getNameRoleActual)\r\n   at AdminTests.WebSiteAdminTests.SuperAdminCreateClinician() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 94\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "SuperAdminCreateClinician",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 11 but was 0. Strings differ at index 0.\r\n  Expected: \"Super Admin\"\r\n  But was:  <string.Empty>\r\n  -----------^\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 32\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleSuperAdmin(String getNameRoleActual)\r\n   at AdminTests.WebSiteAdminTests.SuperAdminCreateClinician() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 94\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "super.admin@dev.com"
+                }
+              ],
+              "start": 1664464344886,
+              "stop": 1664464345475
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Jupiter1405!"
+                }
+              ],
+              "start": 1664464345475,
+              "stop": 1664464345999
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664464346000,
+              "stop": 1664464346626
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664464346626,
+              "stop": 1664464347247
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664464344883,
+          "stop": 1664464347247
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664464347248,
+          "stop": 1664464350649
+        },
+        {
+          "name": "VerifyNameRoleSuperAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 11 but was 0. Strings differ at index 0.\r\n  Expected: \"Super Admin\"\r\n  But was:  <string.Empty>\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 32\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleSuperAdmin_100663351_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": ""
+            }
+          ],
+          "start": 1664464350654,
+          "stop": 1664464350941
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "33e7495c8d384fdfabb8ebc1028abd12-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664464342949,
+      "stop": 1664464351455
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664464342948,
+  "stop": 1664464351463
+}

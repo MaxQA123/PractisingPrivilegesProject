@@ -21,4 +21,16 @@ namespace PractisingPrivilegesProject.Helpers
         public const int kphBelfast = 1;
         public const int kingsbridgeSligo = 2;
     }
+
+    public class TestsDataForDropDownContactPrflPg
+    {
+        public const int superAdmin = 0;
+        public const int adminAdmin = 1;
+    }
+
+    public class TestsDataForDropDownCurrentEmployerPrflPg
+    {
+        public const int kpBelfast  = 0;
+        public const int seTrust  = 1;
+    }
 }

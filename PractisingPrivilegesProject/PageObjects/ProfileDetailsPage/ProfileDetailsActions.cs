@@ -1,4 +1,6 @@
-﻿using NUnit.Allure.Attributes;
+﻿using CazamioProgect.Helpers;
+using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using PractisingPrivilegesProject.Helpers;
 using RimuTec.Faker;
 using System;
@@ -162,6 +164,123 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         public ProfileDetails ClickButtonLocationPrflPg()
         {
             Button.Click(ButtonLocationPrflPg);
+
+            return this;
+        }
+
+        #region DropDownMenuSelectorOfContact
+
+        [AllureStep("ClickDropDownContactPrflPg")]
+        public ProfileDetails ClickDropDownContactPrflPg()
+        {
+            Button.Click(DropDownSelectorContactPrflPg);
+
+            return this;
+        }
+
+        private static IWebElement _element;
+
+        [AllureStep("SelectorItemLocationsMdlWndw")]
+        public static IList<IWebElement> SelectorAdminContactDropDownPrflPg(string _locationItem)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            var str = "//div[@role = 'listbox']";
+            _element = Browser._Driver.FindElement(By.XPath(str));
+            return _element.FindElements(By.XPath($".//span[contains(text(), '{_locationItem}')]"));
+        }
+
+        [AllureStep("SelectItemLocationsMdlWndw")]
+        public ProfileDetails SelectAdminContactDropDownPrflP(int item, string locationItem)
+        {
+            WaitUntil.WaitSomeInterval(500);
+            IList<IWebElement> _item = SelectorAdminContactDropDownPrflPg(locationItem);
+
+            _item[item].Click();
+
+            return this;
+        }
+
+        #endregion
+
+        #region DropDownMenuSelectorOfConsultingType
+
+        [AllureStep("SelectConsultingTypeBothPrflPg")]
+        public ProfileDetails SelectConsultingTypeBothPrflPg()
+        {
+            Button.Click(DropDownMenuSelectorConsultingTypePrflPg);
+            Button.Click(ItemBothPrflPg);
+
+            return this;
+        }
+
+        [AllureStep("SelectConsultingTypePrivatePrflPg")]
+        public ProfileDetails SelectConsultingTypePrivatePrflPg()
+        {
+            Button.Click(DropDownMenuSelectorConsultingTypePrflPg);
+            Button.Click(ItemPrivatePrflPg);
+
+            return this;
+        }
+
+        [AllureStep("SelectConsultingTypeWliPrflPg")]
+        public ProfileDetails SelectConsultingTypeWliPrflPg()
+        {
+            Button.Click(DropDownMenuSelectorConsultingTypePrflPg);
+            Button.Click(ItemWliPrflPg);
+
+            return this;
+        }
+
+        #endregion
+
+        [AllureStep("ScrollToButtonCreatePrflPg")]
+        public ProfileDetails ScrollToButtonCreatePrflPg()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            ScrollingJScriptExecutorHelper.ScrollToElement(ButtonCreatePrflPg);
+
+            return this;
+        }
+
+        #region DropDownMenuSelectorOfCurrentEmployer
+
+        [AllureStep("ClickDropDownCurrentEmployerPrflPg")]
+        public ProfileDetails ClickDropDownCurrentEmployerPrflPg()
+        {
+            Button.Click(DropDownCurrentEmployerPrflPg);
+
+            return this;
+        }
+
+        private static IWebElement element;
+
+        [AllureStep("SelectorCurrentEmployerDropDownPrflPg")]
+        public static IList<IWebElement> SelectorCurrentEmployerDropDownPrflPg(string _locationItem)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            var str = "//div[@role = 'listbox']";
+            element = Browser._Driver.FindElement(By.XPath(str));
+            return element.FindElements(By.XPath($".//span[contains(text(), '{_locationItem}')]"));
+        }
+
+        [AllureStep("SelectCurrentEmployerDropDownPrflP")]
+        public ProfileDetails SelectCurrentEmployerDropDownPrflP(int item, string locationItem)
+        {
+            WaitUntil.WaitSomeInterval(500);
+            IList<IWebElement> _item = SelectorCurrentEmployerDropDownPrflPg(locationItem);
+
+            _item[item].Click();
+
+            return this;
+        }
+
+        #endregion
+
+        [AllureStep("EnterDataJobTitleRestriction")]
+        public ProfileDetails EnterDataJobTitleRestriction()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputIJobTitlePrflPg, Lorem.Word());
+            InputGeneral.InputFunctionWithClear(FieldInputIRestrictionPrflPg, Lorem.Sentence() + GenerateRandomDataHelper.RandomNumberCharacter(10));
 
             return this;
         }

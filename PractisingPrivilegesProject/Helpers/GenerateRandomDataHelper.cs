@@ -45,13 +45,13 @@ namespace PractisingPrivilegesProject.Helpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        //[AllureStep("RandomPriceMinInteger")]
-        //public static string RandomPriceMinInteger(int size)
-        //{
-        //    Random random = new Random();
-        //    const string chars = "11";
-        //    return new string(Enumerable.Repeat(chars, size)
-        //        .Select(s => s[random.Next(s.Length)]).ToArray());
-        //}
+        [AllureStep("RandomPriceMinInteger")]
+        public static string RandomNumberCharacter(int size)
+        {
+            Random random = new Random();
+            const string chars = "1234567890*&^%$#@!";
+            return new string(Enumerable.Repeat(chars, size)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }
