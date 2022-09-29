@@ -16,7 +16,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
             headersCommon.Add(new KeyValuePair<string, string>("accept", "application/json, text/plain, */*"));
             headersCommon.Add(new KeyValuePair<string, string>("accept-encoding", "gzip, deflate, br"));
             headersCommon.Add(new KeyValuePair<string, string>("Content-Type", "application/json"));
-            headersCommon.Add(new KeyValuePair<string, string>("Content-Length", "57"));
+            //headersCommon.Add(new KeyValuePair<string, string>("Content-Length", "57"));
 
             return headersCommon;
         }

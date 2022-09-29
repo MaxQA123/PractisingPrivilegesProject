@@ -26,6 +26,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
             var restClient = new RestClient(EndPointsApi.apiHost);
 
             var restRequest = new RestRequest("/api/identity/signIn", Method.Post);
+
             restRequest.AddHeaders(Headers.HeadersCommon());
 
             restRequest.AddJsonBody(RequestBody(email, password));

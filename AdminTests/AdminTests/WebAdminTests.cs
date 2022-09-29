@@ -94,6 +94,8 @@ namespace AdminTests
                 .VerifyNameRoleSuperAdmin(nameRoleCompare);
             Pages.UsersManagement
                 .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg();
 
             Thread.Sleep(5000);
         }

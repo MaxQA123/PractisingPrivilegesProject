@@ -1,4 +1,5 @@
 ﻿using NUnit.Allure.Attributes;
+using PractisingPrivilegesProject.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,12 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 {
     public partial class ProfileDetails
     {
-        [AllureStep("SigningInAsSuperAdmin")]
-        public ProfileDetails ClickDropDownMenuSelectorRolesPrflPg()
+        [AllureStep("OpenDropDownMenuSelectorRolesPrflPg")]
+        public ProfileDetails OpenDropDownMenuSelectorRolesPrflPg()
         {
+            Button.Click(DropDownMenuSelectorRolesPrflPg);
 
+            return this;
         }
     }
 }

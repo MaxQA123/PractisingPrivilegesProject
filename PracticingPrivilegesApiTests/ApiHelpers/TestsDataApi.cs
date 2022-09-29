@@ -10,7 +10,6 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
     {
         
         public const string apiHost = "https://practicingprivilegesapi.azurewebsites.net";
-        public const string apiHostTwoStep = "https://practicingprivilegesapi.azurewebsites.net";
     }
 
     public class TestDataGeneral

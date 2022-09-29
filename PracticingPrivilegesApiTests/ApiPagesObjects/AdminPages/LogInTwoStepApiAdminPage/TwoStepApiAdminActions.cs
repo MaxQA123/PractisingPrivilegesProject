@@ -24,7 +24,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage
 
         public static ResponceTwoStepAdmin ExecuteTwoStepLogIn(string code, string email, string type)
         {
-            var restClient = new RestClient(EndPointsApi.apiHostTwoStep);
+            var restClient = new RestClient(EndPointsApi.apiHost);
 
             var restRequest = new RestRequest("/api/identity/twoStepSignIn", Method.Post);
 
