@@ -26,4 +26,28 @@ namespace PractisingPrivilegesProject.Helpers
         public const string userNameRoleAdmin = "Admin";
         public const string userNameRoleSuperAdmin = "Super Admin";
     }
+
+    public class TestDataClinician
+    {
+        public const string firstNameClinician = "Clin";
+        public const string lastNameClinician = "Clin";
+    }
+
+    public class TestDataApprover
+    {
+        public const string firstNameApprover = "Test-Approver";
+        public const string lastNameApprover = "Approver";
+        public const string personalIdentificationNumber = "1";
+    }
+
+    public class TestDataViewer
+    {
+        public const string firstNameViewer = "Test-Viewer";
+        public const string lastNameViewer = "Viewer";
+    }
+
+    public class TestDataEmailDomen
+    {
+        public const string domenEmailXitroo = "@xitroo.com";
+    }
 }

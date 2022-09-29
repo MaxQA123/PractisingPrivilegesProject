@@ -12,7 +12,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
     {
         #region DropDownMenuSelectorOfRoles
 
-        [FindsBy(How = How.XPath, Using = "//mat-select[@class = 'mat-select ng-tns-c76-14 ng-tns-c73-13 mat-select-multiple ng-valid ng-star-inserted ng-dirty ng-touched']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'mat-select-arrow')]")]
         public IWebElement DropDownMenuSelectorRolesPrflPg;
 
         [FindsBy(How = How.XPath, Using = "//span[text() = ' Clinician']")]
@@ -26,6 +26,34 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         [FindsBy(How = How.XPath, Using = "//span[text() = ' Viewer']")]
         public IWebElement CheckBoxViewerPrflPg;
+
+        #endregion
+
+        #region MandatoryFildsToFillIn
+
+        [FindsBy(How = How.XPath, Using = "//input[@name = 'First name']")]
+        public IWebElement FieldInputFirstNamePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name = 'Last name']")]
+        public IWebElement FieldInputLastNamePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name = 'Email address']")]
+        public IWebElement FieldInputEmailAddressPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//input[@name = 'Contact telephone number']")]
+        public IWebElement FieldInputContactTelephoneNumberPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//code-input/span/input")]
+        public IWebElement FieldInputFirstPersonalIdentificationNumberPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//code-input/span[2]/input")]
+        public IWebElement FieldInputSecondPersonalIdentificationNumberPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "/code-input/span[3]/input")]
+        public IWebElement FieldInputThirdPersonalIdentificationNumberPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//code-input/span[4]/input")]
+        public IWebElement FieldInputFourthPersonalIdentificationNumberPrflPg;
 
         #endregion
     }

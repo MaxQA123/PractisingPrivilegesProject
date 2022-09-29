@@ -95,7 +95,9 @@ namespace AdminTests
             Pages.UsersManagement
                 .ClickButtonCreateNewUserUsersMngmntPg();
             Pages.ProfileDetails
-                .OpenDropDownMenuSelectorRolesPrflPg();
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleClinicianViaDropDown()
+                .SelectRoleViewerViaDropDown();
 
             Thread.Sleep(5000);
         }
