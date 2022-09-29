@@ -53,7 +53,7 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
 
         //Date of publication:
         //Version\Build:
-        //Willingness for testing: in progress.
+        //Willingness for testing: Done.
         //This test case is doing checking: The successfully LogIn.
         //Comment: 
         //Path to cheking's: 

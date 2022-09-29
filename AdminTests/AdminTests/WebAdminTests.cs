@@ -3,6 +3,7 @@ using Allure.Commons;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using PractisingPrivilegesProject.Helpers;
 using PractisingPrivilegesProject.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace AdminTests
         //The date last publication on which been testing:
         //Willingness for testing: Done.
         //This test case is doing checking: The successfully SignUp as tenant.
-        //Comment: Bug: on email hasn't came a letter for confirming.
+        //Comment: 
 
         public void LogInAsSuperAdmin()
         {
@@ -58,7 +59,7 @@ namespace AdminTests
         //The date last publication on which been testing:
         //Willingness for testing: in progress.
         //This test case is doing checking: The successfully SignUp as tenant.
-        //Comment: Bug: on email hasn't came a letter for confirming.
+        //Comment: 
 
         public void LogInAsAdmin()
         {
@@ -81,7 +82,7 @@ namespace AdminTests
         //The date last publication on which been testing:
         //Willingness for testing: in progress.
         //This test case is doing checking: The successfully SignUp as tenant.
-        //Comment: Bug: on email hasn't came a letter for confirming.
+        //Comment: 
 
         public void SuperAdminCreateClinician()
         {
@@ -97,7 +98,21 @@ namespace AdminTests
             Pages.ProfileDetails
                 .OpenDropDownMenuSelectorRolesPrflPg()
                 .SelectRoleClinicianViaDropDown()
-                .SelectRoleViewerViaDropDown();
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg()
+                .SelectItemDrDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+
 
             Thread.Sleep(5000);
         }

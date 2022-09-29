@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using PractisingPrivilegesProject.PageObjects.HeaderPage;
 using PractisingPrivilegesProject.PageObjects.LogInPage;
+using PractisingPrivilegesProject.PageObjects.MdlWndwSelectSpecialtiesPage;
 using PractisingPrivilegesProject.PageObjects.ProfileDetailsPage;
 using PractisingPrivilegesProject.PageObjects.UsersManagementPage;
 using SeleniumExtras.PageObjects;
@@ -28,5 +29,6 @@ namespace PractisingPrivilegesProject.PageObjects
         public static Header Header => GetPage<Header>();
         public static UsersManagement UsersManagement => GetPage<UsersManagement>();
         public static ProfileDetails ProfileDetails => GetPage<ProfileDetails>();
+        public static MdlWndwSelectSpecialties MdlWndwSelectSpecialties => GetPage<MdlWndwSelectSpecialties>();
     }
 }

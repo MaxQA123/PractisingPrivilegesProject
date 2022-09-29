@@ -49,6 +49,8 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         public ProfileDetails SelectRoleViewerViaDropDown()
         {
             Button.Click(CheckBoxViewerPrflPg);
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(AllPageProfileDetails);
 
             return this;
         }
@@ -60,7 +62,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [AllureStep("EnterFirstLastNameEmailPhonePrflPg")]
         public ProfileDetails EnterFirstLastNameEmailPhonePrflPg()
         {
-            Button.Click(FieldInputFirstNamePrflPg);
+            WaitUntil.WaitSomeInterval(500);
             InputGeneral.InputFunctionWithClear(FieldInputFirstNamePrflPg, Name.FirstName());
             InputGeneral.InputFunctionWithClear(FieldInputLastNamePrflPg, Name.LastName());
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddressPrflPg, GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo);
@@ -72,7 +74,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [AllureStep("EnterConstFirstLastNameEmailPhonePrflPg")]
         public ProfileDetails EnterConstFirstLastNameEmailPhonePrflPg()
         {
-            Button.Click(FieldInputFirstNamePrflPg);
+            WaitUntil.WaitSomeInterval(500);
             InputGeneral.InputFunctionWithClear(FieldInputFirstNamePrflPg, TestDataClinician.firstNameClinician);
             InputGeneral.InputFunctionWithClear(FieldInputLastNamePrflPg, TestDataClinician.lastNameClinician);
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddressPrflPg, GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo);
@@ -84,6 +86,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [AllureStep("EnterIdentificationNumberPrflPg")]
         public ProfileDetails EnterIdentificationNumberPrflPg()
         {
+            WaitUntil.WaitSomeInterval(500);
             InputGeneral.InputFunctionWithClear(FieldInputFirstPersonalIdentificationNumberPrflPg, TestDataApprover.personalIdentificationNumber);
             InputGeneral.InputFunctionWithClear(FieldInputSecondPersonalIdentificationNumberPrflPg, TestDataApprover.personalIdentificationNumber);
             InputGeneral.InputFunctionWithClear(FieldInputThirdPersonalIdentificationNumberPrflPg, TestDataApprover.personalIdentificationNumber);
@@ -93,5 +96,74 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         }
 
         #endregion
+
+        #region DropDownMenuSelectorOfTitle
+
+        [AllureStep("OpenDropDownMenuTitlePrflPg")]
+        public ProfileDetails SelectItemDrDropDownMenuTitlePrflPg()
+        {
+            Button.Click(DropDownMenuSelectorTitlePrflPg);
+            Button.Click(ItemDrPrflPg);
+
+            return this;
+        }
+
+        [AllureStep("OpenDropDownMenuTitlePrflPg")]
+        public ProfileDetails SelectItemMrDropDownMenuTitlePrflPg()
+        {
+            Button.Click(DropDownMenuSelectorTitlePrflPg);
+            Button.Click(ItemMrPrflPg);
+
+            return this;
+        }
+
+        [AllureStep("SelectItemProfDropDownMenuTitlePrflPg")]
+        public ProfileDetails SelectItemProfDropDownMenuTitlePrflPg()
+        {
+            Button.Click(DropDownMenuSelectorTitlePrflPg);
+            Button.Click(ItemProfPrflPg);
+
+            return this;
+        }
+
+        #endregion
+
+        #region SetGMCandIMC
+
+        [AllureStep("SetGmcNumberPrflPg")]
+        public ProfileDetails SetGmcNumberPrflPg()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputGmcPrflPg, GenerateRandomDataHelper.RandomGmcNumber(7));
+            Button.Click(IconForSaveGmcPrflPg);
+
+            return this;
+        }
+
+        [AllureStep("SetImcNumberPrflPg")]
+        public ProfileDetails SetImcNumberPrflPg()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputImcPrflPg, GenerateRandomDataHelper.RandomImcNumber(7));
+            Button.Click(IconForSaveImcPrflPg);
+
+            return this;
+        }
+
+        #endregion
+
+        [AllureStep("ClickButtonSpecialtyPrflPg")]
+        public ProfileDetails ClickButtonSpecialtyPrflPg()
+        {
+            Button.Click(ButtonSpecialtyPrflPg);
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonLocationPrflPg")]
+        public ProfileDetails ClickButtonLocationPrflPg()
+        {
+            Button.Click(ButtonLocationPrflPg);
+
+            return this;
+        }
     }
 }

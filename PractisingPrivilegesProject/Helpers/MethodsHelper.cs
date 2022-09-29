@@ -17,7 +17,7 @@ namespace PractisingPrivilegesProject.Helpers
         public static void InputFunctionWithClear(IWebElement element, string text)
         {
             WaitUntil.WaitSomeInterval(250);
-            WaitUntil.ElementIsClickable(element);
+            WaitUntil.ElementIsClickable(element); 
             element.Clear();
             element.SendKeys(text);
         }
