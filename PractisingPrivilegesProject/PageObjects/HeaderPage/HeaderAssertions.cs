@@ -26,8 +26,19 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
         [AllureStep("VerifyNameRoleSuperAdmin")]
         public Header VerifyNameRoleSuperAdmin(string getNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(1);
+            WaitUntil.WaitSomeInterval(2000);
             string nameRoleExpected = TestDataAdmin.userNameRoleSuperAdmin;
+
+            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+
+            return this;
+        }
+
+        [AllureStep("VerifyNameRoleAdmin")]
+        public Header VerifyNameRoleAdmin(string getNameRoleActual)
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            string nameRoleExpected = TestDataAdmin.userNameRoleAdmin;
 
             Assert.AreEqual(nameRoleExpected, getNameRoleActual);
 
@@ -37,8 +48,30 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
         [AllureStep("VerifyNameRoleClinician")]
         public Header VerifyNameRoleClinician(string getNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(1);
-            string nameRoleExpected = TestDataAdmin.userNameRoleSuperAdmin;
+            WaitUntil.WaitSomeInterval(2000);
+            string nameRoleExpected = TestDataClinician.userNameRoleJaneClinician;
+
+            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+
+            return this;
+        }
+
+        [AllureStep("VerifyNameRoleApprover")]
+        public Header VerifyNameRoleApprover(string getNameRoleActual)
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            string nameRoleExpected = TestDataApprover.userNameRoleApproverApprover;
+
+            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+
+            return this;
+        }
+
+        [AllureStep("VerifyNameRoleViewer")]
+        public Header VerifyNameRoleViewer(string getNameRoleActual)
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            string nameRoleExpected = TestDataViewer.userNameRoleViewerViewer;
 
             Assert.AreEqual(nameRoleExpected, getNameRoleActual);
 

@@ -1,0 +1,254 @@
+{
+  "uuid": "91e833c7-d987-4d0e-9ed2-c3d44a297888-tr-0-1001",
+  "historyId": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "fullName": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ClinicianTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsClinician"
+    },
+    {
+      "name": "testClass",
+      "value": "WebClinicianTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Clinician"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsClinician"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsClinician",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 11 but was 23. Strings differ at index 0.\r\n  Expected: \"Admin Admin\"\r\n  But was:  \"JaneClinician Clinician\"\r\n  -----------^\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 43\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleAdmin(String getNameRoleActual)\r\n   at ClinicianTests.WebClinicianTests.LogInAsClinician() in C:\\Automation\\PractisingPrivilegesProject\\ClinicianTests\\ClinicianTests\\WebClinicianTests.cs:line 51\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsClinician",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 11 but was 23. Strings differ at index 0.\r\n  Expected: \"Admin Admin\"\r\n  But was:  \"JaneClinician Clinician\"\r\n  -----------^\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 43\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleAdmin(String getNameRoleActual)\r\n   at ClinicianTests.WebClinicianTests.LogInAsClinician() in C:\\Automation\\PractisingPrivilegesProject\\ClinicianTests\\ClinicianTests\\WebClinicianTests.cs:line 51\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "janeclinician-doe@xitroo.com"
+                }
+              ],
+              "start": 1664548680179,
+              "stop": 1664548680971
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1664548680972,
+              "stop": 1664548681741
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664548681741,
+              "stop": 1664548682417
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664548680177,
+          "stop": 1664548682417
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664548685717,
+              "stop": 1664548686438
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "668442"
+            }
+          ],
+          "start": 1664548684459,
+          "stop": 1664548686438
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664548686439,
+          "stop": 1664548689618
+        },
+        {
+          "name": "VerifyNameRoleAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 11 but was 23. Strings differ at index 0.\r\n  Expected: \"Admin Admin\"\r\n  But was:  \"JaneClinician Clinician\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 43\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleAdmin_100663375_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "JaneClinician Clinician"
+            }
+          ],
+          "start": 1664548689619,
+          "stop": 1664548691885
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "bdac6c2df9a7442cb241e27379929555-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664548677889,
+      "stop": 1664548694622
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664548677888,
+  "stop": 1664548694634
+}

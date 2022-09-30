@@ -1,0 +1,249 @@
+{
+  "uuid": "d2c4ac7e-3a6b-48b3-b025-e21ceb455dc3-tr-0-1001",
+  "historyId": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "fullName": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ClinicianTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsClinician"
+    },
+    {
+      "name": "testClass",
+      "value": "WebClinicianTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Clinician"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsClinician"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsClinician",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "LogInAsClinician"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsClinician",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "janeclinician-doe@xitroo.com"
+                }
+              ],
+              "start": 1664549134944,
+              "stop": 1664549135647
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1664549135647,
+              "stop": 1664549136316
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664549136317,
+              "stop": 1664549137104
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664549134942,
+          "stop": 1664549137104
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664549138987,
+              "stop": 1664549139728
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "298804"
+            }
+          ],
+          "start": 1664549137748,
+          "stop": 1664549139728
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664549139729,
+          "stop": 1664549142828
+        },
+        {
+          "name": "VerifyNameRoleClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "JaneClinician Clinician"
+            }
+          ],
+          "start": 1664549142828,
+          "stop": 1664549144862
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fb5acd8e7c264a948af0466cfb05c740-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664549132701,
+      "stop": 1664549148241
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664549132699,
+  "stop": 1664549148250
+}

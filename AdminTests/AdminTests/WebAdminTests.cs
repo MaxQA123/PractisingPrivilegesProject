@@ -33,7 +33,7 @@ namespace AdminTests
         //Version\Build:
         //The date last publication on which been testing:
         //Willingness for testing: Done.
-        //This test case is doing checking: The successfully SignUp as tenant.
+        //This test case is doing checking: The successfully LogIn as super admin.
         //Comment: 
 
         public void LogInAsSuperAdmin()
@@ -60,8 +60,8 @@ namespace AdminTests
         //Date of publication:
         //Version\Build:
         //The date last publication on which been testing:
-        //Willingness for testing: in progress.
-        //This test case is doing checking: The successfully SignUp as tenant.
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully LogIn as admin.
         //Comment: 
 
         public void LogInAsAdmin()
@@ -69,7 +69,18 @@ namespace AdminTests
             Pages.LogIn
                 .SigningInAsAdmin();
 
-            Thread.Sleep(5000);
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+
         }
 
         [Test]
@@ -83,8 +94,8 @@ namespace AdminTests
         //Date of publication:
         //Version\Build:
         //The date last publication on which been testing:
-        //Willingness for testing: in progress.
-        //This test case is doing checking: The successfully SignUp as tenant.
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a clinician.
         //Comment: 
 
         public void SuperAdminCreateClinician()
@@ -105,7 +116,6 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
-            string firstNameCopy = Pages.ProfileDetails.CopyFirstNameFromProfileDetails();
 
             Pages.ProfileDetails
                 .SelectItemDrDropDownMenuTitlePrflPg()

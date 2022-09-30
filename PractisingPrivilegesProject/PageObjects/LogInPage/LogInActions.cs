@@ -31,6 +31,36 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
             return this;
         }
 
+        [AllureStep("SigningInAsClinician")]
+        public LogIn SigningInAsClinician()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataClinician.emailJaneClinician);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
+
+        [AllureStep("SigningInAsApprover")]
+        public LogIn SigningInAsApprover()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataApprover.emailJaneApprover);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
+
+        [AllureStep("SigningInAsViewer")]
+        public LogIn SigningInAsViewer()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataViewer.emailViewerViewer);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
+
         [AllureStep("SigningInAsClinicianAfterCreating")]
         public LogIn SigningInAsClinicianAfterCreating(string _email)
         {

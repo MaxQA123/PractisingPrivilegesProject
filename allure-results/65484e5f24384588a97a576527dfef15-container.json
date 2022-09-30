@@ -1,0 +1,76 @@
+{
+  "uuid": "0d007ec5-2cb0-4bb7-97d8-8d97cfc314f7-tc-0-1000",
+  "name": "ApproverTests.WebApproverTests.LogInAsApprover",
+  "children": [
+    "dccb3e8d-7a7e-440f-8c40-aa85e51fc759-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664549847714,
+      "stop": 1664549847714
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664549847714,
+      "stop": 1664549847714
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664549847714,
+      "stop": 1664549847714
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664549847714,
+      "stop": 1664549847714
+    }
+  ],
+  "links": [],
+  "start": 1664549826846,
+  "stop": 1664549847791
+}
