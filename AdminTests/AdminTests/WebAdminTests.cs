@@ -120,6 +120,7 @@ namespace AdminTests
                 .ClickDropDownCurrentEmployerPrflPg()
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
                 .EnterDataJobTitleRestriction();
+                //.ClickButtonCreatePrflPg();
 
             Thread.Sleep(5000);
         }

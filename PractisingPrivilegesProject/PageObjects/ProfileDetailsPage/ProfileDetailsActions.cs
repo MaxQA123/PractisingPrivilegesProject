@@ -1,6 +1,7 @@
-﻿using CazamioProgect.Helpers;
+﻿using PractisingPrivileges.Helpers;
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using RimuTec.Faker;
 using System;
@@ -281,6 +282,14 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         {
             InputGeneral.InputFunctionWithClear(FieldInputIJobTitlePrflPg, Lorem.Word());
             InputGeneral.InputFunctionWithClear(FieldInputIRestrictionPrflPg, Lorem.Sentence() + GenerateRandomDataHelper.RandomNumberCharacter(10));
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonCreatePrflPg")]
+        public ProfileDetails ClickButtonCreatePrflPg()
+        {
+            Button.Click(ButtonCreatePrflPg);
 
             return this;
         }

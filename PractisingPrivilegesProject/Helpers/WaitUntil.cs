@@ -1,6 +1,6 @@
-﻿using CazamioProgect.Helpers;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using PractisingPrivileges.Helpers;
 using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;

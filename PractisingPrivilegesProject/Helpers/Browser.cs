@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace CazamioProgect.Helpers
+namespace PractisingPrivileges.Helpers
 {
     public class Browser
     {

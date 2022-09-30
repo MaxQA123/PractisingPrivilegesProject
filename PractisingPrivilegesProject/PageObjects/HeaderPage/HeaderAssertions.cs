@@ -1,4 +1,4 @@
-﻿using CazamioProgect.Helpers;
+﻿using PractisingPrivileges.Helpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
 using OpenQA.Selenium;

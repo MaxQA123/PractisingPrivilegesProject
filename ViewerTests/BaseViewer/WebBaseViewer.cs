@@ -1,5 +1,5 @@
-﻿using CazamioProgect.Helpers;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using System;
 using System.Collections.Generic;

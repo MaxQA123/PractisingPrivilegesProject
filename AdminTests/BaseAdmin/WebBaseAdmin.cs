@@ -1,4 +1,4 @@
-﻿using CazamioProgect.Helpers;
+﻿using PractisingPrivileges.Helpers;
 using NUnit.Framework;
 using PractisingPrivilegesProject.Helpers;
 using System;

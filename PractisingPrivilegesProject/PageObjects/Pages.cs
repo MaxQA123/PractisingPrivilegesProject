@@ -1,4 +1,4 @@
-﻿using CazamioProgect.Helpers;
+﻿using PractisingPrivileges.Helpers;
 using OpenQA.Selenium;
 using PractisingPrivilegesProject.PageObjects.HeaderPage;
 using PractisingPrivilegesProject.PageObjects.LogInPage;
