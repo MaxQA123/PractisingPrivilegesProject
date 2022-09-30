@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using PracticingPrivilegesApiTests.ApiPagesObjects;
+using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
 
 namespace AdminTests
 {
@@ -143,7 +145,12 @@ namespace AdminTests
                 .ClickButtonSetPassworSetPassworddPg();
             Pages.LogIn
                 .SigningInAsClinicianAfterCreating(emailCopy);
-                
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
             Thread.Sleep(5000);
         }
 
@@ -159,6 +166,13 @@ namespace AdminTests
         {
             Pages.LogIn
                 .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
 
             Thread.Sleep(5000);
         }

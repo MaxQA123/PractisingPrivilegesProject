@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using PractisingPrivilegesProject.Helpers;
 using PractisingPrivilegesProject.PageObjects.EmailXitrooPage;
 using PractisingPrivilegesProject.PageObjects.SetPasswordPage;
+using PractisingPrivilegesProject.PageObjects.VerificationCodePage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -36,5 +37,6 @@ namespace PractisingPrivilegesProject.PageObjects
         public static SwitchingJScriptExecutorHelper SwitchingJScriptExecutorHelper => GetPage<SwitchingJScriptExecutorHelper>();
         public static EmailXitroo EmailXitroo => GetPage<EmailXitroo>();
         public static SetPassword SetPassword => GetPage<SetPassword>();
+        public static VerificationCode VerificationCode => GetPage<VerificationCode>();
     }
 }

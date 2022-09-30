@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,12 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdminTests\AdminTests.csproj" />
-    <ProjectReference Include="..\ApproverTests\ApproverTests.csproj" />
-    <ProjectReference Include="..\ClinicianTests\ClinicianTests.csproj" />
-    <ProjectReference Include="..\MultiRoleTests\MultiRoleTests.csproj" />
     <ProjectReference Include="..\PractisingPrivilegesProject\PractisingPrivilegesProject.csproj" />
-    <ProjectReference Include="..\ViewerTests\ViewerTests.csproj" />
   </ItemGroup>
 
 </Project>
