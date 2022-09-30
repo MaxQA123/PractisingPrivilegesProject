@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using PractisingPrivileges.Helpers;
 using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,6 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
     {
         #region DropDownMenuSelectorOfRoles
 
-        //div[contains(@class, 'mat-select-arrow')]
-        //mat-select[@id = 'mat-select-0']
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'mat-select-arrow')]")]
         public IWebElement DropDownMenuSelectorRolesPrflPg;
 
@@ -41,6 +40,9 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         [FindsBy(How = How.XPath, Using = "//input[@name = 'Email address']")]
         public IWebElement FieldInputEmailAddressPrflPg;
+
+        IWebElement FieldInputEmailAddressPrflPgForGet => Browser._Driver.FindElement(_FieldInputEmailAddressPrflPgForGet);
+        public static readonly By _FieldInputEmailAddressPrflPgForGet = By.XPath("//input[@name = 'Email address']");
 
         [FindsBy(How = How.XPath, Using = "//input[@name = 'Contact telephone number']")]
         public IWebElement FieldInputContactTelephoneNumberPrflPg;
@@ -126,6 +128,15 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator create mat-stroked-button mat-button-base mat-primary ng-star-inserted']")]
         public IWebElement ButtonCreatePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'error-message ng-star-inserted')]")]
+        public IWebElement ErrorMessageYouMustEnterValuePrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'select-error ng-star-inserted')]")]
+        public IWebElement ErrorMessagePleaseChooseSpecialtyLocationPrflPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[@aria-lable = 'User successfully created']")]
+        public IWebElement SuccessfullyMessageUserSuccessfullyCreatedPrflPg;
 
     }
 }

@@ -9,6 +9,8 @@ namespace PractisingPrivilegesProject.Helpers
     public class EndPoints
     {
         public const string urlWebSite = "https://practicingprivileges.azurewebsites.net/auth/sign-in";
+        public const string urlRandomEmail = "https://xitroo.com/";
+        public const string urlConstEmail = "https://xitroo.com/#liludalastfg@xitroo.com";
     }
 
     public class TestDataGeneral

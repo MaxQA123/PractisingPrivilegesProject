@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PractisingPrivilegesProject.Helpers;
+using PractisingPrivilegesProject.PageObjects.EmailXitrooPage;
+using PractisingPrivilegesProject.PageObjects.SetPasswordPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -30,5 +33,8 @@ namespace PractisingPrivilegesProject.PageObjects
         public static UsersManagement UsersManagement => GetPage<UsersManagement>();
         public static ProfileDetails ProfileDetails => GetPage<ProfileDetails>();
         public static MdlWndwSelectSpecialties MdlWndwSelectSpecialties => GetPage<MdlWndwSelectSpecialties>();
+        public static SwitchingJScriptExecutorHelper SwitchingJScriptExecutorHelper => GetPage<SwitchingJScriptExecutorHelper>();
+        public static EmailXitroo EmailXitroo => GetPage<EmailXitroo>();
+        public static SetPassword SetPassword => GetPage<SetPassword>();
     }
 }

@@ -69,7 +69,6 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var responseTwoStep = TwoStepApiAdmin.ExecuteTwoStepLogIn(code, email, CredentialsApiAdmin.type);
 
             TwoStepApiAdmin.VerifyingLoggedUserConst(responseTwoStep);
-
         }
     }
 }

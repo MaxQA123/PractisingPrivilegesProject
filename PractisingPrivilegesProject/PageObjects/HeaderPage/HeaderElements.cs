@@ -20,11 +20,10 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
         public IWebElement TextNameRoleOnHeader => Browser._Driver.FindElement(_TextNameRoleOnHeader);
         public readonly static By _TextNameRoleOnHeader = By.XPath("//div[@class = 'mat-menu-trigger avatar']//span");
 
-
-        [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator mat-menu-item ng-tns-c22-16']")]
+        [FindsBy(How = How.XPath, Using = "//button[contains(@class, 'mat-focus-indicator mat-menu-item ng-tns')]")]
         public IWebElement ItemProfileFromDropDownHeader;
 
-        [FindsBy(How = How.XPath, Using = "//div[@class = 'mat-menu-content ng-tns-c22-16']//button[@class = 'mat-focus-indicator mat-menu-item ng-tns-c22-16'][2]")]
+        [FindsBy(How = How.XPath, Using = "//button[contains(@class, 'mat-focus-indicator mat-menu-item ng-tns')][2]")]
         public IWebElement ItemLogOutFromDropDownHeader;
     }
 }

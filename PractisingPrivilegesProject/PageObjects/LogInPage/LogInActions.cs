@@ -30,5 +30,17 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 
             return this;
         }
+
+        [AllureStep("SigningInAsClinicianAfterCreating")]
+        public LogIn SigningInAsClinicianAfterCreating(string _email)
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            FieldInputEmailLogInPg.SendKeys(_email);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            Button.Click(IconShowPasswordLogInPg);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
     }
 }

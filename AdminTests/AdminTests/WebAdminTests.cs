@@ -3,6 +3,7 @@ using Allure.Commons;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using PractisingPrivilegesProject.PageObjects;
 using System;
@@ -99,7 +100,11 @@ namespace AdminTests
                 .OpenDropDownMenuSelectorRolesPrflPg()
                 .SelectRoleClinicianViaDropDown()
                 .SelectRoleViewerViaDropDown()
-                .EnterFirstLastNameEmailPhonePrflPg()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfiledetails();
+
+            Pages.ProfileDetails
                 .SelectItemDrDropDownMenuTitlePrflPg()
                 .SetGmcNumberPrflPg()
                 .SetImcNumberPrflPg()
@@ -119,8 +124,41 @@ namespace AdminTests
                 .ScrollToButtonCreatePrflPg()
                 .ClickDropDownCurrentEmployerPrflPg()
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
-                .EnterDataJobTitleRestriction();
-                //.ClickButtonCreatePrflPg();
+                .EnterDataJobTitleRestriction()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg();
+            Pages.LogIn
+                .SigningInAsClinicianAfterCreating(emailCopy);
+                
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminCreateClinician")]
+
+        public void Demo()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
 
             Thread.Sleep(5000);
         }

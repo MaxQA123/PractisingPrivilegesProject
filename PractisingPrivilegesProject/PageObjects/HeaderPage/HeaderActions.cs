@@ -17,5 +17,15 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
 
             return this;
         }
+
+        [AllureStep("LoggedFromAccountOnHeader")]
+        public Header LoggedFromAccountOnHeader()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            Button.Click(TextNameRoleOnHeader);
+            Button.Click(ItemLogOutFromDropDownHeader);
+
+            return this;
+        }
     }
 }

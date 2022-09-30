@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace PractisingPrivilegesProject.Helpers
 {
-    public class JScriptExecutorHelper
+    public class SwitchingJScriptExecutorHelper
     {
         [AllureStep("OpenNewTab")]
-        public JScriptExecutorHelper OpenNewTab()
+        public SwitchingJScriptExecutorHelper OpenNewTab()
         {
             ((IJavaScriptExecutor)Browser._Driver).ExecuteScript("window.open();");
             Browser._Driver.SwitchTo().Window(Browser._Driver.WindowHandles.Last());
@@ -22,7 +22,7 @@ namespace PractisingPrivilegesProject.Helpers
         }
 
         [AllureStep("CloseNewTab")]
-        public JScriptExecutorHelper CloseNewTab()
+        public SwitchingJScriptExecutorHelper CloseNewTab()
         {
             ((IJavaScriptExecutor)Browser._Driver).ExecuteScript("window.close();");
             Browser._Driver.SwitchTo().Window(Browser._Driver.WindowHandles.First());

@@ -29,20 +29,20 @@ namespace PractisingPrivilegesProject.PageObjects.EmailXitrooPage
         public readonly static By _ButtonBackEmail = By.XPath("//button[@id = 'backButton']");
 
         public IWebElement ButtonConfirmEmailFromEmail => Browser._Driver.FindElement(_ButtonConfirmEmailFromEmail);
-        public readonly static By _ButtonConfirmEmailFromEmail = By.XPath("//a[contains(@href, 'https://web-alpha-onlc.stage.soft-artel.com/registration/accept-email/')]");
+        public readonly static By _ButtonConfirmEmailFromEmail = By.XPath("//a[contains(@href, 'https://practicingprivileges.azurewebsites.net/auth/set-password')]");
 
         public IWebElement ButtonResetPassword => Browser._Driver.FindElement(_ButtonResetPassword);
         public readonly static By _ButtonResetPassword = By.XPath("");
 
-        #region ForCopyFromXitrooEmailToFieldInputLogInPage
+        //#region ForCopyFromXitrooEmailToFieldInputLogInPage
 
-        public IWebElement FIeldInputEmailLogInPage => Browser._Driver.FindElement(_FIeldInputEmailLogInPage);
-        public readonly static By _FIeldInputEmailLogInPage = By.XPath("//input[@id = 'email']");
+        //public IWebElement FIeldInputEmailLogInPage => Browser._Driver.FindElement(_FIeldInputEmailLogInPage);
+        //public readonly static By _FIeldInputEmailLogInPage = By.XPath("//input[@id = 'email']");
 
-        public IWebElement FieldInputEmailXitroo => Browser._Driver.FindElement(_FieldInputEmailXitroo);
-        public readonly static By _FieldInputEmailXitroo = By.XPath("//input[@id = 'mailInput']");
+        //public IWebElement FieldInputEmailXitroo => Browser._Driver.FindElement(_FieldInputEmailXitroo);
+        //public readonly static By _FieldInputEmailXitroo = By.XPath("//input[@id = 'mailInput']");
 
-        #endregion
+        //#endregion
     }
 
 }

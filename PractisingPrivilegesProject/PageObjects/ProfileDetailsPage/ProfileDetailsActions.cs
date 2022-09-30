@@ -293,5 +293,16 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
             return this;
         }
+
+        [AllureStep("CopyEmailFromProfiledetails")]
+        public string CopyEmailFromProfiledetails()
+        {
+            WaitUntil.WaitSomeInterval(1);
+            string getemail = Browser._Driver.FindElement(_FieldInputEmailAddressPrflPgForGet).GetAttribute("value");
+            string email = getemail.ToLower();
+
+            return email;
+        }
+
     }
 }
