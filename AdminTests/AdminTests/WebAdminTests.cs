@@ -104,7 +104,8 @@ namespace AdminTests
                 .SelectRoleViewerViaDropDown()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
-            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfiledetails();
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+            string firstNameCopy = Pages.ProfileDetails.CopyFirstNameFromProfileDetails();
 
             Pages.ProfileDetails
                 .SelectItemDrDropDownMenuTitlePrflPg()
@@ -150,7 +151,7 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
-
+            
             Thread.Sleep(5000);
         }
 

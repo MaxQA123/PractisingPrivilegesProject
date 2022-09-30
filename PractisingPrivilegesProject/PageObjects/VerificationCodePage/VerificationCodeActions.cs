@@ -16,7 +16,7 @@ namespace PractisingPrivilegesProject.PageObjects.VerificationCodePage
             WaitUntil.WaitSomeInterval(1000);
             FieldInputVerificationCodeVrfctnCdPg.SendKeys(_verificationCode);
             Button.Click(ButtomSubmitVrfctnCdPg);
-
+            
             return this;
         }
     }

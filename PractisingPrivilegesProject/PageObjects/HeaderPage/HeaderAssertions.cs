@@ -34,5 +34,15 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
             return this;
         }
 
+        [AllureStep("VerifyNameRoleClinician")]
+        public Header VerifyNameRoleClinician(string getNameRoleActual)
+        {
+            WaitUntil.WaitSomeInterval(1);
+            string nameRoleExpected = TestDataAdmin.userNameRoleSuperAdmin;
+
+            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+
+            return this;
+        }
     }
 }

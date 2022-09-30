@@ -294,14 +294,24 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             return this;
         }
 
-        [AllureStep("CopyEmailFromProfiledetails")]
-        public string CopyEmailFromProfiledetails()
+        [AllureStep("CopyEmailFromProfileDetails")]
+        public string CopyEmailFromProfileDetails()
         {
-            WaitUntil.WaitSomeInterval(1);
+            WaitUntil.WaitSomeInterval(500);
             string getemail = Browser._Driver.FindElement(_FieldInputEmailAddressPrflPgForGet).GetAttribute("value");
             string email = getemail.ToLower();
 
             return email;
+        }
+
+        [AllureStep("CopyFirstNameFromProfileDetails")]
+        public string CopyFirstNameFromProfileDetails()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getFirstName = Browser._Driver.FindElement(_FieldInputFirstNamePrflPgForGet).GetAttribute("value");
+            string firstName = getFirstName.ToString();
+
+            return firstName;
         }
 
     }
