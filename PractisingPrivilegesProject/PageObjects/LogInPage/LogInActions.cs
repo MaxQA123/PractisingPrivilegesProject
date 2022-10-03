@@ -61,8 +61,8 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
             return this;
         }
 
-        [AllureStep("SigningInAsClinicianAfterCreating")]
-        public LogIn SigningInAsClinicianAfterCreating(string _email)
+        [AllureStep("SigningInNewUserAfterCreating")]
+        public LogIn SigningInNewUserAfterCreating(string _email)
         {
             WaitUntil.WaitSomeInterval(2000);
             FieldInputEmailLogInPg.SendKeys(_email);

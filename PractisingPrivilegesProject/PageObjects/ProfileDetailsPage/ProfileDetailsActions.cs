@@ -87,7 +87,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         }
 
         [AllureStep("EnterIdentificationNumberPrflPg")]
-        public ProfileDetails EnterIdentificationNumberPrflPg()
+        public ProfileDetails EnterPersonalIdentificationNumberPrflPg()
         {
             WaitUntil.WaitSomeInterval(500);
             InputGeneral.InputFunctionWithClear(FieldInputFirstPersonalIdentificationNumberPrflPg, TestDataApprover.personalIdentificationNumber);

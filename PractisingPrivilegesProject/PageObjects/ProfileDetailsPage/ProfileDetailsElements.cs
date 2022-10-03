@@ -56,7 +56,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [FindsBy(How = How.XPath, Using = "//code-input/span[2]/input")]
         public IWebElement FieldInputSecondPersonalIdentificationNumberPrflPg;
 
-        [FindsBy(How = How.XPath, Using = "/code-input/span[3]/input")]
+        [FindsBy(How = How.XPath, Using = "//code-input/span[3]/input")]
         public IWebElement FieldInputThirdPersonalIdentificationNumberPrflPg;
 
         [FindsBy(How = How.XPath, Using = "//code-input/span[4]/input")]
@@ -138,7 +138,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'select-error ng-star-inserted')]")]
         public IWebElement ErrorMessagePleaseChooseSpecialtyLocationPrflPg;
 
-        [FindsBy(How = How.XPath, Using = "//div[@aria-lable = 'User successfully created']")]
+        [FindsBy(How = How.XPath, Using = "//div[@aria-label = 'User successfully created']")]
         public IWebElement SuccessfullyMessageUserSuccessfullyCreatedPrflPg;
 
     }

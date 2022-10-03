@@ -29,5 +29,15 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
             return this;
         }
+
+        [AllureStep("VerifyUserSuccessfullyCreatedPrflPg")]
+        public ProfileDetails VerifyUserSuccessfullyCreatedPrflPg()
+        {
+            WaitUntil.CustomElementIsVisible(SuccessfullyMessageUserSuccessfullyCreatedPrflPg);
+            Assert.IsTrue(Successfully.IsVisible(SuccessfullyMessageUserSuccessfullyCreatedPrflPg));
+            WaitUntil.WaitSomeInterval(3000);
+
+            return this;
+        }
     }
 }

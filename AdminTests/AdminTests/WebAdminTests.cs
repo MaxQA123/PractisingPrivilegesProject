@@ -81,6 +81,7 @@ namespace AdminTests
             Pages.Header
                 .VerifyNameRoleAdmin(nameRoleCompare);
 
+            Thread.Sleep(5000);
         }
 
         [Test]
@@ -153,15 +154,151 @@ namespace AdminTests
                 .ClickButtonConfirmEmailFromEmail();
             Pages.SetPassword
                 .EnterPasswordRepeatPassword()
-                .ClickButtonSetPassworSetPassworddPg();
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
             Pages.LogIn
-                .SigningInAsClinicianAfterCreating(emailCopy);
+                .SigningInNewUserAfterCreating(emailCopy);
 
             var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
             
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AdminCreateApprover")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a approver.
+        //Comment: 
+
+        public void AdminCreateApprover()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleApproverViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+                string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .EnterPersonalIdentificationNumberPrflPg()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+                //.VerifyUserSuccessfullyCreatedPrflPg();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var approverResponseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminCreateAdmin")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a admin.
+        //Comment: 
+
+        public void SuperAdminCreateAdmin()
+        {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleAdminViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
             Thread.Sleep(5000);
         }
 

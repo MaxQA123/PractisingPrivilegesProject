@@ -18,5 +18,8 @@ namespace PractisingPrivilegesProject.PageObjects.SetPasswordPage
 
         [FindsBy(How = How.XPath, Using = "//button[@class= 'mat-focus-indicator red-btn w100 mat-flat-button mat-button-base mat-primary ng-star-inserted']")]
         public IWebElement ButtonSetPassworSetPassworddPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[@aria-label = 'Your password has been successfully changed']")]
+        public IWebElement MessageChangePassworForSetPassworddPg;
     }
 }
