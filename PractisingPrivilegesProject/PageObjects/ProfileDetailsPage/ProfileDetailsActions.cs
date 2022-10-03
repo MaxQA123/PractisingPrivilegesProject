@@ -58,6 +58,14 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             return this;
         }
 
+        [AllureStep("CloseDropDownMenuSelectorRolesPrflPg")]
+        public ProfileDetails CloseDropDownMenuSelectorRolesPrflPg()
+        {
+            Button.Click(AllPageProfileDetails);
+
+            return this;
+        }
+
         #endregion
 
         #region MandatoryFildsToFillIn
@@ -102,7 +110,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         #region DropDownMenuSelectorOfTitle
 
-        [AllureStep("OpenDropDownMenuTitlePrflPg")]
+        [AllureStep("SelectItemDrDropDownMenuTitlePrflPg")]
         public ProfileDetails SelectItemDrDropDownMenuTitlePrflPg()
         {
             Button.Click(DropDownMenuSelectorTitlePrflPg);
@@ -111,7 +119,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             return this;
         }
 
-        [AllureStep("OpenDropDownMenuTitlePrflPg")]
+        [AllureStep("SelectItemMrDropDownMenuTitlePrflPg")]
         public ProfileDetails SelectItemMrDropDownMenuTitlePrflPg()
         {
             Button.Click(DropDownMenuSelectorTitlePrflPg);

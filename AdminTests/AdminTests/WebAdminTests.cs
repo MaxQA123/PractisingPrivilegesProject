@@ -308,6 +308,568 @@ namespace AdminTests
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
+        [AllureSubSuite("AdminCreateViewer")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a viewer.
+        //Comment: 
+
+        public void AdminCreateViewer()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            //.VerifyUserSuccessfullyCreatedPrflPg();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var approverResponseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminCreateUserWithAllRoles")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a user with all roles.
+        //Comment: 
+
+        public void SuperAdminCreateUserWithAllRoles()
+        {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleClinicianViaDropDown()
+                .SelectRoleAdminViaDropDown()
+                .SelectRoleApproverViaDropDown()
+                .CloseDropDownMenuSelectorRolesPrflPg()
+                .EnterFirstLastNameEmailPhonePrflPg()
+                .EnterPersonalIdentificationNumberPrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .SelectItemMrDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.ent, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.ophthalmology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kingsbridgeSligo, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AdminCreateUserClinicianApproverVieewer")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a user with roles clinician, approver and viewer.
+        //Comment: 
+
+        public void AdminCreateUserClinicianApproverVieewer()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleApproverViaDropDown()
+                .SelectRoleClinicianViaDropDown()
+                .CloseDropDownMenuSelectorRolesPrflPg()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .EnterPersonalIdentificationNumberPrflPg()
+                .SelectItemProfDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            //.VerifyUserSuccessfullyCreatedPrflPg();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var approverResponseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminCreateUserClinicianViewer")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a user with roles clinician, viewer.
+        //Comment: 
+
+        public void SuperAdminCreateUserClinicianViewer()
+        {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleClinicianViaDropDown()
+                .CloseDropDownMenuSelectorRolesPrflPg()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .SelectItemMrDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.ent, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.ophthalmology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kingsbridgeSligo, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AdminCreateApproverViewer")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a approver, viewer.
+        //Comment: 
+
+        public void AdminCreateApproverViewer()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleApproverViaDropDown()
+                .CloseDropDownMenuSelectorRolesPrflPg()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .EnterPersonalIdentificationNumberPrflPg()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            //.VerifyUserSuccessfullyCreatedPrflPg();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var approverResponseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminCreateUserApproverClinician")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been created a clinician.
+        //Comment: 
+
+        public void SuperAdminCreateUserApproverClinician()
+        {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleClinicianViaDropDown()
+                .SelectRoleApproverViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .EnterPersonalIdentificationNumberPrflPg()
+                .SelectItemDrDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction()
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("SuperAdminForgotPassword")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: in progress.
+        //This test case is doing checking: The successfully had been changed a password for super admin.
+        //Comment: 
+
+        public void SuperAdminForgotPassword()
+        {
+
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AdminForgotPassword")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully had been changed a password for admin.
+        //Comment: 
+
+        public void AdminForgotPassword()
+        {
+            Pages.LogIn
+                .ClickLinkForgotPasswordLogInPg();
+            Pages.ForgotPassword
+                .VerifyTitleForgotPasswordPg()
+                .EnterEmailOnFrgtPsswrdPg();
+            Pages.ForgotPassword
+                .ClickButtonRequestOKFrgtPsswrdPg();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlConstEmailAdminFrgtPsswrd);
+            Pages.EmailXitroo
+                .EnterEmail()
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickLinkResetPassword();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningAfterChangingPassword();
+
+            var email = TestDataAdmin.emailAdminForTestingFrgtPsswrd;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataAdmin.passwordNewAdminForTestingFrgtPsswrd);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateClinician")]
 
         public void Demo()

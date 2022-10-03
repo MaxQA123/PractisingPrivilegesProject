@@ -11,6 +11,12 @@ namespace PractisingPrivilegesProject.Helpers
         public const string urlWebSite = "https://practicingprivileges.azurewebsites.net/auth/sign-in";
         public const string urlRandomEmail = "https://xitroo.com/";
         public const string urlConstEmail = "https://xitroo.com/#liludalastfg@xitroo.com";
+        public const string urlConstEmailSuperAdminFrgtPsswrd = "https://xitroo.com/#eilhs@xitroo.com";
+        public const string urlConstEmailAdminFrgtPsswrd = "https://xitroo.com/#eilhs@xitroo.com";
+        public const string urlConstEmailClinicianFrgtPsswrd = "https://xitroo.com/#hungrydubinsky@xitroo.com";
+        public const string urlConstEmailApproverFrgtPssword = "https://xitroo.com/#eilhs@xitroo.com";
+        public const string urlConstEmailViewerFrgtPssword = "https://xitroo.com/#eilhs@xitroo.com";
+
     }
 
     public class TestDataGeneral
@@ -24,9 +30,13 @@ namespace PractisingPrivilegesProject.Helpers
         public const string passwordSuperAdmin = "Jupiter1405!";
 
         public const string emailAdminQatester = "qatester91311@xitroo.com";
+        public const string passwordNewAdminQatester = "!Qaz12345";
 
         public const string userNameRoleAdmin = "Admin Admin";
         public const string userNameRoleSuperAdmin = "Super Admin";
+
+        public const string emailAdminForTestingFrgtPsswrd = "eilhs@xitroo.com";
+        public const string passwordNewAdminForTestingFrgtPsswrd = "!Qaz12345";
     }
 
     public class TestDataClinician
@@ -36,6 +46,9 @@ namespace PractisingPrivilegesProject.Helpers
 
         public const string firstNameClinician = "Clin";
         public const string lastNameClinician = "Clin";
+
+        public const string emailClinicianForTestingFrgtPsswrd = "hungrydubinsky@xitroo.com";
+        public const string passwordNewClinicianForTestingFrgtPsswrd = "!Qaz12345";
     }
 
     public class TestDataApprover

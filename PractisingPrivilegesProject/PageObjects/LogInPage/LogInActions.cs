@@ -72,5 +72,29 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 
             return this;
         }
+
+        [AllureStep("SigningAfterChangingPassword")]
+        public LogIn SigningAfterChangingPassword()
+        {
+            WaitUntil.WaitSomeInterval(2000);
+
+            //InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminForTestingFrgtPsswrd);
+            //InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordNewAdminForTestingFrgtPsswrd);
+
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataClinician.passwordNewClinicianForTestingFrgtPsswrd);
+            Button.Click(IconShowPasswordLogInPg);
+            Button.Click(ButtonSignInLogInPg);
+
+            return this;
+        }
+
+        [AllureStep("ClickLinkForgotPasswordLogInPg")]
+        public LogIn ClickLinkForgotPasswordLogInPg()
+        {
+            Button.Click(LinkForgotPasswordLogInPg);
+
+            return this;
+        }
     }
 }

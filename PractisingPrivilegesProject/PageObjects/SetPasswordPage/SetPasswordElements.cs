@@ -13,8 +13,14 @@ namespace PractisingPrivilegesProject.PageObjects.SetPasswordPage
         [FindsBy(How = How.XPath, Using = "//input[@placeholder= 'Password']")]
         public IWebElement FieldInputPasswordSetPasswordPg;
 
+        [FindsBy(How = How.XPath, Using = "//app-input[@placeholder = 'Password']//mat-icon[@class = 'mat-icon notranslate pointer material-icons mat-icon-no-color ng-star-inserted']")]
+        public IWebElement IconShowPasswordSetPasswordPg;
+
         [FindsBy(How = How.XPath, Using = "//input[@placeholder= 'Repeat password']")]
         public IWebElement FieldInputIRepeatPassworSetPassworddPg;
+
+        [FindsBy(How = How.XPath, Using = "//app-input[@placeholder = 'Repeat password']//mat-icon[@class = 'mat-icon notranslate pointer material-icons mat-icon-no-color ng-star-inserted']")]
+        public IWebElement IconShowRepeatPasswordSetPasswordPg;
 
         [FindsBy(How = How.XPath, Using = "//button[@class= 'mat-focus-indicator red-btn w100 mat-flat-button mat-button-base mat-primary ng-star-inserted']")]
         public IWebElement ButtonSetPassworSetPassworddPg;

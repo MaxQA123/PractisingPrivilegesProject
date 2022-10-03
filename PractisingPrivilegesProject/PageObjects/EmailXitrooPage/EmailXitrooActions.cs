@@ -21,6 +21,15 @@ namespace PractisingPrivilegesProject.PageObjects.EmailXitrooPage
             return this;
         }
 
+        [AllureStep("EnterEmail")]
+        public EmailXitroo EnterEmail()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
+            
+            return this;
+        }
+
         [AllureStep("ClickSearchButton")]
         public EmailXitroo ClickSearchButton()
         {
@@ -47,6 +56,18 @@ namespace PractisingPrivilegesProject.PageObjects.EmailXitrooPage
             Browser._Driver.SwitchTo().Frame(IframeXitrooLetter);
             WaitUntil.ElementIsClickable(ButtonConfirmEmailFromEmail);
             ButtonConfirmEmailFromEmail.Click();
+            Browser._Driver.SwitchTo().DefaultContent();
+
+            return this;
+        }
+
+        [AllureStep("ClickLinkResetPassword")]
+        public EmailXitroo ClickLinkResetPassword()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            Browser._Driver.SwitchTo().Frame(IframeXitrooLetter);
+            WaitUntil.ElementIsClickable(LinkResetPassword);
+            LinkResetPassword.Click();
             Browser._Driver.SwitchTo().DefaultContent();
 
             return this;

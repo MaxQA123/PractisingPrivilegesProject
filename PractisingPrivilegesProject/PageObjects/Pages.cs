@@ -16,6 +16,7 @@ using PractisingPrivilegesProject.PageObjects.EmailXitrooPage;
 using PractisingPrivilegesProject.PageObjects.SetPasswordPage;
 using PractisingPrivilegesProject.PageObjects.VerificationCodePage;
 using PractisingPrivilegesProject.PageObjects.UserProfilePage;
+using PractisingPrivilegesProject.PageObjects.ForgotPasswordPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -40,5 +41,6 @@ namespace PractisingPrivilegesProject.PageObjects
         public static SetPassword SetPassword => GetPage<SetPassword>();
         public static VerificationCode VerificationCode => GetPage<VerificationCode>();
         public static UserProfile UserProfile => GetPage<UserProfile>();
+        public static ForgotPassword ForgotPassword => GetPage<ForgotPassword>();
     }
 }

@@ -31,8 +31,8 @@ namespace PractisingPrivilegesProject.PageObjects.EmailXitrooPage
         public IWebElement ButtonConfirmEmailFromEmail => Browser._Driver.FindElement(_ButtonConfirmEmailFromEmail);
         public readonly static By _ButtonConfirmEmailFromEmail = By.XPath("//a[contains(@href, 'https://practicingprivileges.azurewebsites.net/auth/set-password')]");
 
-        public IWebElement ButtonResetPassword => Browser._Driver.FindElement(_ButtonResetPassword);
-        public readonly static By _ButtonResetPassword = By.XPath("");
+        public IWebElement LinkResetPassword => Browser._Driver.FindElement(_LinkResetPassword);
+        public readonly static By _LinkResetPassword = By.XPath("//a[contains(@href, 'https://practicingprivileges.azurewebsites.net/auth/reset-password')]");
 
         //#region ForCopyFromXitrooEmailToFieldInputLogInPage
 
