@@ -25,7 +25,7 @@ namespace PractisingPrivilegesProject.PageObjects.EmailXitrooPage
         public EmailXitroo EnterEmail()
         {
             WaitUntil.WaitSomeInterval(3000);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, TestDataViewer.emailViewerForTestingFrgtPsswrd);
             
             return this;
         }

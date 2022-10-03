@@ -67,7 +67,7 @@ namespace ClinicianTests
         //Date of publication:
         //Version\Build:
         //The date last publication on which been testing:
-        //Willingness for testing: in progress.
+        //Willingness for testing: Done.
         //This test case is doing checking: The successfully has been changed password.
         //Comment: 
 

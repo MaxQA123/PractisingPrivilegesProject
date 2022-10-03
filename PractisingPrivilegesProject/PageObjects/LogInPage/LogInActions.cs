@@ -81,8 +81,15 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
             //InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminForTestingFrgtPsswrd);
             //InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordNewAdminForTestingFrgtPsswrd);
 
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataClinician.passwordNewClinicianForTestingFrgtPsswrd);
+            //InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
+            //InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataClinician.passwordNewClinicianForTestingFrgtPsswrd);
+
+            //InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataApprover.emailApproverForTestingFrgtPsswrd);
+            //InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalNewPassword);
+
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataViewer.emailViewerForTestingFrgtPsswrd);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalNewPassword);
+
             Button.Click(IconShowPasswordLogInPg);
             Button.Click(ButtonSignInLogInPg);
 

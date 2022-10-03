@@ -13,7 +13,7 @@ namespace PractisingPrivilegesProject.PageObjects.ForgotPasswordPage
         [AllureStep("EnterEmailOnFrgtPsswrdPg")]
         public ForgotPassword EnterEmailOnFrgtPsswrdPg()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailFrgtPsswrdPg, TestDataClinician.emailClinicianForTestingFrgtPsswrd);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailFrgtPsswrdPg, TestDataViewer.emailViewerForTestingFrgtPsswrd);
 
             return this;
         }

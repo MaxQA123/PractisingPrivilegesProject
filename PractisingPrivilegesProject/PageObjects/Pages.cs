@@ -17,6 +17,10 @@ using PractisingPrivilegesProject.PageObjects.SetPasswordPage;
 using PractisingPrivilegesProject.PageObjects.VerificationCodePage;
 using PractisingPrivilegesProject.PageObjects.UserProfilePage;
 using PractisingPrivilegesProject.PageObjects.ForgotPasswordPage;
+using PractisingPrivilegesProject.PageObjects.SidebarPage;
+using PractisingPrivilegesProject.PageObjects.LocationsPage;
+using PractisingPrivilegesProject.PageObjects.EmployersPage;
+using PractisingPrivilegesProject.PageObjects.DocumentsManagementPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -42,5 +46,9 @@ namespace PractisingPrivilegesProject.PageObjects
         public static VerificationCode VerificationCode => GetPage<VerificationCode>();
         public static UserProfile UserProfile => GetPage<UserProfile>();
         public static ForgotPassword ForgotPassword => GetPage<ForgotPassword>();
+        public static Sidebar Sidebar => GetPage<Sidebar>();
+        public static Locations Locations => GetPage<Locations>();
+        public static Employers Employers => GetPage<Employers>();
+        public static DocumentsManagement DocumentsManagement => GetPage<DocumentsManagement>();
     }
 }

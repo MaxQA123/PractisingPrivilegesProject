@@ -870,6 +870,45 @@ namespace AdminTests
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
+        [AllureSubSuite("VerifySidebar")]
+
+        public void VerifySidebar()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+            Pages.Sidebar
+                .ClickButtonLocationSidebar();
+            Pages.Locations
+                .VerifyTitleLocationstPg();
+            Pages.Sidebar
+                .ClickButtonEmployerSidebar();
+            Pages.Employers
+                .VerifyTitleEmployersPg();
+            Pages.Sidebar
+                .ClickButtonDocumentsManagementSidebar();
+            Pages.DocumentsManagement
+                .VerifyTitleDocumentsManagementPg();
+            Pages.Sidebar
+                .ClickButtonUsersManagementSidebar();
+            Pages.UsersManagement
+                .VerifyTitleUsersManagmentPg();
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateClinician")]
 
         public void Demo()
@@ -883,6 +922,22 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
+            Pages.Sidebar
+                .ClickButtonLocationSidebar();
+            Pages.Locations
+                .VerifyTitleLocationstPg();
+            Pages.Sidebar
+                .ClickButtonEmployerSidebar();
+            Pages.Employers
+                .VerifyTitleEmployersPg();
+            Pages.Sidebar
+                .ClickButtonDocumentsManagementSidebar();
+            Pages.DocumentsManagement
+                .VerifyTitleDocumentsManagementPg();
+            Pages.Sidebar
+                .ClickButtonUsersManagementSidebar();
+            Pages.UsersManagement
+                .VerifyTitleUsersManagmentPg();
 
             Thread.Sleep(5000);
         }

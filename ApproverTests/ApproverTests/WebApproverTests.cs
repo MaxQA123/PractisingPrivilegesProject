@@ -4,6 +4,7 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using PractisingPrivilegesProject.PageObjects;
 using System;
@@ -51,6 +52,55 @@ namespace ApproverTests
 
             Pages.Header
                 .VerifyNameRoleApprover(nameRoleCompare);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Approver")]
+        [AllureSubSuite("ForgotPasswordApprover")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully has been changed password.
+        //Comment: 
+
+        public void ForgotPasswordApprover()
+        {
+            Pages.LogIn
+                .ClickLinkForgotPasswordLogInPg();
+            Pages.ForgotPassword
+                .VerifyTitleForgotPasswordPg()
+                .EnterEmailOnFrgtPsswrdPg();
+            Pages.ForgotPassword
+                .ClickButtonRequestOKFrgtPsswrdPg();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlConstEmailApproverFrgtPssword);
+            Pages.EmailXitroo
+                .EnterEmail()
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickLinkResetPassword();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningAfterChangingPassword();
+
+            var email = TestDataApprover.emailApproverForTestingFrgtPsswrd;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalNewPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
 
             Thread.Sleep(5000);
         }
