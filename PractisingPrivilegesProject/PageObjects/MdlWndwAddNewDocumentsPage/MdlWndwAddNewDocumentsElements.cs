@@ -46,8 +46,10 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage
 
         #region RenewalRequiredTimeFrame
 
-        [FindsBy(How = How.XPath, Using = "")]
-        public IWebElement CheckBoxTermsAndConditionsMdlWndwAddNewDocs;
+        //app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']
+        //div[contains(@class, 'column ng-tn')][2]//app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']")]
+        public IWebElement FieldInputFirstRequiredTimeFrame;
 
         #endregion
     }

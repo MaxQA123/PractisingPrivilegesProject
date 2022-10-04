@@ -71,27 +71,5 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage
 
             return this;
         }
-
-        private static IWebElement _element;
-
-        [AllureStep("SelectorRenewalTimeframe")]
-        public static IList<IWebElement> SelectorRenewalTimeframe(string _locationDay)
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            var str = "//div[contains(@class, 'column ng-tn')][2]//app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']";
-            _element = Browser._Driver.FindElement(By.XPath(str));
-            return _element.FindElements(By.XPath($".//td[contains(@class, '{_locationDay}')]"));
-        }
-
-        [AllureStep("SelectRenewalTimeframe")]
-        public MdlWndwAddNewDocuments SelectRenewalTimeframe(int day, string locationDay)
-        {
-            WaitUntil.WaitSomeInterval(500);
-            IList<IWebElement> _day = SelectorRenewalTimeframe(locationDay);
-
-            _day[day].Click();
-
-            return this;
-        }
     }
 }
