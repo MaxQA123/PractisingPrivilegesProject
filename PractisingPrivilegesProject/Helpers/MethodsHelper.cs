@@ -43,7 +43,6 @@ namespace PractisingPrivilegesProject.Helpers
 
     public class KeyBoardActions
     {
-
         [AllureStep("ClickArrowRight")]
         public static void ClickArrowRight()
         {
@@ -67,6 +66,15 @@ namespace PractisingPrivilegesProject.Helpers
         {
             new Actions(Browser._Driver)
                 .SendKeys(Keys.Enter)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClickEscapeButton")]
+        public static void ClickEscapeButton()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.Escape)
                 .Build()
                 .Perform();
         }

@@ -1,0 +1,352 @@
+{
+  "uuid": "9fea796b-17a0-4cd9-bdae-320210059003-tr-0-1015",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewLocationAsSuperAdmin",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewLocationAsSuperAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewLocationAsSuperAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewLocationAsSuperAdmin"
+    }
+  ],
+  "links": [],
+  "name": "AddNewLocationAsSuperAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id = 'mat-select-8-panel']\"}\n  (Session info: chrome=106.0.5249.91)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_o(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 30\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.SelectorNumberPageForLctnPg(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 18\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_o(Int32 numberPageLocationPage, String locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 38\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.SelectNumberPageForLctnPg(Int32 numberPageLocationPage, String locationNumberPage)\r\n   at AdminTests.WebSiteAdminTests.AddNewLocationAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 951"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewLocationAsSuperAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id = 'mat-select-8-panel']\"}\n  (Session info: chrome=106.0.5249.91)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_o(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 30\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.SelectorNumberPageForLctnPg(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 18\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_o(Int32 numberPageLocationPage, String locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 38\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.SelectNumberPageForLctnPg(Int32 numberPageLocationPage, String locationNumberPage)\r\n   at AdminTests.WebSiteAdminTests.AddNewLocationAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 951"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "super.admin@dev.com"
+                }
+              ],
+              "start": 1664880139400,
+              "stop": 1664880140032
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Jupiter1405!"
+                }
+              ],
+              "start": 1664880140032,
+              "stop": 1664880140639
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664880140639,
+              "stop": 1664880141290
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664880141290,
+              "stop": 1664880141933
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664880139399,
+          "stop": 1664880141933
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664880141934,
+          "stop": 1664880145012
+        },
+        {
+          "name": "VerifyNameRoleSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Super Admin"
+            }
+          ],
+          "start": 1664880145013,
+          "stop": 1664880147045
+        },
+        {
+          "name": "ClickButtonLocationSidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664880147046,
+              "stop": 1664880147765
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664880147046,
+          "stop": 1664880147765
+        },
+        {
+          "name": "ClickDropDownSelectorNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664880147766,
+              "stop": 1664880148627
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664880147765,
+          "stop": 1664880148627
+        },
+        {
+          "name": "SelectNumberPageForLctnPg",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id = 'mat-select-8-panel']\"}\n  (Session info: chrome=106.0.5249.91)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_o(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 30\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.SelectorNumberPageForLctnPg(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 18\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_o(Int32 numberPageLocationPage, String locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 38\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectNumberPageForLctnPg_100663342_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectorNumberPageForLctnPg",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@id = 'mat-select-8-panel']\"}\n  (Session info: chrome=106.0.5249.91)",
+                "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_o(String _locationNumberPage) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\SelectorNumberPage\\SelectorNumberActions.cs:line 30\r\n   at PractisingPrivilegesProject.PageObjects.SelectorNumberPage.SelectorNumberPagesForAllPages.__a$_around_SelectorNumberPageForLctnPg_100663341_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": ""
+                }
+              ],
+              "start": 1664880149170,
+              "stop": 1664880152312
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "4"
+            },
+            {
+              "name": "String",
+              "value": ""
+            }
+          ],
+          "start": 1664880148628,
+          "stop": 1664880152317
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a4f3952e1c824d669165dc231d1b7ee3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664880137413,
+      "stop": 1664880153700
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664880137410,
+  "stop": 1664880153711
+}

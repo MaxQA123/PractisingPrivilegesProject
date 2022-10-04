@@ -1,0 +1,508 @@
+{
+  "uuid": "10554ce2-ba6a-4414-91ed-614296737a9b-tr-0-1017",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    }
+  ],
+  "links": [],
+  "name": "AddNewDocWithoutRequiresRenewal",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.InvalidCastException : Unable to cast object of type 'OpenQA.Selenium.WebElement' to type 'OpenQA.Selenium.IJavaScriptExecutor'.",
+    "trace": "   at PractisingPrivilegesProject.Helpers.ButtonJScriptExecutorHelper.ClickOnHiddenElement(IWebElement hiddenElement) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\JScriptExecutorHelper.cs:line 64\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 42\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.CloseJsDropDownMenuSelector()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1055"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewDocWithoutRequiresRenewal",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.InvalidCastException : Unable to cast object of type 'OpenQA.Selenium.WebElement' to type 'OpenQA.Selenium.IJavaScriptExecutor'.",
+        "trace": "   at PractisingPrivilegesProject.Helpers.ButtonJScriptExecutorHelper.ClickOnHiddenElement(IWebElement hiddenElement) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\JScriptExecutorHelper.cs:line 64\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 42\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.CloseJsDropDownMenuSelector()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1055"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1664893398696,
+              "stop": 1664893399340
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1664893399341,
+              "stop": 1664893399916
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893399916,
+              "stop": 1664893400584
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893398694,
+          "stop": 1664893400584
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893402331,
+              "stop": 1664893402964
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "897029"
+            }
+          ],
+          "start": 1664893401161,
+          "stop": 1664893402964
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893402965,
+          "stop": 1664893406061
+        },
+        {
+          "name": "VerifyNameRoleAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Admin Admin"
+            }
+          ],
+          "start": 1664893406062,
+          "stop": 1664893408081
+        },
+        {
+          "name": "ClickButtonDocumentsManagementSidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893408586,
+              "stop": 1664893409265
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893408082,
+          "stop": 1664893409265
+        },
+        {
+          "name": "VerifyTitleDocumentsManagementPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893409266,
+          "stop": 1664893410385
+        },
+        {
+          "name": "ClickTabDocumentsDcmntsMngmntPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893410385,
+              "stop": 1664893411082
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893410385,
+          "stop": 1664893411082
+        },
+        {
+          "name": "ClickTabDocumentsDcmntsMngmntPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893411083,
+              "stop": 1664893412117
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893411083,
+          "stop": 1664893412117
+        },
+        {
+          "name": "EnterFieldInputNameMdlWndwAddNewDocs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElement",
+                  "value": "Element (id = 19915e60-367c-42bb-8395-eaeb9fb76729)"
+                },
+                {
+                  "name": "String",
+                  "value": "Requires Renewal One Two Three"
+                }
+              ],
+              "start": 1664893412232,
+              "stop": 1664893412965
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893412122,
+          "stop": 1664893412965
+        },
+        {
+          "name": "SelectAllFormatFilesMdlWndwAddNewDocs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893412966,
+              "stop": 1664893413733
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893413733,
+              "stop": 1664893414677
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664893414677,
+              "stop": 1664893415391
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893412966,
+          "stop": 1664893415391
+        },
+        {
+          "name": "CloseDropDownMenuSelector",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Unable to cast object of type 'OpenQA.Selenium.WebElement' to type 'OpenQA.Selenium.IJavaScriptExecutor'.",
+            "trace": "   at PractisingPrivilegesProject.Helpers.ButtonJScriptExecutorHelper.ClickOnHiddenElement(IWebElement hiddenElement) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\JScriptExecutorHelper.cs:line 64\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 42\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseJsDropDownMenuSelector_100663413_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664893415392,
+          "stop": 1664893415481
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e376ce581c46495e850fd616c915ed8c-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664893396829,
+      "stop": 1664893416328
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664893396825,
+  "stop": 1664893416338
+}

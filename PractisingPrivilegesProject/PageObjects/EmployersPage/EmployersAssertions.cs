@@ -1,5 +1,6 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Framework;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using System;
 using System.Collections.Generic;
@@ -18,5 +19,26 @@ namespace PractisingPrivilegesProject.PageObjects.EmployersPage
 
             return this;
         }
+
+        [AllureStep("GetNameEmployerMdlWndwAddNewLctnPg")]
+        public string GetNameEmployerMdlWndwAddNewLctnPg()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getNameLocation = Browser._Driver.FindElement(_NameEmployerLctnsPg).Text;
+            string getNameLocationExpected = getNameLocation.ToString();
+
+            return getNameLocationExpected;
+        }
+
+        //[AllureStep("VerifyNewNameLocationMdlWndwAddNewLctnPg")]
+        //public Employers VerifyNewNameLocationMdlWndwAddNewLctnPg(string getNameLocationExpected)
+        //{
+        //    WaitUntil.WaitSomeInterval(2000);
+        //    string getNameLocationActual = Browser._Driver.FindElement(_NameLocationLctnsPg).Text;
+
+        //    Assert.AreEqual(getNameLocationActual, getNameLocationExpected);
+
+        //    return this;
+        //}
     }
 }

@@ -914,7 +914,7 @@ namespace AdminTests
         //Date of publication:
         //Version\Build:
         //The date last publication on which been testing:
-        //Willingness for testing: in progress.
+        //Willingness for testing: Done.
         //This test case is doing checking: The successfully had been added a new location.
         //Comment: 
 
@@ -935,21 +935,127 @@ namespace AdminTests
             Pages.MdlWndwAddNewLocation
                 .EnterNameLocationMdlWndwAddNewLctn();
 
-            string getNameForCompare = Pages.Locations.GetNameLocationMdlWndwAddNewLctnPg();
+            string getNameForCompare = Pages.MdlWndwAddNewLocation.GetNameLocationMdlWndwAddNewLctnPg();
 
             Pages.MdlWndwAddNewLocation
                 .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
-                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.janeClinician, "")
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinicianForLocation.janeClinician, "")
                 .ClickFieldInputNameLocationMdlWndwAddNewLctnPg()
                 .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
-                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.nextWithTopOfListOne, "")
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinicianForLocation.nextWithTopOfListOne, "")
                 .ClickFieldInputNameLocationMdlWndwAddNewLctnPg()
                 .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
-                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.nextWithTopOfListOne, "")
-                .ClickFButtonAddMdlWndwAddNewLctnPg()
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinicianForLocation.nextWithTopOfListOne, "")
+                .ClickButtonAddMdlWndwAddNewLctnPg()
                 .VerifyMessageLocationCreatedMdlWndwAddNewLctnPg();
+            Pages.SelectorNumberPagesForAllPages
+                .ClickDropDownSelectorNumber()
+                .SelectNumberPage(TestDataForDropDownNumberPage.oneHundredItem, "");
             Pages.Locations
                 .VerifyNewNameLocationMdlWndwAddNewLctnPg(getNameForCompare);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AddNewEmployerAsAdmin")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully has been created a new employer.
+        //Comment: 
+
+        public void AddNewEmployerAsAdmin()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.Sidebar
+                .ClickButtonEmployerSidebar();
+            Pages.Employers
+                .VerifyTitleEmployersPg()
+                .ClickButtonAddNewEmployerEmplrsPg();
+            Pages.MdlWndwAddNewEmployer
+                .EnterNameEmployerMdlWndwAddNewEmplr();
+
+            string getNameForCompare = Pages.MdlWndwAddNewEmployer.GetNameEmployerMdlWndwAddNewEmplrPg();
+
+            Pages.MdlWndwAddNewEmployer
+                .ClickDropDownAddClinicianMdlWndwAddNewEmplrPg()
+                .SelectClinicianMdlWndwAddNewEmplr(TestDataForDropDownAddClinicianForEnployer.janeClinician, "")
+                .ClickFieldInputNameEmployerMdlWndwAddNewEmplrPg()
+                .ClickDropDownAddClinicianMdlWndwAddNewEmplrPg()
+                .SelectClinicianMdlWndwAddNewEmplr(TestDataForDropDownAddClinicianForEnployer.janeClinician, "")
+                .ClickFieldInputNameEmployerMdlWndwAddNewEmplrPg()
+                .ClickDropDownAddClinicianMdlWndwAddNewEmplrPg()
+                .SelectClinicianMdlWndwAddNewEmplr(TestDataForDropDownAddClinicianForEnployer.nextWithTopOfListOne, "")
+                .ClickButtonAddMdlWndwAddNewEmplrPg()
+                .VerifyMessageEmployerCreatedMdlWndwAddNewEmplrPg();
+            Pages.Locations
+                .VerifyNewNameLocationMdlWndwAddNewLctnPg(getNameForCompare);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AddNewDocWithoutRequiresRenewal")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The successfully has been created a new dociment without "Requires Renewal".
+        //Comment: 
+
+        public void AddNewDocWithoutRequiresRenewal()
+        {
+            Pages.LogIn
+               .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.Sidebar
+                .ClickButtonDocumentsManagementSidebar();
+            Pages.DocumentsManagement
+                .VerifyTitleDocumentsManagementPg()
+                .ClickTabDocumentsDcmntsMngmntPg()
+                .ClickButtonCreateNewDocumentDcmntsMngmntPg();
+            Pages.MdlWndwAddNewDocuments
+                .EnterFieldInputNameMdlWndwAddNewDocs()
+                .SelectAllFormatFilesMdlWndwAddNewDocs()
+                .ClickCheckBoxRenewalRequiredMdlWndwAddNewDocs();
 
             Thread.Sleep(5000);
         }

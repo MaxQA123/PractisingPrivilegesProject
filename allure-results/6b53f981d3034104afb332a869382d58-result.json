@@ -1,0 +1,234 @@
+{
+  "uuid": "ccffe45c-ffc4-4b9a-b016-ae9634e0084f-tr-0-1016",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewEmployerAsAdmin",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewEmployerAsAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewEmployerAsAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewEmployerAsAdmin"
+    }
+  ],
+  "links": [],
+  "name": "AddNewEmployerAsAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class = 'mat-menu-trigger avatar']//span\"}\n  (Session info: chrome=106.0.5249.91)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.GetNameRoleFromHeader() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderElements.cs:line 20\r\n   at AdminTests.WebSiteAdminTests.AddNewEmployerAsAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 987"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewEmployerAsAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class = 'mat-menu-trigger avatar']//span\"}\n  (Session info: chrome=106.0.5249.91)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.GetNameRoleFromHeader() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderElements.cs:line 20\r\n   at AdminTests.WebSiteAdminTests.AddNewEmployerAsAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 987"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1664883434754,
+              "stop": 1664883435389
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1664883435390,
+              "stop": 1664883435954
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664883435955,
+              "stop": 1664883436656
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664883434752,
+          "stop": 1664883436656
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664883438442,
+              "stop": 1664883439151
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "417166"
+            }
+          ],
+          "start": 1664883437207,
+          "stop": 1664883439151
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class = 'mat-menu-trigger avatar']//span\"}\n  (Session info: chrome=106.0.5249.91)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_GetNameRoleFromHeader_100663426_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664883439152,
+          "stop": 1664883442319
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "4626d70068ea4a6ebec87daa52b4e9cf-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664883432800,
+      "stop": 1664883444615
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664883432799,
+  "stop": 1664883444631
+}

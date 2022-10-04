@@ -13,10 +13,12 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage
 {
     public partial class MdlWndwAddNewLocation
     {
-        [AllureStep("EnterNameLocation")]
+        [AllureStep("EnterNameLocationMdlWndwAddNewLctn")]
         public MdlWndwAddNewLocation EnterNameLocationMdlWndwAddNewLctn()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputNameLocationMdlWndwAddNewLctnPg, Address.City());
+            //InputGeneral.InputFunctionWithClear(FieldInputNameLocationMdlWndwAddNewLctnPg, Address.City());
+
+            InputGeneral.InputFunctionWithClear(FieldInputNameLocationMdlWndwAddNewLctnPg, TestDataLocations.nameLocationFrankfurt);
 
             return this;
         }
@@ -38,7 +40,7 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage
         }
 
         [AllureStep("ClickFButtonAddMdlWndwAddNewLctnPg")]
-        public MdlWndwAddNewLocation ClickFButtonAddMdlWndwAddNewLctnPg()
+        public MdlWndwAddNewLocation ClickButtonAddMdlWndwAddNewLctnPg()
         {
             Button.Click(ButtonAddMdlWndwAddNewLctnPg);
 

@@ -77,6 +77,25 @@ namespace PractisingPrivilegesProject.Helpers
         public const string passwordNewViewerForTestingFrgtPsswrd = "!Qaz12345";
     }
 
+    public class TestDataNameDocumnets
+    {
+        public const string testing = "Test Documents";
+        public const string testWithoutTime = "Test without time";
+        public const string testEight = "Test Eight";
+        public const string testSeven = "Test Seven";
+        public const string testFifteen = "Test Fifteen";
+        public const string newInfoTest = "New Info Test";
+
+        public const string verifyInfoOnly = "Verify Info Only";
+        public const string requiresRenewalOneTwoThree = "Requires Renewal One Two Three";
+        public const string testingTestThreeHundred = "Testing Test Three Hundred";
+        public const string visibleCheckedToViewersRequiresRenewal = "Visible Checked To Viewers RequiresRenewal";
+        public const string withoutRequiresRenewal = "Without Requires Renewal";
+        public const string termsAndConditions = "Terms and conditions";
+
+        public const string termsAndConditionsSecond = "Terms and conditions second";
+    }
+
     public class TestDataEmailDomen
     {
         public const string domenEmailXitroo = "@xitroo.com";

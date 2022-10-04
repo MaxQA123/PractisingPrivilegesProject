@@ -61,7 +61,7 @@ namespace PractisingPrivilegesProject.Helpers
     {
         public static IWebElement ClickOnHiddenElement(IWebElement hiddenElement)
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)Browser._Driver.FindElement(By.XPath("//app-list[@header= 'Specialty']//div[@class = 'actions ng-star-inserted']"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Browser._Driver.FindElement(By.XPath("//input[@placeholder= 'Name']"));
             js.ExecuteScript("arguments[0].click();", hiddenElement);
 
             return hiddenElement;

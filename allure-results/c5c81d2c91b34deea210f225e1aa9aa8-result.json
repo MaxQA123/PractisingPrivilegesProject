@@ -1,0 +1,531 @@
+{
+  "uuid": "f3e9eff2-7053-4a66-aa35-0c84ce561e25-tr-0-1017",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    }
+  ],
+  "links": [],
+  "name": "AddNewDocWithoutRequiresRenewal",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> is not clickable at point (960, 462). Other element would receive the click: <mat-option _ngcontent-aeb-c163=\"\" role=\"option\" class=\"mat-option mat-focus-indicator mat-option-multiple ng-tns-c86-19 ng-star-inserted mat-selected mat-active\" id=\"mat-option-27\" tabindex=\"0\" aria-selected=\"true\" aria-disabled=\"false\" style=\"\">...</mat-option>\n  (Session info: chrome=106.0.5249.91)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 35\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.CloseDropDownMenuSelector()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1055"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewDocWithoutRequiresRenewal",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> is not clickable at point (960, 462). Other element would receive the click: <mat-option _ngcontent-aeb-c163=\"\" role=\"option\" class=\"mat-option mat-focus-indicator mat-option-multiple ng-tns-c86-19 ng-star-inserted mat-selected mat-active\" id=\"mat-option-27\" tabindex=\"0\" aria-selected=\"true\" aria-disabled=\"false\" style=\"\">...</mat-option>\n  (Session info: chrome=106.0.5249.91)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 35\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.CloseDropDownMenuSelector()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1055"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1664892025769,
+              "stop": 1664892026522
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1664892026523,
+              "stop": 1664892027081
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892027082,
+              "stop": 1664892027723
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892025758,
+          "stop": 1664892027723
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892029451,
+              "stop": 1664892030114
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "108388"
+            }
+          ],
+          "start": 1664892028223,
+          "stop": 1664892030114
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892030115,
+          "stop": 1664892033204
+        },
+        {
+          "name": "VerifyNameRoleAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Admin Admin"
+            }
+          ],
+          "start": 1664892033205,
+          "stop": 1664892035241
+        },
+        {
+          "name": "ClickButtonDocumentsManagementSidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892035746,
+              "stop": 1664892036429
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892035242,
+          "stop": 1664892036429
+        },
+        {
+          "name": "VerifyTitleDocumentsManagementPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892036430,
+          "stop": 1664892037520
+        },
+        {
+          "name": "ClickTabDocumentsDcmntsMngmntPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892037521,
+              "stop": 1664892038217
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892037521,
+          "stop": 1664892038217
+        },
+        {
+          "name": "ClickTabDocumentsDcmntsMngmntPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892038218,
+              "stop": 1664892039102
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892038218,
+          "stop": 1664892039102
+        },
+        {
+          "name": "EnterFieldInputNameMdlWndwAddNewDocs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElement",
+                  "value": "Element (id = 9cfcdd2c-7de6-4573-9e84-96531d6675ef)"
+                },
+                {
+                  "name": "String",
+                  "value": "Requires Renewal One Two Three"
+                }
+              ],
+              "start": 1664892039274,
+              "stop": 1664892040066
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892039104,
+          "stop": 1664892040066
+        },
+        {
+          "name": "SelectAllFormatFilesMdlWndwAddNewDocs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892040067,
+              "stop": 1664892040815
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892040815,
+              "stop": 1664892041578
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892041578,
+              "stop": 1664892042296
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892040067,
+          "stop": 1664892042296
+        },
+        {
+          "name": "CloseDropDownMenuSelector",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> is not clickable at point (960, 462). Other element would receive the click: <mat-option _ngcontent-aeb-c163=\"\" role=\"option\" class=\"mat-option mat-focus-indicator mat-option-multiple ng-tns-c86-19 ng-star-inserted mat-selected mat-active\" id=\"mat-option-27\" tabindex=\"0\" aria-selected=\"true\" aria-disabled=\"false\" style=\"\">...</mat-option>\n  (Session info: chrome=106.0.5249.91)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\MdlWndwAddNewDocumentsPage\\MdlWndwAddNewDocumentsActions.cs:line 35\r\n   at PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage.MdlWndwAddNewDocuments.__a$_around_CloseDropDownMenuSelector_100663412_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "element click intercepted: Element <div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div> is not clickable at point (960, 462). Other element would receive the click: <mat-option _ngcontent-aeb-c163=\"\" role=\"option\" class=\"mat-option mat-focus-indicator mat-option-multiple ng-tns-c86-19 ng-star-inserted mat-selected mat-active\" id=\"mat-option-27\" tabindex=\"0\" aria-selected=\"true\" aria-disabled=\"false\" style=\"\">...</mat-option>\n  (Session info: chrome=106.0.5249.91)",
+                "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663492_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1664892044309,
+              "stop": 1664892046001
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1664892042296,
+          "stop": 1664892046002
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "b08ffb13ec3048399f6408ecc6260a5a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1664892023790,
+      "stop": 1664892047367
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1664892023789,
+  "stop": 1664892047376
+}

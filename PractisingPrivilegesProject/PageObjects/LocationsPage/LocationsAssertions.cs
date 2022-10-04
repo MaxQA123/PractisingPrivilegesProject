@@ -20,23 +20,13 @@ namespace PractisingPrivilegesProject.PageObjects.LocationsPage
             return this;
         }
 
-        [AllureStep("GetNameLocationMdlWndwAddNewLctnPg")]
-        public string GetNameLocationMdlWndwAddNewLctnPg()
-        {
-            WaitUntil.WaitSomeInterval(500);
-            string getNameLocation = Browser._Driver.FindElement(_NameLocationLctnsPg).Text;
-            string getNameLocationExpected = getNameLocation.ToString();
-
-            return getNameLocationExpected;
-        }
-
         [AllureStep("VerifyNewNameLocationMdlWndwAddNewLctnPg")]
         public Locations VerifyNewNameLocationMdlWndwAddNewLctnPg(string getNameLocationExpected)
         {
             WaitUntil.WaitSomeInterval(2000);
             string getNameLocationActual = Browser._Driver.FindElement(_NameLocationLctnsPg).Text;
 
-            Assert.AreEqual(getNameLocationActual, getNameLocationExpected);
+            Assert.AreEqual(getNameLocationExpected, getNameLocationActual);
 
             return this;
         }

@@ -22,6 +22,9 @@ using PractisingPrivilegesProject.PageObjects.LocationsPage;
 using PractisingPrivilegesProject.PageObjects.EmployersPage;
 using PractisingPrivilegesProject.PageObjects.DocumentsManagementPage;
 using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage;
+using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewEmployerPage;
+using PractisingPrivilegesProject.PageObjects.SelectorNumberPage;
+using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -52,5 +55,8 @@ namespace PractisingPrivilegesProject.PageObjects
         public static Employers Employers => GetPage<Employers>();
         public static DocumentsManagement DocumentsManagement => GetPage<DocumentsManagement>();
         public static MdlWndwAddNewLocation MdlWndwAddNewLocation => GetPage<MdlWndwAddNewLocation>();
+        public static MdlWndwAddNewEmployer MdlWndwAddNewEmployer => GetPage<MdlWndwAddNewEmployer>();
+        public static MdlWndwAddNewDocuments MdlWndwAddNewDocuments => GetPage<MdlWndwAddNewDocuments>();
+        public static SelectorNumberPagesForAllPages SelectorNumberPagesForAllPages => GetPage<SelectorNumberPagesForAllPages>();
     }
 }

@@ -12,13 +12,23 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage
 {
     public partial class MdlWndwAddNewLocation
     {
-        [AllureStep("VerifyMessageChangePasswordSetPasswordPg")]
+        [AllureStep("VerifyMessageLocationCreatedMdlWndwAddNewLctnPg")]
         public MdlWndwAddNewLocation VerifyMessageLocationCreatedMdlWndwAddNewLctnPg()
         {
             WaitUntil.WaitSomeInterval(500);
             Assert.IsTrue(Successfully.IsVisible(MessageLocationCreatedMdlWndwAddNewLctnPg));
 
             return this;
+        }
+
+        [AllureStep("GetNameLocationMdlWndwAddNewLctnPg")]
+        public string GetNameLocationMdlWndwAddNewLctnPg()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getNameLocation = TestDataLocations.nameLocationFrankfurt;
+            string getNameLocationExpected = getNameLocation.ToString();
+
+            return getNameLocationExpected;
         }
     }
 }
