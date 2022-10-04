@@ -33,4 +33,13 @@ namespace PractisingPrivilegesProject.Helpers
         public const int kpBelfast  = 0;
         public const int seTrust  = 1;
     }
+
+    public class TestDataForDropDownAddClinician
+    {
+        public const int janeClinician = 0;
+        public const int nextWithTopOfListOne = 1;
+        public const int nextWithTopOfListOTwo = 2;
+        public const int nextWithTopOfListThird = 3;
+        public const int nextWithTopOfListFourth = 4;
+    }
 }

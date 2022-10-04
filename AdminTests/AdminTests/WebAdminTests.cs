@@ -909,7 +909,58 @@ namespace AdminTests
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
-        [AllureSubSuite("SuperAdminCreateClinician")]
+        [AllureSubSuite("AddNewLocationAsSuperAdmin")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: in progress.
+        //This test case is doing checking: The successfully had been added a new location.
+        //Comment: 
+
+        public void AddNewLocationAsSuperAdmin()
+        {
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.Sidebar
+                .ClickButtonLocationSidebar();
+            Pages.Locations
+                .VerifyTitleLocationstPg()
+                .ClickButtonAddNewLocationLctnsPg();
+            Pages.MdlWndwAddNewLocation
+                .EnterNameLocationMdlWndwAddNewLctn();
+
+            string getNameForCompare = Pages.Locations.GetNameLocationMdlWndwAddNewLctnPg();
+
+            Pages.MdlWndwAddNewLocation
+                .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.janeClinician, "")
+                .ClickFieldInputNameLocationMdlWndwAddNewLctnPg()
+                .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.nextWithTopOfListOne, "")
+                .ClickFieldInputNameLocationMdlWndwAddNewLctnPg()
+                .ClickDropDownAddClinicianMdlWndwAddNewLctnPg()
+                .SelectClinicianMdlWndwAddNewLctn(TestDataForDropDownAddClinician.nextWithTopOfListOne, "")
+                .ClickFButtonAddMdlWndwAddNewLctnPg()
+                .VerifyMessageLocationCreatedMdlWndwAddNewLctnPg();
+            Pages.Locations
+                .VerifyNewNameLocationMdlWndwAddNewLctnPg(getNameForCompare);
+
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Demo")]
+        [AllureSubSuite("Demo")]
 
         public void Demo()
         {

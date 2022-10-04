@@ -21,6 +21,7 @@ using PractisingPrivilegesProject.PageObjects.SidebarPage;
 using PractisingPrivilegesProject.PageObjects.LocationsPage;
 using PractisingPrivilegesProject.PageObjects.EmployersPage;
 using PractisingPrivilegesProject.PageObjects.DocumentsManagementPage;
+using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -50,5 +51,6 @@ namespace PractisingPrivilegesProject.PageObjects
         public static Locations Locations => GetPage<Locations>();
         public static Employers Employers => GetPage<Employers>();
         public static DocumentsManagement DocumentsManagement => GetPage<DocumentsManagement>();
+        public static MdlWndwAddNewLocation MdlWndwAddNewLocation => GetPage<MdlWndwAddNewLocation>();
     }
 }

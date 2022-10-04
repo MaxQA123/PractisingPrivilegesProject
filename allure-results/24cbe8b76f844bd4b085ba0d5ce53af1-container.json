@@ -1,0 +1,76 @@
+{
+  "uuid": "08ffa9c7-34c1-48de-a00f-a83d30cff85f-tc-0-1000",
+  "name": "AdminTests.WebSiteAdminTests.VerifySidebar",
+  "children": [
+    "4e64c03d-6b4b-4f76-a5e0-55bb2536a6eb-tr-0-1014"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664865854556,
+      "stop": 1664865854556
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664865854556,
+      "stop": 1664865854556
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664865854556,
+      "stop": 1664865854556
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1664865854556,
+      "stop": 1664865854556
+    }
+  ],
+  "links": [],
+  "start": 1664865834832,
+  "stop": 1664865854608
+}
