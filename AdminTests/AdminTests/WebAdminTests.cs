@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using PracticingPrivilegesApiTests.ApiPagesObjects;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
+using PutsboxWrapper;
 
 namespace AdminTests
 {
@@ -1055,11 +1056,20 @@ namespace AdminTests
             Pages.MdlWndwAddNewDocuments
                 .EnterFieldInputNameMdlWndwAddNewDocs()
                 .SelectAllFormatFilesMdlWndwAddNewDocs()
-                .ClickCheckBoxRenewalRequiredMdlWndwAddNewDocs();
+                .ClickCheckBoxRenewalRequiredMdlWndwAddNewDocs()
+                .EnterRenewalTimeFramMdlWndwAddNewDocs()
+                .EnterReminderTimeFramMdlWndwAddNewDocs()
+                .SetEveryHoursReminderFrequency()
+                .UploadDocuments()
+                .VerifyEnterData()
+                .VerifyUploadedFilesRemove()
+                .ClickButtonAddMdlWndwAddNewDocs();
+            Pages.DocumentsManagement
+                .VerifyCreatingNewDocument();
 
             Thread.Sleep(5000);
         }
-
+        
         [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
@@ -1071,30 +1081,49 @@ namespace AdminTests
         public void Demo()
         {
             Pages.LogIn
-                .SigningInAsAdmin();
+                .SigningInAsSuperAdmin();
 
-            var email = TestDataAdmin.emailAdminQatester;
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 
-            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleAdminViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
+
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            //Pages.Header
+            //   .LoggedFromAccountOnHeader();
+            //Pages.SwitchingJScriptExecutorHelper
+            //    .OpenNewTab();
+            //Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            //Pages.EmailXitroo
+            //    .EnterEmail(emailCopy)
+            //    .ClickSearchButton()
+            //    .OpenNewlyLetter()
+            //    .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
-            Pages.Sidebar
-                .ClickButtonLocationSidebar();
-            Pages.Locations
-                .VerifyTitleLocationstPg();
-            Pages.Sidebar
-                .ClickButtonEmployerSidebar();
-            Pages.Employers
-                .VerifyTitleEmployersPg();
-            Pages.Sidebar
-                .ClickButtonDocumentsManagementSidebar();
-            Pages.DocumentsManagement
-                .VerifyTitleDocumentsManagementPg();
-            Pages.Sidebar
-                .ClickButtonUsersManagementSidebar();
-            Pages.UsersManagement
-                .VerifyTitleUsersManagmentPg();
 
             Thread.Sleep(5000);
         }

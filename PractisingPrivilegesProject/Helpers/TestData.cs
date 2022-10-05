@@ -79,7 +79,7 @@ namespace PractisingPrivilegesProject.Helpers
 
     public class TestDataNameDocumnets
     {
-        public const string testing = "Test Documents";
+        public const string testing = "Test Documents 1";
         public const string testWithoutTime = "Test without time";
         public const string testEight = "Test Eight";
         public const string testSeven = "Test Seven";
@@ -96,8 +96,49 @@ namespace PractisingPrivilegesProject.Helpers
         public const string termsAndConditionsSecond = "Terms and conditions second";
     }
 
+    public class TestDataForRenewalTimeframe
+    {
+        public const string hours = "5";
+        public const string days = "1";
+        public const string months = "1";
+        public const string years = "1";
+    }
+
+    public class TestDataForReminderTimeframe
+    {
+        public const string hours = "4";
+        public const string days = "1";
+        public const string months = "1";
+        public const string years = "1";
+    }
+
+    public class TestDataReminderFrequency
+    {
+        public const string hours = "1";
+        public const string days = "1";
+        public const string months = "1";
+    }
+
     public class TestDataEmailDomen
     {
         public const string domenEmailXitroo = "@xitroo.com";
+        public const string PUTS_BOX = "@putsbox.com";
     }
+
+    public class UploadImages
+    {
+        public const string avatarImgSuperAdmin = $"\\UploadImages\\SuperAdminAvatarTiger.jpg";
+        public const string avatarImgAdmin = $"\\UploadImages\\AdminAvatar.jpg";
+        public const string avatarImgClinician = $"\\UploadImages\\ClinicianAvatarIguanna.jpg";
+        public const string avatarImgApprover = $"\\UploadImages\\ApproverAvatarDelphin.jpg";
+        public const string avatarImgViewer = $"\\UploadImages\\ViewerAvatarPopugai.jpg";
+
+        public const string pdfDocumentTestingOne = $"\\UploadImages\\TestingOne.pdf";
+        public const string photoDocumentTestingTwo = $"\\UploadImages\\TestingTwo.jpg";
+        public const string wordDocDocumentTestQA = $"\\UploadImages\\TestQA.doc";
+        public const string wordDocxDocumentTextDocument = $"\\UploadImages\\TextDocument.docx";
+        public const string pngDocumentRobot123 = $"\\UploadImages\\Robot123.png";
+        public const string jpegDocumentDocument444 = $"\\UploadImages\\Document444.jpeg";
+    }
+
 }

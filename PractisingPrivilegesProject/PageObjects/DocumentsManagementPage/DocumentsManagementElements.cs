@@ -29,5 +29,8 @@ namespace PractisingPrivilegesProject.PageObjects.DocumentsManagementPage
         public IWebElement ButtonCreateNewDocumentDcmntsMngmntPg;
 
         #endregion
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'document successfully created')]")]
+        public IWebElement MessageCreateNewDocumentDcmntsMngmntPg;
     }
 }

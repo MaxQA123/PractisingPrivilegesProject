@@ -29,9 +29,9 @@ namespace PractisingPrivilegesProject.Helpers
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementIsVisible(element));
         }
 
-        public static void WaitSomeInterval(int seconds)
+        public static void WaitSomeInterval(int milliSeconds = 2000)
         {
-            Task.Delay(TimeSpan.FromMilliseconds(seconds)).Wait();
+            Task.Delay(TimeSpan.FromMilliseconds(milliSeconds)).Wait();
         }
 
         public static void ElementIsVesible(By element, int seconds = 10)

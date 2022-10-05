@@ -44,12 +44,72 @@ namespace PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'area ng-tns')]//div[contains(@class, 'column ng-tn')][2]//mat-checkbox[@formcontrolname = 'isTermsAndConditions']")]
         public IWebElement CheckBoxTermsAndConditionsMdlWndwAddNewDocs;
 
-        #region RenewalRequiredTimeFrame
+        [FindsBy(How = How.XPath, Using = "//app-upload-from-computer//div[@class = 'computer']//input[contains(@accept, ' , .pdf')]")]
+        public IWebElement LinkUploadFileMdlWndwAddNewDocs;
 
-        //app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']
-        //div[contains(@class, 'column ng-tn')][2]//app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']
-        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//div[@class = 'inputs']//input[@id = 'hours']")]
-        public IWebElement FieldInputFirstRequiredTimeFrame;
+        [FindsBy(How = How.XPath, Using = "//app-form-error//div[@class = 'validation-errors']//div[text() = ' You must enter a value ']")]
+        public IWebElement ErrorMessageYouMustEnterValueMdlWndwAddNewDocs;
+
+        [FindsBy(How = How.XPath, Using = "//ul//div[text() = ' This file invalid ']")]
+        public IWebElement ErrorMessageThisFileInvalidMdlWndwAddNewDocs;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Please remove invalid files ']")]
+        public IWebElement ErrorMessagePleaseRemoveInvalidFilesMdlWndwAddNewDocs;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add']")]
+        public IWebElement ButtonAddMdlWndwAddNewDocs;
+
+        #region RenewalTimeFrame
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//input[@id = 'hours']")]
+        public IWebElement FieldInputHoursRenewalTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//input[@id = 'days']")]
+        public IWebElement FieldInputDaysRenewalTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//input[@id = 'months']")]
+        public IWebElement FieldInputMonthsRenewalTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Renewal Timeframe']//input[@id = 'years']")]
+        public IWebElement FieldInputYearsRenewalTimeFrame;
+
+        #endregion
+
+        #region ReminderTimeframe
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Reminder Timeframe']//input[@id = 'hours']")]
+        public IWebElement FieldInputHoursReminderTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Reminder Timeframe']//input[@id = 'days']")]
+        public IWebElement FieldInputDaysReminderTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Reminder Timeframe']//input[@id = 'months']")]
+        public IWebElement FieldInputMonthsReminderTimeFrame;
+
+        [FindsBy(How = How.XPath, Using = "//app-duration-picker[@label = 'Reminder Timeframe']//input[@id = 'years']")]
+        public IWebElement FieldInputYearsReminderTimeFrame;
+
+        #endregion
+
+        #region ReminderFrequency
+
+        [FindsBy(How = How.XPath, Using = "//mat-button-toggle//button[contains(@id, 'mat-button-toggle')]//span[text() = 'Every Hours']")]
+        public IWebElement ButtonEveryHoursReminderFrequency;
+
+        [FindsBy(How = How.XPath, Using = "//mat-button-toggle//button[contains(@id, 'mat-button-toggle')]//span[text() = 'Every Days']")]
+        public IWebElement ButtonEveryDaysReminderFrequency;
+
+        [FindsBy(How = How.XPath, Using = "//mat-button-toggle//button[contains(@id, 'mat-button-toggle')]//span[text() = 'Every Months']")]
+        public IWebElement ButtonEveryMonthsReminderFrequency;
+
+        [FindsBy(How = How.XPath, Using = "//app-interval-duration-picker//div[@class = 'inputs']//input[@id =  'hours']")]
+        public IWebElement FieldInputEveryHoursReminderFrequency;
+
+        [FindsBy(How = How.XPath, Using = "//app-interval-duration-picker//div[@class = 'inputs']//input[@id =  'days']")]
+        public IWebElement FieldInputEveryDaysReminderFrequency;
+
+        [FindsBy(How = How.XPath, Using = "//app-interval-duration-picker//div[@class = 'inputs']//input[@id =  'months']")]
+        public IWebElement FieldInputEveryMonthsReminderFrequency;
 
         #endregion
     }
