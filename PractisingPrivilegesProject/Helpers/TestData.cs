@@ -16,7 +16,11 @@ namespace PractisingPrivilegesProject.Helpers
         public const string urlConstEmailClinicianFrgtPsswrd = "https://xitroo.com/#hungrydubinsky@xitroo.com";
         public const string urlConstEmailApproverFrgtPssword = "https://xitroo.com/#syeni@xitroo.com";
         public const string urlConstEmailViewerFrgtPssword = "https://xitroo.com/#kbfva@xitroo.com";
+    }
 
+    public class ConnectionDb
+    {
+        public const string GET_CONNECTION_STRING_TO_DB = "Server=tcp:practicingprivileges.database.windows.net,1433;Database=PracticingPrivileges;User Id=practicingprivileges;Password=QxW4xAkP;";
     }
 
     public class TestDataGeneral

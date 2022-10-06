@@ -79,7 +79,7 @@ namespace PractisingPrivilegesProject.Helpers
                 .Perform();
         }
 
-        [AllureStep("ClickEscapeButton")]
+        [AllureStep("ScrollToElement")]
         public static void ScrollToElement(IWebElement element)
         {
             new Actions(Browser._Driver)

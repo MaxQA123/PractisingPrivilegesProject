@@ -12,7 +12,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
         public const string apiHost = "https://practicingprivilegesapi.azurewebsites.net";
     }
 
-    public class TestDataGeneral
+    public class TestDataGeneralApi
     {
         public const string passwordGeneralCurrent = "Qwerty123!";
     }

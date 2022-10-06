@@ -1080,29 +1080,35 @@ namespace AdminTests
 
         public void Demo()
         {
-            Pages.LogIn
-                .SigningInAsSuperAdmin();
+            string test = WebSiteDBHelper.GetUserEmail();
 
-            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            Console.WriteLine(test);
 
-            Pages.Header
-                .VerifyNameRoleSuperAdmin(nameRoleCompare);
-            Pages.UsersManagement
-                .ClickButtonCreateNewUserUsersMngmntPg();
-            Pages.ProfileDetails
-                .OpenDropDownMenuSelectorRolesPrflPg()
-                .SelectRoleAdminViaDropDown()
-                .SelectRoleViewerViaDropDown()
-                .EnterFirstLastNameEmailPhonePrflPg();
 
-            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
-            string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
+            //Pages.LogIn
+            //    .SigningInAsSuperAdmin();
 
-            Pages.ProfileDetails
-                .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+            //string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            //Pages.Header
+            //    .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            //Pages.UsersManagement
+            //    .ClickButtonCreateNewUserUsersMngmntPg();
+            //Pages.ProfileDetails
+            //    .OpenDropDownMenuSelectorRolesPrflPg()
+            //    .SelectRoleAdminViaDropDown()
+            //    .SelectRoleViewerViaDropDown()
+            //    .EnterFirstLastNameEmailPhonePrflPg();
+
+            //string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            //string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
+
+            //Pages.ProfileDetails
+            //    .ClickButtonCreatePrflPg()
+            //    .VerifyEnterData()
+            //    .VerifySelectData();
             //Pages.Header
             //   .LoggedFromAccountOnHeader();
             //Pages.SwitchingJScriptExecutorHelper
@@ -1113,19 +1119,19 @@ namespace AdminTests
             //    .ClickSearchButton()
             //    .OpenNewlyLetter()
             //    .ClickButtonConfirmEmailFromEmail();
-            Pages.SetPassword
-                .EnterPasswordRepeatPassword()
-                .ClickButtonSetPassworSetPassworddPg()
-                .VerifyMessageChangePasswordSetPasswordPg();
-            Pages.LogIn
-                .SigningInNewUserAfterCreating(emailCopy);
+            //Pages.SetPassword
+            //    .EnterPasswordRepeatPassword()
+            //    .ClickButtonSetPassworSetPassworddPg()
+            //    .VerifyMessageChangePasswordSetPasswordPg();
+            //Pages.LogIn
+            //    .SigningInNewUserAfterCreating(emailCopy);
 
-            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+            //var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
-            Pages.VerificationCode
-                .ConfirmVerificationCode(responseLogIn.code);
+            //Pages.VerificationCode
+            //    .ConfirmVerificationCode(responseLogIn.code);
 
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
         }
     }
 }
