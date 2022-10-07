@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
+using PractisingPrivilegesProject.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using NUnit.Framework.Interfaces;
+using OpenQA.Selenium;
 
 namespace PractisingPrivileges.Helpers
 {
@@ -18,14 +18,24 @@ namespace PractisingPrivileges.Helpers
         [OneTimeTearDown]
         public void DoAfterAllTheTests()
         {
-
+            Browser.Quit();
         }
 
         [TearDown]
 
         public void DoAfterEach()
         {
-            Browser.Quit();
+
+            if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
+            {
+                ScreenShotHelper.MakeScreenShot();
+                Browser.Close();
+            }
+            else if (Browser._Driver !=null)
+            {
+                Browser.Close();
+            }
+            
         }
 
     }

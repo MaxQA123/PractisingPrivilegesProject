@@ -68,7 +68,37 @@ namespace PractisingPrivilegesProject.Helpers
             }
             catch (NoSuchElementException) { }
             catch (StaleElementReferenceException) { }
+        }
 
+        public static void CustomElementIsVisibleErrors(IWebElement element, int milliSeconds = 500)
+        {
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromMilliseconds(milliSeconds));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(100);
+            try
+            {
+                wait.Until(e =>
+                {
+                    try
+                    {
+                        if (element.Enabled == true)
+                        {
+                            return true;
+                        }
+                        return false;
+                    }
+                    catch (NoSuchElementException)
+                    {
+                        return false;
+                    }
+                    catch (StaleElementReferenceException)
+                    {
+                        return false;
+                    }
+
+                });
+            }
+            catch (NoSuchElementException) { }
+            catch (StaleElementReferenceException) { }
         }
 
         public static void CustomElementIsInVisible(IWebElement element, int seconds = 10)

@@ -1,0 +1,198 @@
+{
+  "uuid": "43e35fdc-bed3-456c-929f-fd507a5b07d6-tr-0-1001",
+  "historyId": "AdminTests.WebSiteAdminTests.LogInAsSuperAdmin",
+  "fullName": "AdminTests.WebSiteAdminTests.LogInAsSuperAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsSuperAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsSuperAdmin"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsSuperAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 0.5 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.CustomElementIsVisibleErrors(IWebElement element, Int32 milliSeconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 79\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 15\r\n   at AdminTests.WebSiteAdminTests.LogInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 42"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsSuperAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 0.5 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.CustomElementIsVisibleErrors(IWebElement element, Int32 milliSeconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 79\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 15\r\n   at AdminTests.WebSiteAdminTests.LogInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 42"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsSuperAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 0.5 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.CustomElementIsVisibleErrors(IWebElement element, Int32 milliSeconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 79\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "super.admin@dev.com"
+                }
+              ],
+              "start": 1665148664410,
+              "stop": 1665148664976
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Jupiter1405!"
+                }
+              ],
+              "start": 1665148664976,
+              "stop": 1665148665478
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665148665478,
+              "stop": 1665148666090
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665148666091,
+              "stop": 1665148666701
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665148664407,
+          "stop": 1665148669803
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d96ae36ef29149feb6d81f8ce7c90e76-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665148662922,
+      "stop": 1665148670502
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665148662921,
+  "stop": 1665148670509
+}

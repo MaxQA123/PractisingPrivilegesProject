@@ -1,11 +1,13 @@
 ﻿using OpenQA.Selenium;
-using PractisingPrivileges.Helpers;
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Imaging;
+using System.Drawing;
+using PractisingPrivileges.Helpers;
 
 namespace PractisingPrivilegesProject.Helpers
 {
@@ -19,6 +21,7 @@ namespace PractisingPrivilegesProject.Helpers
             string timestampName = DateTime.UtcNow.ToString("dd-MMMM-yyyy' 'HH-mm-ss");
             string path = Browser.RootPath() + "ErrorImages\\" + timestampPath + "\\";
             string name = path + "Exception-" + timestampName + ".jpeg";
+            
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -27,5 +30,6 @@ namespace PractisingPrivilegesProject.Helpers
             WaitUntil.WaitSomeInterval(2000);
             return name;
         }
+
     }
 }

@@ -1,0 +1,215 @@
+{
+  "uuid": "b7be5361-8bf6-4917-b1a2-3f7ed8794f79-tr-0-1001",
+  "historyId": "AdminTests.WebSiteAdminTests.LogInAsSuperAdmin",
+  "fullName": "AdminTests.WebSiteAdminTests.LogInAsSuperAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsSuperAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsSuperAdmin"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsSuperAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 25\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.VerifySuccessLogIn()\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 15\r\n   at AdminTests.WebSiteAdminTests.LogInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 42\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsSuperAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 25\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.VerifySuccessLogIn()\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 15\r\n   at AdminTests.WebSiteAdminTests.LogInAsSuperAdmin() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 42\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsSuperAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 25\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.VerifySuccessLogIn()\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 21\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsSuperAdmin_100663430_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1665148088039,
+              "stop": 1665148088605
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Jupiter1405!"
+                }
+              ],
+              "start": 1665148088606,
+              "stop": 1665148089070
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665148089070,
+              "stop": 1665148089700
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665148089700,
+              "stop": 1665148090307
+            },
+            {
+              "name": "VerifySuccessLogIn",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "  Expected: True\r\n  But was:  False\r\n",
+                "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 25\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_VerifySuccessLogIn_100663439_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665148090796,
+              "stop": 1665148091928
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665148088037,
+          "stop": 1665148091928
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "51a0713d5e2d41c884747a1a8663e2ca-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665148086565,
+      "stop": 1665148092633
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665148086563,
+  "stop": 1665148092641
+}

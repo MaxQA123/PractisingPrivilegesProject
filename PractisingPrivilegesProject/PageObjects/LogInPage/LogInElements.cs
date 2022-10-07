@@ -24,5 +24,11 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/auth/forgot-password']")]
         public IWebElement LinkForgotPasswordLogInPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[@class = 'error-message ng-star-inserted']")]
+        public IWebElement MessageYouMustEnterValueLogInPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'Invalid login attempt.')]")]
+        public IWebElement MessageInvaldLoginAttempLogInPg;
     }
 }

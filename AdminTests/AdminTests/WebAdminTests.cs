@@ -1080,58 +1080,52 @@ namespace AdminTests
 
         public void Demo()
         {
-            string test = WebSiteDBHelper.GetUserEmail();
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
 
-            Console.WriteLine(test);
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleAdminViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
 
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
-            //Pages.LogIn
-            //    .SigningInAsSuperAdmin();
+            string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
 
-            //string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnterData()
+                .VerifySelectData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
 
-            //Pages.Header
-            //    .VerifyNameRoleSuperAdmin(nameRoleCompare);
-            //Pages.UsersManagement
-            //    .ClickButtonCreateNewUserUsersMngmntPg();
-            //Pages.ProfileDetails
-            //    .OpenDropDownMenuSelectorRolesPrflPg()
-            //    .SelectRoleAdminViaDropDown()
-            //    .SelectRoleViewerViaDropDown()
-            //    .EnterFirstLastNameEmailPhonePrflPg();
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
-            //string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
 
-            //string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
-
-            //Pages.ProfileDetails
-            //    .ClickButtonCreatePrflPg()
-            //    .VerifyEnterData()
-            //    .VerifySelectData();
-            //Pages.Header
-            //   .LoggedFromAccountOnHeader();
-            //Pages.SwitchingJScriptExecutorHelper
-            //    .OpenNewTab();
-            //Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
-            //Pages.EmailXitroo
-            //    .EnterEmail(emailCopy)
-            //    .ClickSearchButton()
-            //    .OpenNewlyLetter()
-            //    .ClickButtonConfirmEmailFromEmail();
-            //Pages.SetPassword
-            //    .EnterPasswordRepeatPassword()
-            //    .ClickButtonSetPassworSetPassworddPg()
-            //    .VerifyMessageChangePasswordSetPasswordPg();
-            //Pages.LogIn
-            //    .SigningInNewUserAfterCreating(emailCopy);
-
-            //var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
-
-            //Pages.VerificationCode
-            //    .ConfirmVerificationCode(responseLogIn.code);
-
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
         }
     }
 }
