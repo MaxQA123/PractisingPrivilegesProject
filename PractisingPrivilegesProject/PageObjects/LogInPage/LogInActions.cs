@@ -13,12 +13,11 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         [AllureStep("SigningInAsSuperAdmin")]
         public LogIn SigningInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminQatester);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
             Button.Click(IconShowPasswordLogInPg);
             Button.Click(ButtonSignInLogInPg);
             VerifySuccessLogIn();
-            VerifyEnteredDataEmailPassword();
             
             return this;
         }

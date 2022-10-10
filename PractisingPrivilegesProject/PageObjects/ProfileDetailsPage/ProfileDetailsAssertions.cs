@@ -11,23 +11,14 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 {
     public partial class ProfileDetails
     {
-        [AllureStep("VerifyEnterData")]
-        public ProfileDetails VerifyEnterData()
+        [AllureStep("VerifyEnteredDataSelectedData")]
+        public void VerifyEnteredDataSelectedData()
         {
-            WaitUntil.WaitSomeInterval(500);
-            Assert.IsTrue(Errors.IsInvisible(ErrorMessageYouMustEnterValuePrflPg));
-
-            return this;
-        }
-
-        [AllureStep("VerifySelectData")]
-        public ProfileDetails VerifySelectData()
-        {
-            WaitUntil.WaitSomeInterval(500);
-            Assert.IsTrue(Errors.IsInvisible(ErrorMessagePleaseChooseSpecialtyLocationPrflPg));
-            WaitUntil.WaitSomeInterval(3000);
-
-            return this;
+            Assert.Multiple(() =>
+            {
+                Assert.IsTrue(Errors.IsInvisible(ErrorMessageYouMustEnterValuePrflPg));
+                Assert.IsTrue(Errors.IsInvisible(ErrorMessagePleaseChooseSpecialtyLocationPrflPg));
+            });
         }
 
         [AllureStep("VerifyUserSuccessfullyCreatedPrflPg")]

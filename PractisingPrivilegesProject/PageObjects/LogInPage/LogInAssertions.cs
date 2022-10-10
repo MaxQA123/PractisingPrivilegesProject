@@ -11,20 +11,14 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 {
     public partial class LogIn
     {
-        [AllureStep("VerifyEnteredDataEmailPassword")]
-        public LogIn VerifyEnteredDataEmailPassword()
-        {
-            Assert.IsTrue(Errors.IsInvisible(MessageYouMustEnterValueLogInPg));
-
-            return this;
-        }
-
         [AllureStep("VerifySuccessLogIn")]
-        public LogIn VerifySuccessLogIn()
+        public void VerifySuccessLogIn()
         {
-            Assert.IsTrue(Errors.IsInvisible(MessageInvaldLoginAttempLogInPg));
-
-            return this;
+            Assert.Multiple(() =>
+            {
+                Assert.IsTrue(Errors.IsInvisible(MessageYouMustEnterValueLogInPg));
+                Assert.IsTrue(Errors.IsInvisible(MessageInvaldLoginAttempLogInPg));
+            });
         }
     }
 }

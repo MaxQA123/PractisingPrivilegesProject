@@ -141,8 +141,7 @@ namespace AdminTests
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
                 .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -212,8 +211,7 @@ namespace AdminTests
             Pages.ProfileDetails
                 .EnterPersonalIdentificationNumberPrflPg()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
                 //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
@@ -276,8 +274,7 @@ namespace AdminTests
 
             Pages.ProfileDetails
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -343,8 +340,7 @@ namespace AdminTests
 
             Pages.ProfileDetails
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
@@ -433,8 +429,7 @@ namespace AdminTests
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
                 .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -503,30 +498,29 @@ namespace AdminTests
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
-                .EnterPersonalIdentificationNumberPrflPg()
-                .SelectItemProfDropDownMenuTitlePrflPg()
-                .SetGmcNumberPrflPg()
-                .SetImcNumberPrflPg()
-                .ClickButtonSpecialtyPrflPg();
-            Pages.MdlWndwSelectSpecialties
-                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
-                .ClickButtonAddMdlWndwSpecialtiesLocations();
-            Pages.ProfileDetails
-                .ClickButtonLocationPrflPg();
-            Pages.MdlWndwSelectSpecialties
-                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
-                .ClickButtonAddMdlWndwSpecialtiesLocations();
-            Pages.ProfileDetails
-                .ClickDropDownContactPrflPg()
-                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
-                .SelectConsultingTypePrivatePrflPg()
-                .ScrollToButtonCreatePrflPg()
-                .ClickDropDownCurrentEmployerPrflPg()
-                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
-                .EnterDataJobTitleRestriction()
+            //    .EnterPersonalIdentificationNumberPrflPg()
+            //    .SelectItemProfDropDownMenuTitlePrflPg()
+            //    .SetGmcNumberPrflPg()
+            //    .SetImcNumberPrflPg()
+            //    .ClickButtonSpecialtyPrflPg();
+            //Pages.MdlWndwSelectSpecialties
+            //    .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+            //    .ClickButtonAddMdlWndwSpecialtiesLocations();
+            //Pages.ProfileDetails
+            //    .ClickButtonLocationPrflPg();
+            //Pages.MdlWndwSelectSpecialties
+            //    .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+            //    .ClickButtonAddMdlWndwSpecialtiesLocations();
+            //Pages.ProfileDetails
+            //    .ClickDropDownContactPrflPg()
+            //    .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+            //    .SelectConsultingTypePrivatePrflPg()
+            //    .ScrollToButtonCreatePrflPg()
+            //    .ClickDropDownCurrentEmployerPrflPg()
+            //    .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+            //    .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
@@ -612,8 +606,7 @@ namespace AdminTests
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
                 .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -683,8 +676,7 @@ namespace AdminTests
             Pages.ProfileDetails
                 .EnterPersonalIdentificationNumberPrflPg()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
@@ -769,8 +761,7 @@ namespace AdminTests
                 .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
                 .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
+                .VerifyEnteredDataSelectedData();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -1081,49 +1072,12 @@ namespace AdminTests
         public void Demo()
         {
             Pages.LogIn
-                .SigningInAsSuperAdmin();
+            .SigningInAsSuperAdmin();
 
             string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 
             Pages.Header
                 .VerifyNameRoleSuperAdmin(nameRoleCompare);
-            Pages.UsersManagement
-                .ClickButtonCreateNewUserUsersMngmntPg();
-            Pages.ProfileDetails
-                .OpenDropDownMenuSelectorRolesPrflPg()
-                .SelectRoleAdminViaDropDown()
-                .SelectRoleViewerViaDropDown()
-                .EnterFirstLastNameEmailPhonePrflPg();
-
-            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
-
-            string link = Putsbox.GetLinkFromEmailWithValue(emailCopy, "Complete Registration");
-
-            Pages.ProfileDetails
-                .ClickButtonCreatePrflPg()
-                .VerifyEnterData()
-                .VerifySelectData();
-            Pages.Header
-               .LoggedFromAccountOnHeader();
-            Pages.SwitchingJScriptExecutorHelper
-                .OpenNewTab();
-            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
-            Pages.EmailXitroo
-                .EnterEmail(emailCopy)
-                .ClickSearchButton()
-                .OpenNewlyLetter()
-                .ClickButtonConfirmEmailFromEmail();
-            Pages.SetPassword
-                .EnterPasswordRepeatPassword()
-                .ClickButtonSetPassworSetPassworddPg()
-                .VerifyMessageChangePasswordSetPasswordPg();
-            Pages.LogIn
-                .SigningInNewUserAfterCreating(emailCopy);
-
-            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
-
-            Pages.VerificationCode
-                .ConfirmVerificationCode(responseLogIn.code);
 
             Thread.Sleep(5000);
         }

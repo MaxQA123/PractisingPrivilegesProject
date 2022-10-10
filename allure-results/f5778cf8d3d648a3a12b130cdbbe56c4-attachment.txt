@@ -1,0 +1,2 @@
+You must enter a value
+Please choose Specialty

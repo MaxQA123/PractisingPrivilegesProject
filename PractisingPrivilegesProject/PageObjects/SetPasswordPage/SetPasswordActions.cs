@@ -18,9 +18,9 @@ namespace PractisingPrivilegesProject.PageObjects.SetPasswordPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[2]);
             WaitUntil.WaitSomeInterval(500);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordSetPasswordPg, TestDataGeneral.generalNewPassword);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordSetPasswordPg, TestDataGeneral.generalPassword);
             Button.Click(IconShowPasswordSetPasswordPg);
-            InputGeneral.InputFunctionWithClear(FieldInputIRepeatPassworSetPassworddPg, TestDataGeneral.generalNewPassword);
+            InputGeneral.InputFunctionWithClear(FieldInputIRepeatPassworSetPassworddPg, TestDataGeneral.generalPassword);
             Button.Click(IconShowRepeatPasswordSetPasswordPg);
 
             return this;
