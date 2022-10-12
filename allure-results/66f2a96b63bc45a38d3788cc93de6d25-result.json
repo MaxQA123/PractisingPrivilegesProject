@@ -1,0 +1,619 @@
+{
+  "uuid": "134fe117-3d7c-46e7-868f-3e2403a69814-tr-0-1018",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewRole",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewRole",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewRole"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewRole"
+    }
+  ],
+  "links": [],
+  "name": "AddNewRole",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 18 but was 12. Strings differ at index 12.\r\n  Expected: \"Role testing\\r\\nedit\"\r\n  But was:  \"Role testing\"\r\n  -----------------------^\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementAssertions.cs:line 44\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.VerifyDisplyingNameRoleOnPage() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementActions.cs:line 16\r\n   at AdminTests.WebSiteAdminTests.AddNewRole() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1108\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewRole",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 18 but was 12. Strings differ at index 12.\r\n  Expected: \"Role testing\\r\\nedit\"\r\n  But was:  \"Role testing\"\r\n  -----------------------^\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementAssertions.cs:line 44\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.VerifyDisplyingNameRoleOnPage() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementActions.cs:line 16\r\n   at AdminTests.WebSiteAdminTests.AddNewRole() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1108\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1665586817164,
+              "stop": 1665586817793
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665586817793,
+              "stop": 1665586818288
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586818289,
+              "stop": 1665586818946
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586817163,
+          "stop": 1665586818946
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586820649,
+              "stop": 1665586821306
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "028451"
+            }
+          ],
+          "start": 1665586819491,
+          "stop": 1665586821306
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586821307,
+          "stop": 1665586824376
+        },
+        {
+          "name": "VerifyNameRoleAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Admin Admin"
+            }
+          ],
+          "start": 1665586824377,
+          "stop": 1665586826392
+        },
+        {
+          "name": "ClickButtonDocumentsManagementSidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586826903,
+              "stop": 1665586827527
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586826393,
+          "stop": 1665586827527
+        },
+        {
+          "name": "VerifyTitleDocumentsManagementPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586827529,
+          "stop": 1665586828611
+        },
+        {
+          "name": "ClickButtonCreateNewRoleDcmntsMngmntPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586828611,
+              "stop": 1665586829265
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586828611,
+          "stop": 1665586829265
+        },
+        {
+          "name": "EnterNameRoleForDoc",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElement",
+                  "value": "Element (id = ffedbaca-6670-4ce0-99ad-f82a2bc3b64b)"
+                },
+                {
+                  "name": "String",
+                  "value": "Role testing"
+                }
+              ],
+              "start": 1665586829307,
+              "stop": 1665586829814
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586829268,
+          "stop": 1665586829815
+        },
+        {
+          "name": "ClickDropDownSelectorDocsMdlWndwAddNewRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586829818,
+              "stop": 1665586830465
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586829817,
+          "stop": 1665586830465
+        },
+        {
+          "name": "SelectDocsMdlWndwAddNewRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectorForDocsMdlWndwAddNewRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": ""
+                }
+              ],
+              "start": 1665586830993,
+              "stop": 1665586832041
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "0"
+            },
+            {
+              "name": "String",
+              "value": ""
+            }
+          ],
+          "start": 1665586830468,
+          "stop": 1665586832116
+        },
+        {
+          "name": "SelectDocsMdlWndwAddNewRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickArrowDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665586832118,
+              "stop": 1665586832148
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665586832150,
+              "stop": 1665586832163
+            },
+            {
+              "name": "ClickArrowDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665586832163,
+              "stop": 1665586832174
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665586832174,
+              "stop": 1665586832193
+            },
+            {
+              "name": "ClickEscapeButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1665586832193,
+              "stop": 1665586832210
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586832117,
+          "stop": 1665586832210
+        },
+        {
+          "name": "ClickButtonCreateMdlWndwAddNewDocs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665586832211,
+              "stop": 1665586832863
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586832211,
+          "stop": 1665586832863
+        },
+        {
+          "name": "VerifyCreatingNewRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586832864,
+          "stop": 1665586833974
+        },
+        {
+          "name": "VerifyDisplyingNameRoleOnPage",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 18 but was 12. Strings differ at index 12.\r\n  Expected: \"Role testing\\r\\nedit\"\r\n  But was:  \"Role testing\"\r\n  -----------------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementAssertions.cs:line 44\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_VerifyDisplyingNameRoleOnPage_100663504_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665586833975,
+          "stop": 1665586834194
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6c8878b6d5d940b083ca7ec87b444d56-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665586815632,
+      "stop": 1665586836968
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665586815631,
+  "stop": 1665586836987
+}

@@ -25,6 +25,7 @@ using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewLocationPage;
 using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewEmployerPage;
 using PractisingPrivilegesProject.PageObjects.SelectorNumberPage;
 using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage;
+using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewRolePage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {
@@ -57,6 +58,7 @@ namespace PractisingPrivilegesProject.PageObjects
         public static MdlWndwAddNewLocation MdlWndwAddNewLocation => GetPage<MdlWndwAddNewLocation>();
         public static MdlWndwAddNewEmployer MdlWndwAddNewEmployer => GetPage<MdlWndwAddNewEmployer>();
         public static MdlWndwAddNewDocuments MdlWndwAddNewDocuments => GetPage<MdlWndwAddNewDocuments>();
+        public static MdlWndwAddNewRole MdlWndwAddNewRole => GetPage<MdlWndwAddNewRole>();
         public static SelectorNumberPagesForAllPages SelectorNumberPagesForAllPages => GetPage<SelectorNumberPagesForAllPages>();
     }
 }

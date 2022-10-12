@@ -84,6 +84,7 @@ namespace PractisingPrivilegesProject.Helpers
     public class TestDataNameDocumnets
     {
         public const string testing = "Test Documents 1";
+
         public const string testWithoutTime = "Test without time";
         public const string testEight = "Test Eight";
         public const string testSeven = "Test Seven";
@@ -98,6 +99,14 @@ namespace PractisingPrivilegesProject.Helpers
         public const string termsAndConditions = "Terms and conditions";
 
         public const string termsAndConditionsSecond = "Terms and conditions second";
+    }
+
+    public class TestDataNameRoles
+    {
+        public const string ROLE_TESTING = "Role testing";
+
+        public const string ROLE_TESTING_WITHOUT_TIME_INFO_ONLY = "Role Testing 8 7 15 Without time Info Only";
+        public const string ROLE_MULTI_DOCUMENTS = "Role Multi Documents";
     }
 
     public class TestDataForRenewalTimeframe

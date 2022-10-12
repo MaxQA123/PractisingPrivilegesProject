@@ -18,7 +18,23 @@ namespace PractisingPrivilegesProject.PageObjects.DocumentsManagementPage
             return this;
         }
 
-        [AllureStep("ClickTabDocumentsDcmntsMngmntPg")]
+        [AllureStep("ClickTabRolesDcmntsMngmntPg")]
+        public DocumentsManagement ClickTabRolesDcmntsMngmntPg()
+        {
+            Button.Click(TabRolesDcmntsMngmntPg);
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonCreateNewRoleDcmntsMngmntPg")]
+        public DocumentsManagement ClickButtonCreateNewRoleDcmntsMngmntPg()
+        {
+            Button.Click(ButtonCreateNewRoleDcmntsMngmntPg);
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonCreateNewDocumentDcmntsMngmntPg")]
         public DocumentsManagement ClickButtonCreateNewDocumentDcmntsMngmntPg()
         {
             Button.Click(ButtonCreateNewDocumentDcmntsMngmntPg);

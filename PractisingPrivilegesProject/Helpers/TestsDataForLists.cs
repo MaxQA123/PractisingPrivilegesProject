@@ -78,4 +78,15 @@ namespace PractisingPrivilegesProject.Helpers
         public const int fiftyItem = 3;
         public const int oneHundredItem = 4;
     }
+
+    public class TestDataForDropDownAddDocuments
+    {
+        public const int TESTING_MANUAL = 0;
+        public const int NEXT_WITH_TOP_OF_LIST_ONE = 1;
+        public const int NEXT_WITH_TOP_OF_LIST_TWO = 2;
+        public const int NEXT_WITH_TOP_OF_LIST_THIRD = 3;
+        public const int NEXT_WITH_TOP_OF_LIST_FOURTH = 4;
+        public const int NEXT_WITH_TOP_OF_LIST_FIVETH = 5;
+        public const int NEXT_WITH_TOP_OF_LIST_SIXTH = 6;
+    }
 }

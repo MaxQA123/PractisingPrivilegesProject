@@ -1060,7 +1060,58 @@ namespace AdminTests
 
             Thread.Sleep(5000);
         }
-        
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Admin")]
+        [AllureSubSuite("AddNewRole")]
+
+        //Date of publication:
+        //Version\Build:
+        //The date last publication on which been testing:
+        //Willingness for testing: in progress.
+        //This test case is doing checking: The successfully has been created a new role.
+        //Comment: 
+
+        public void AddNewRole()
+        {
+            Pages.LogIn
+                .SigningInAsAdmin();
+
+            var email = TestDataAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+
+            Pages.Header
+                .VerifyNameRoleAdmin(nameRoleCompare);
+            Pages.Sidebar
+                .ClickButtonDocumentsManagementSidebar();
+            Pages.DocumentsManagement
+                .VerifyTitleDocumentsManagementPg()
+                .ClickButtonCreateNewRoleDcmntsMngmntPg();
+            Pages.MdlWndwAddNewRole
+                .EnterNameRoleForDoc();
+
+            Pages.MdlWndwAddNewRole
+                .ClickDropDownSelectorDocsMdlWndwAddNewRole()
+                .SelectDocsMdlWndwAddNewRole(TestDataForDropDownAddDocuments.TESTING_MANUAL, "")
+                .SelectDocsMdlWndwAddNewRole()
+                .ClickButtonCreateMdlWndwAddNewDocs();
+            Pages.DocumentsManagement
+                .VerifyCreatingNewRole()
+                .VerifyDisplyingNameRoleOnPage();
+
+            WaitUntil.WaitSomeInterval(5000);
+        }
+
         [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
