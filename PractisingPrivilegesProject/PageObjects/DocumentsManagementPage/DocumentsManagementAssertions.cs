@@ -20,14 +20,6 @@ namespace PractisingPrivilegesProject.PageObjects.DocumentsManagementPage
             return this;
         }
 
-        //[AllureStep("VerifyCreatingNewDocument")]
-        //public DocumentsManagement VerifyCreatingNewDocument()
-        //{
-        //    Assert.IsTrue(Successfully.IsVisible(MessageCreateNewDocumentDcmntsMngmntPg));
-
-        //    return this;
-        //}
-
         [AllureStep("VerifyCreatingNewDocument")]
         public void VerifyCreatingNewDocument()
         {

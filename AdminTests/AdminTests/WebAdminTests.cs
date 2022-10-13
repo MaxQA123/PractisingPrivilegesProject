@@ -27,6 +27,7 @@ namespace AdminTests
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
+        [Retry(2)]
         [AllureSuite("Admin")]
         [AllureSubSuite("LogInAsSuperAdmin")]
 
@@ -47,7 +48,7 @@ namespace AdminTests
             Pages.Header
                 .VerifyNameRoleSuperAdmin(nameRoleCompare);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(1000);
         }
 
         [Test]
@@ -498,27 +499,27 @@ namespace AdminTests
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
-            //    .EnterPersonalIdentificationNumberPrflPg()
-            //    .SelectItemProfDropDownMenuTitlePrflPg()
-            //    .SetGmcNumberPrflPg()
-            //    .SetImcNumberPrflPg()
-            //    .ClickButtonSpecialtyPrflPg();
-            //Pages.MdlWndwSelectSpecialties
-            //    .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
-            //    .ClickButtonAddMdlWndwSpecialtiesLocations();
-            //Pages.ProfileDetails
-            //    .ClickButtonLocationPrflPg();
-            //Pages.MdlWndwSelectSpecialties
-            //    .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
-            //    .ClickButtonAddMdlWndwSpecialtiesLocations();
-            //Pages.ProfileDetails
-            //    .ClickDropDownContactPrflPg()
-            //    .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
-            //    .SelectConsultingTypePrivatePrflPg()
-            //    .ScrollToButtonCreatePrflPg()
-            //    .ClickDropDownCurrentEmployerPrflPg()
-            //    .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
-            //    .EnterDataJobTitleRestriction()
+                .EnterPersonalIdentificationNumberPrflPg()
+                .SelectItemProfDropDownMenuTitlePrflPg()
+                .SetGmcNumberPrflPg()
+                .SetImcNumberPrflPg()
+                .ClickButtonSpecialtyPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectSpecialties.urology, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickButtonLocationPrflPg();
+            Pages.MdlWndwSelectSpecialties
+                .SelectItemSpecialtiesMdlWndw(TestsDataForMdlWndwSelectLocations.kphBelfast, "")
+                .ClickButtonAddMdlWndwSpecialtiesLocations();
+            Pages.ProfileDetails
+                .ClickDropDownContactPrflPg()
+                .SelectAdminContactDropDownPrflP(TestsDataForDropDownContactPrflPg.adminAdmin, "")
+                .SelectConsultingTypePrivatePrflPg()
+                .ScrollToButtonCreatePrflPg()
+                .ClickDropDownCurrentEmployerPrflPg()
+                .SelectCurrentEmployerDropDownPrflP(TestsDataForDropDownCurrentEmployerPrflPg.seTrust, "")
+                .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
                 .VerifyEnteredDataSelectedData();
             //.VerifyUserSuccessfullyCreatedPrflPg();

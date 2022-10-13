@@ -1,4 +1,5 @@
 ﻿using NUnit.Allure.Attributes;
+using NUnit.Framework;
 using PractisingPrivilegesProject.Helpers;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,14 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         [AllureStep("SigningInAsSuperAdmin")]
         public LogIn SigningInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
-            Button.Click(IconShowPasswordLogInPg);
-            Button.Click(ButtonSignInLogInPg);
+            Assert.Multiple(() =>
+            {
+                InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
+                InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
+                Button.Click(IconShowPasswordLogInPg);
+                Button.Click(ButtonSignInLogInPg);
+            });
+            
             VerifySuccessLogIn();
             
             return this;
