@@ -1,0 +1,358 @@
+{
+  "uuid": "5dd7339f-8c0f-4756-8f75-3f4f7ff8cd90-tr-0-1017",
+  "historyId": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "fullName": "AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddNewDocWithoutRequiresRenewal"
+    }
+  ],
+  "links": [],
+  "name": "AddNewDocWithoutRequiresRenewal",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div role=\"tab\" mattablabelwrapper=\"\" mat-ripple=\"\" cdkmonitorelementfocus=\"\" class=\"mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted\" id=\"mat-tab-label-0-1\" tabindex=\"-1\" aria-posinset=\"2\" aria-setsize=\"2\" aria-controls=\"mat-tab-content-0-1\" aria-selected=\"false\" aria-disabled=\"false\">...</div> is not clickable at point (418, 146). Other element would receive the click: <div _ngcontent-ini-c40=\"\" class=\"ngx-spinner-overlay ng-tns-c40-0 ng-trigger ng-trigger-fadeIn ng-star-inserted\" style=\"background-color: rgba(0, 0, 0, 0.8); z-index: 99999; position: fixed; opacity: 1;\">...</div>\n  (Session info: chrome=106.0.5249.103)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementActions.cs:line 16\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.ClickTabDocumentsDcmntsMngmntPg()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1043"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddNewDocWithoutRequiresRenewal",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div role=\"tab\" mattablabelwrapper=\"\" mat-ripple=\"\" cdkmonitorelementfocus=\"\" class=\"mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted\" id=\"mat-tab-label-0-1\" tabindex=\"-1\" aria-posinset=\"2\" aria-setsize=\"2\" aria-controls=\"mat-tab-content-0-1\" aria-selected=\"false\" aria-disabled=\"false\">...</div> is not clickable at point (418, 146). Other element would receive the click: <div _ngcontent-ini-c40=\"\" class=\"ngx-spinner-overlay ng-tns-c40-0 ng-trigger ng-trigger-fadeIn ng-star-inserted\" style=\"background-color: rgba(0, 0, 0, 0.8); z-index: 99999; position: fixed; opacity: 1;\">...</div>\n  (Session info: chrome=106.0.5249.103)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementActions.cs:line 16\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.ClickTabDocumentsDcmntsMngmntPg()\r\n   at AdminTests.WebSiteAdminTests.AddNewDocWithoutRequiresRenewal() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1043"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1665655084531,
+              "stop": 1665655085118
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665655085118,
+              "stop": 1665655085682
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665655085682,
+              "stop": 1665655086335
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655084529,
+          "stop": 1665655086335
+        },
+        {
+          "name": "GetUserEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655086340,
+          "stop": 1665655087350
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665655088496,
+              "stop": 1665655089119
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "394081"
+            }
+          ],
+          "start": 1665655087351,
+          "stop": 1665655089119
+        },
+        {
+          "name": "GetNameRoleFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655089121,
+          "stop": 1665655092191
+        },
+        {
+          "name": "VerifyNameRoleAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Admin Admin"
+            }
+          ],
+          "start": 1665655092191,
+          "stop": 1665655094202
+        },
+        {
+          "name": "ClickButtonDocumentsManagementSidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665655094710,
+              "stop": 1665655095344
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655094203,
+          "stop": 1665655095344
+        },
+        {
+          "name": "VerifyTitleDocumentsManagementPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655095345,
+          "stop": 1665655096455
+        },
+        {
+          "name": "ClickTabDocumentsDcmntsMngmntPg",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <div role=\"tab\" mattablabelwrapper=\"\" mat-ripple=\"\" cdkmonitorelementfocus=\"\" class=\"mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted\" id=\"mat-tab-label-0-1\" tabindex=\"-1\" aria-posinset=\"2\" aria-setsize=\"2\" aria-controls=\"mat-tab-content-0-1\" aria-selected=\"false\" aria-disabled=\"false\">...</div> is not clickable at point (418, 146). Other element would receive the click: <div _ngcontent-ini-c40=\"\" class=\"ngx-spinner-overlay ng-tns-c40-0 ng-trigger ng-trigger-fadeIn ng-star-inserted\" style=\"background-color: rgba(0, 0, 0, 0.8); z-index: 99999; position: fixed; opacity: 1;\">...</div>\n  (Session info: chrome=106.0.5249.103)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.Button.Click(IWebElement element)\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DocumentsManagementPage\\DocumentsManagementActions.cs:line 16\r\n   at PractisingPrivilegesProject.PageObjects.DocumentsManagementPage.DocumentsManagement.__a$_around_ClickTabDocumentsDcmntsMngmntPg_100663497_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "element click intercepted: Element <div role=\"tab\" mattablabelwrapper=\"\" mat-ripple=\"\" cdkmonitorelementfocus=\"\" class=\"mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted\" id=\"mat-tab-label-0-1\" tabindex=\"-1\" aria-posinset=\"2\" aria-setsize=\"2\" aria-controls=\"mat-tab-content-0-1\" aria-selected=\"false\" aria-disabled=\"false\">...</div> is not clickable at point (418, 146). Other element would receive the click: <div _ngcontent-ini-c40=\"\" class=\"ngx-spinner-overlay ng-tns-c40-0 ng-trigger ng-trigger-fadeIn ng-star-inserted\" style=\"background-color: rgba(0, 0, 0, 0.8); z-index: 99999; position: fixed; opacity: 1;\">...</div>\n  (Session info: chrome=106.0.5249.103)",
+                "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_o(IWebElement element) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 40\r\n   at PractisingPrivilegesProject.Helpers.Button.__a$_around_Click_100663529_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665655096456,
+              "stop": 1665655098216
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665655096456,
+          "stop": 1665655098217
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "966b77a4240c4d84a33092541f686672-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665655079520,
+      "stop": 1665655101418
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665655079518,
+  "stop": 1665655101428
+}

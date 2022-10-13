@@ -20,32 +20,39 @@ namespace PractisingPrivilegesProject.PageObjects.DocumentsManagementPage
             return this;
         }
 
-        [AllureStep("VerifyCreatingNewDocument")]
-        public DocumentsManagement VerifyCreatingNewDocument()
-        {
-            Assert.IsTrue(Successfully.IsVisible(MessageCreateNewDocumentDcmntsMngmntPg));
+        //[AllureStep("VerifyCreatingNewDocument")]
+        //public DocumentsManagement VerifyCreatingNewDocument()
+        //{
+        //    Assert.IsTrue(Successfully.IsVisible(MessageCreateNewDocumentDcmntsMngmntPg));
 
-            return this;
+        //    return this;
+        //}
+
+        [AllureStep("VerifyCreatingNewDocument")]
+        public void VerifyCreatingNewDocument()
+        {
+            Assert.Multiple(() =>
+            {
+                WaitUntil.WaitSomeInterval(500);
+                Assert.IsTrue(Successfully.IsVisible(MessageCreateNewDocumentDcmntsMngmntPg));
+
+                string nameDocumentFromDbActual = WebSiteDBHelper.GetNameDocument();
+                Assert.AreEqual(nameDocumentFromDbActual, TestDataNameDocumnets.testing);
+                Console.WriteLine($"Created document:{nameDocumentFromDbActual}");
+            });
         }
 
         [AllureStep("VerifyCreatingNewRole")]
-        public DocumentsManagement VerifyCreatingNewRole()
+        public void VerifyCreatingNewRole()
         {
-            Assert.IsTrue(Successfully.IsVisible(MessageRoleSuccessfullyCreatedDcmntsMngmntPg));
+            Assert.Multiple(() =>
+            {
+                Assert.IsTrue(Successfully.IsVisible(MessageRoleSuccessfullyCreatedDcmntsMngmntPg));
 
-            return this;
+                string nameRoleFromDbActual = WebSiteDBHelper.GetNameRole();
+                Assert.AreEqual(nameRoleFromDbActual, TestDataNameRoles.ROLE_TESTING);
+                Console.WriteLine($"Created role:{nameRoleFromDbActual}");
+            });
         }
-
-        [AllureStep("VerifyDisplyingNameRoleOnPage")]
-        public DocumentsManagement VerifyDisplyingNameRoleOnPage()
-        {
-            WaitUntil.WaitSomeInterval(1);
-            string nameRoleActual = NewCreatedRole.Text;
-
-            Assert.AreEqual(nameRoleActual, TestDataNameRoles.ROLE_TESTING);
-
-            return this;
-        }
-
     }
 }

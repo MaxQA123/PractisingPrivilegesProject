@@ -34,7 +34,7 @@ namespace PractisingPrivilegesProject.PageObjects.DocumentsManagementPage
 
         #endregion
 
-        [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'document successfully created')]")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'Test Documents 1 document successfully created')]")]
         public IWebElement MessageCreateNewDocumentDcmntsMngmntPg;
 
         [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'Role successfully created')]")]

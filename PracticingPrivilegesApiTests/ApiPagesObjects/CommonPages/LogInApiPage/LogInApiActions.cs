@@ -1,5 +1,6 @@
 ﻿    using Newtonsoft.Json;
-    using PracticingPrivilegesApiTests.ApiHelpers;
+using NUnit.Allure.Steps;
+using PracticingPrivilegesApiTests.ApiHelpers;
     using RestSharp;
     using System;
     using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
             return payload;
         }
 
+        [AllureStep("GetUserEmail")]
         public static ResponseLogIn ExecuteLogIn(string email, string password)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);

@@ -71,27 +71,5 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
 
             TwoStepApiAdmin.VerifyingLoggedUserConst(responseTwoStep);
         }
-
-        [Test]
-        [AllureTag("Regression")]
-        [AllureOwner("Maksim Perevalov")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("TestingBD")]
-        [AllureSubSuite("LoginConstDataAsAdmin")]
-
-        //Date of publication:
-        //Version\Build:
-        //Willingness for testing: Done.
-        //This test case is doing checking: The successfully LogIn.
-        //Comment: 
-        //Path to cheking's: 
-
-        public void GetEmail()
-        {
-            string test = WebSiteDBHelper.GetUserEmail();
-
-            Console.WriteLine(test);
-        }
     }
 }

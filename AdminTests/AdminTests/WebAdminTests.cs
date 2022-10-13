@@ -1058,7 +1058,7 @@ namespace AdminTests
             Pages.DocumentsManagement
                 .VerifyCreatingNewDocument();
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -1072,7 +1072,7 @@ namespace AdminTests
         //Date of publication:
         //Version\Build:
         //The date last publication on which been testing:
-        //Willingness for testing: in progress.
+        //Willingness for testing: Done.
         //This test case is doing checking: The successfully has been created a new role.
         //Comment: 
 
@@ -1106,10 +1106,9 @@ namespace AdminTests
                 .SelectDocsMdlWndwAddNewRole()
                 .ClickButtonCreateMdlWndwAddNewDocs();
             Pages.DocumentsManagement
-                .VerifyCreatingNewRole()
-                .VerifyDisplyingNameRoleOnPage();
+                .VerifyCreatingNewRole();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
         }
 
         [Test]
