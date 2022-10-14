@@ -13,16 +13,12 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
     {
         [AllureStep("SigningInAsSuperAdmin")]
         public LogIn SigningInAsSuperAdmin()
-        {
-            Assert.Multiple(() =>
-            {
+        { 
                 InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
                 InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
                 Button.Click(IconShowPasswordLogInPg);
                 Button.Click(ButtonSignInLogInPg);
-            });
-            
-            VerifySuccessLogIn();
+                VerifySuccessLogIn();
             
             return this;
         }
@@ -83,6 +79,8 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         public LogIn SigningAfterChangingPassword()
         {
             WaitUntil.WaitSomeInterval(2000);
+
+            //Comment out the necessary lines, uncomment the unnecessary lines.
 
             //InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminForTestingFrgtPsswrd);
             //InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordNewAdminForTestingFrgtPsswrd);

@@ -32,8 +32,11 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         #region MandatoryFieldsToFillIn
 
-        [FindsBy(How = How.XPath, Using = "//input[@name = 'First name']")]
-        public IWebElement FieldInputFirstNamePrflPg;
+        //[FindsBy(How = How.XPath, Using = "//input[@name = 'First name']")]
+        //public IWebElement FieldInputFirstNamePrflPg;
+
+        IWebElement FieldInputFirstNamePrflPg => Browser._Driver.FindElement(_FieldInputFirstNamePrflPg);
+        public static readonly By _FieldInputFirstNamePrflPg = By.XPath("//input[@name = 'First name']");
 
         [FindsBy(How = How.XPath, Using = "//input[@name = 'Last name']")]
         public IWebElement FieldInputLastNamePrflPg;

@@ -45,35 +45,43 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
             return this;
         }
 
-        [AllureStep("VerifyNameRoleClinician")]
-        public Header VerifyNameRoleClinician(string getNameRoleActual)
+        [AllureStep("VerifyFirstNameClinician")]
+        public Header VerifyFirstNameClinician(string firstNameActual)
         {
             WaitUntil.WaitSomeInterval(2000);
             string nameRoleExpected = TestDataClinician.userNameRoleJaneClinician;
 
-            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+            Assert.AreEqual(nameRoleExpected, firstNameActual);
+
+            return this;
+        }
+
+        [AllureStep("VerifyFirstNameRandom")]
+        public Header VerifyFirstNameRandom(string firstNameExpected,string firstNameActual)
+        {
+            Assert.AreEqual(firstNameExpected, firstNameActual);
 
             return this;
         }
 
         [AllureStep("VerifyNameRoleApprover")]
-        public Header VerifyNameRoleApprover(string getNameRoleActual)
+        public Header VerifyNameRoleApprover(string getFirstNameActual)
         {
             WaitUntil.WaitSomeInterval(2000);
             string nameRoleExpected = TestDataApprover.userNameRoleApproverApprover;
 
-            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+            Assert.AreEqual(nameRoleExpected, getFirstNameActual);
 
             return this;
         }
 
         [AllureStep("VerifyNameRoleViewer")]
-        public Header VerifyNameRoleViewer(string getNameRoleActual)
+        public Header VerifyNameRoleViewer(string getFirstNameActual)
         {
             WaitUntil.WaitSomeInterval(2000);
             string nameRoleExpected = TestDataViewer.userNameRoleViewerViewer;
 
-            Assert.AreEqual(nameRoleExpected, getNameRoleActual);
+            Assert.AreEqual(nameRoleExpected, getFirstNameActual);
 
             return this;
         }

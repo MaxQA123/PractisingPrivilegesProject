@@ -118,6 +118,7 @@ namespace AdminTests
                 .SelectRoleViewerViaDropDown()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -164,8 +165,13 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
-            
-            Thread.Sleep(5000);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+
+            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -207,13 +213,13 @@ namespace AdminTests
                 .SelectRoleViewerViaDropDown()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
-                string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
                 .EnterPersonalIdentificationNumberPrflPg()
                 .ClickButtonCreatePrflPg()
                 .VerifyEnteredDataSelectedData();
-                //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -235,6 +241,11 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
 
             Thread.Sleep(5000);
         }
@@ -271,6 +282,7 @@ namespace AdminTests
                 .SelectRoleViewerViaDropDown()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -297,6 +309,11 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
 
             Thread.Sleep(5000);
         }
@@ -337,12 +354,12 @@ namespace AdminTests
             Pages.ProfileDetails
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
                 .ClickButtonCreatePrflPg()
                 .VerifyEnteredDataSelectedData();
-            //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -364,6 +381,11 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
 
             Thread.Sleep(5000);
         }
@@ -496,6 +518,7 @@ namespace AdminTests
                 .CloseDropDownMenuSelectorRolesPrflPg()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -522,7 +545,6 @@ namespace AdminTests
                 .EnterDataJobTitleRestriction()
                 .ClickButtonCreatePrflPg()
                 .VerifyEnteredDataSelectedData();
-            //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -544,6 +566,11 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
 
             Thread.Sleep(5000);
         }
@@ -672,13 +699,13 @@ namespace AdminTests
                 .CloseDropDownMenuSelectorRolesPrflPg()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
                 .EnterPersonalIdentificationNumberPrflPg()
                 .ClickButtonCreatePrflPg()
                 .VerifyEnteredDataSelectedData();
-            //.VerifyUserSuccessfullyCreatedPrflPg();
             Pages.Header
                .LoggedFromAccountOnHeader();
             Pages.SwitchingJScriptExecutorHelper
@@ -700,6 +727,11 @@ namespace AdminTests
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
+
+            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+
+            Pages.Header
+                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
 
             Thread.Sleep(5000);
         }
@@ -1122,15 +1154,22 @@ namespace AdminTests
 
         public void Demo()
         {
-            Pages.LogIn
-            .SigningInAsSuperAdmin();
+            Pages.DemoTest
+                .SigningInAsClinician();
 
-            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            var email = TestDataClinician.EMAIL_DEMO_TEST;
 
-            Pages.Header
-                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
 
-            Thread.Sleep(5000);
+            Pages.VerificationCode
+                .ConfirmVerificationCode(responseLogIn.code);
+
+            string nameRoleCompare = Pages.DemoTest.GetDemoFirstNameFromUserProfile();
+
+            Pages.DemoTest
+                .VerifyDemo(nameRoleCompare);
+
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

@@ -48,12 +48,12 @@ namespace ApproverTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            string firstName = Pages.Header.GetFirstNameFromHeadere();
 
             Pages.Header
-                .VerifyNameRoleApprover(nameRoleCompare);
+                .VerifyNameRoleApprover(firstName);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace ApproverTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
     }
 }

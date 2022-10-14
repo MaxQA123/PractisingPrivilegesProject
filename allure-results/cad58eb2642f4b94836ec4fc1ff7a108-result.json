@@ -1,0 +1,269 @@
+{
+  "uuid": "1fc959f6-5ed8-4d11-bf8e-ef329237af13-tr-0-1001",
+  "historyId": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "fullName": "ClinicianTests.WebClinicianTests.LogInAsClinician",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ClinicianTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsClinician"
+    },
+    {
+      "name": "testClass",
+      "value": "WebClinicianTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Clinician"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsClinician"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsClinician",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 23 but was 13. Strings differ at index 13.\r\n  Expected: \"JaneClinician Clinician\"\r\n  But was:  \"JaneClinician\"\r\n  ------------------------^\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 54\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleClinician(String getNameRoleActual)\r\n   at ClinicianTests.WebClinicianTests.LogInAsClinician() in C:\\Automation\\PractisingPrivilegesProject\\ClinicianTests\\ClinicianTests\\WebClinicianTests.cs:line 53\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsClinician",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 23 but was 13. Strings differ at index 13.\r\n  Expected: \"JaneClinician Clinician\"\r\n  But was:  \"JaneClinician\"\r\n  ------------------------^\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 54\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.VerifyNameRoleClinician(String getNameRoleActual)\r\n   at ClinicianTests.WebClinicianTests.LogInAsClinician() in C:\\Automation\\PractisingPrivilegesProject\\ClinicianTests\\ClinicianTests\\WebClinicianTests.cs:line 53\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "janeclinician-doe@xitroo.com"
+                }
+              ],
+              "start": 1665746997453,
+              "stop": 1665746998108
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665746998109,
+              "stop": 1665746998686
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665746998687,
+              "stop": 1665746999336
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665746997450,
+          "stop": 1665746999336
+        },
+        {
+          "name": "GetUserEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665746999340,
+          "stop": 1665747000868
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665747002101,
+              "stop": 1665747002748
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "705124"
+            }
+          ],
+          "start": 1665747000869,
+          "stop": 1665747002748
+        },
+        {
+          "name": "GetFirstNameFromHeader",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665747002749,
+          "stop": 1665747005819
+        },
+        {
+          "name": "VerifyNameRoleClinician",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 23 but was 13. Strings differ at index 13.\r\n  Expected: \"JaneClinician Clinician\"\r\n  But was:  \"JaneClinician\"\r\n  ------------------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\HeaderPage\\HeaderAssertions.cs:line 54\r\n   at PractisingPrivilegesProject.PageObjects.HeaderPage.Header.__a$_around_VerifyNameRoleClinician_100663465_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "JaneClinician"
+            }
+          ],
+          "start": 1665747005820,
+          "stop": 1665747007943
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fc1827a2c3ab416187a5f94eca052f22-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665746995756,
+      "stop": 1665747010690
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665746995755,
+  "stop": 1665747010703
+}

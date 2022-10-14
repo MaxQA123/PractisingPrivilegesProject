@@ -48,12 +48,12 @@ namespace ClinicianTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            string firstName = Pages.Header.GetFirstNameFromHeadere();
 
             Pages.Header
-                .VerifyNameRoleClinician(nameRoleCompare);
+                .VerifyFirstNameClinician(firstName);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]

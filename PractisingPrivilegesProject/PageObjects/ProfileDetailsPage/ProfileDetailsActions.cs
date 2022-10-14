@@ -312,15 +312,14 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             return email;
         }
 
-        [AllureStep("CopyFirstNameFromProfileDetails")]
-        public string CopyFirstNameFromProfileDetails()
+        [AllureStep("GetFirstNameFromProfileDetails")]
+        public string GetFirstNameFromProfileDetails()
         {
             WaitUntil.WaitSomeInterval(500);
-            string getFirstName = Browser._Driver.FindElement(_FieldInputFirstNamePrflPgForGet).GetAttribute("value");
+            string getFirstName = Browser._Driver.FindElement(_FieldInputFirstNamePrflPg).GetAttribute("value");
             string firstName = getFirstName.ToString();
 
             return firstName;
         }
-
     }
 }

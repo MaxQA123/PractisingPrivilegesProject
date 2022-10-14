@@ -46,8 +46,11 @@ namespace PractisingPrivilegesProject.Helpers
 
     public class TestDataClinician
     {
+        public const string EMAIL_DEMO_TEST = "pdvrd@xitroo.com";
+        public const string USER_NAME_DEMO_TEST = "Nicholas";
+
         public const string emailJaneClinician = "janeclinician-doe@xitroo.com";
-        public const string userNameRoleJaneClinician = "JaneClinician Clinician";
+        public const string userNameRoleJaneClinician = "JaneClinician";
 
         public const string firstNameClinician = "Clin";
         public const string lastNameClinician = "Clin";
@@ -59,7 +62,7 @@ namespace PractisingPrivilegesProject.Helpers
     public class TestDataApprover
     {
         public const string emailJaneApprover = "jane-approver@xitroo.com";
-        public const string userNameRoleApproverApprover = "Approver Approver";
+        public const string userNameRoleApproverApprover = "Approver";
 
         public const string firstNameApprover = "Test-Approver";
         public const string lastNameApprover = "Approver";
@@ -72,7 +75,7 @@ namespace PractisingPrivilegesProject.Helpers
     public class TestDataViewer
     {
         public const string emailViewerViewer = "jane-viewer@xitroo.com";
-        public const string userNameRoleViewerViewer = "Viewer Viewer";
+        public const string userNameRoleViewerViewer = "Viewer";
 
         public const string firstNameViewer = "Test-Viewer";
         public const string lastNameViewer = "Viewer";

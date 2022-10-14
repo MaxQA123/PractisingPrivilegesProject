@@ -19,7 +19,5 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
         public string code { get; set; }
         public string isSuccessful { get; set; }
         public string message { get; set; }
-    }
-
-    
+    } 
 }

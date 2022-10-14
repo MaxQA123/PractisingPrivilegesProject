@@ -1,4 +1,5 @@
 ﻿using NUnit.Allure.Attributes;
+using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,18 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
             Button.Click(ItemLogOutFromDropDownHeader);
 
             return this;
+        }
+
+        [AllureStep("GetFirstNameFromHeader")]
+        public string GetFirstNameFromHeadere()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            string getFirstName = TextNameRoleOnHeader.Text.Substring(0, TextNameRoleOnHeader.Text.IndexOf(" "));
+            string firstNameActual = getFirstName.ToString();
+
+            Console.WriteLine(firstNameActual);
+
+            return firstNameActual;
         }
     }
 }
