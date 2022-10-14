@@ -1,0 +1,264 @@
+{
+  "uuid": "026d49f7-28c1-4270-a4e7-6a605f620546-tr-0-1019",
+  "historyId": "AdminTests.WebSiteAdminTests.Demo",
+  "fullName": "AdminTests.WebSiteAdminTests.Demo",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Demo"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Demo"
+    },
+    {
+      "name": "subSuite",
+      "value": "Demo"
+    }
+  ],
+  "links": [],
+  "name": "Demo",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Demo"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Demo",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "pdvrd@xitroo.com"
+                }
+              ],
+              "start": 1665760761860,
+              "stop": 1665760762622
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665760762622,
+              "stop": 1665760763418
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665760763419,
+              "stop": 1665760764102
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665760761858,
+          "stop": 1665760764102
+        },
+        {
+          "name": "GetUserEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665760764106,
+          "stop": 1665760764598
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665760765844,
+              "stop": 1665760766506
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "455757"
+            }
+          ],
+          "start": 1665760764600,
+          "stop": 1665760766506
+        },
+        {
+          "name": "GetDemoLastName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665760766507,
+          "stop": 1665760769572
+        },
+        {
+          "name": "VerifyDemo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Nicholas"
+            }
+          ],
+          "start": 1665760769572,
+          "stop": 1665760771597
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "67b2280ed3384c1988c885bb3731d499-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665760759731,
+      "stop": 1665760773291
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665760759726,
+  "stop": 1665760773303
+}

@@ -1,0 +1,249 @@
+{
+  "uuid": "bb0877a5-c873-4ba0-a7d8-01004830784d-tr-0-1019",
+  "historyId": "AdminTests.WebSiteAdminTests.Demo",
+  "fullName": "AdminTests.WebSiteAdminTests.Demo",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Demo"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Demo"
+    },
+    {
+      "name": "subSuite",
+      "value": "Demo"
+    }
+  ],
+  "links": [],
+  "name": "Demo",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.InvalidSelectorException : invalid selector: Unable to locate an element with the xpath expression Last name because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string 'Last name' is not a valid XPath expression.\n  (Session info: chrome=106.0.5249.119)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.get_FieldInputLastNamePrflPg() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoElements.cs:line 26\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoActions.cs:line 41\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.GetDemoLastName() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoElements.cs:line 23\r\n   at AdminTests.WebSiteAdminTests.Demo() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1167"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Demo",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.InvalidSelectorException : invalid selector: Unable to locate an element with the xpath expression Last name because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string 'Last name' is not a valid XPath expression.\n  (Session info: chrome=106.0.5249.119)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.get_FieldInputLastNamePrflPg() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoElements.cs:line 26\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoActions.cs:line 41\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.GetDemoLastName() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoElements.cs:line 23\r\n   at AdminTests.WebSiteAdminTests.Demo() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1167"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "pdvrd@xitroo.com"
+                }
+              ],
+              "start": 1665758453940,
+              "stop": 1665758454662
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665758454662,
+              "stop": 1665758455178
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665758455178,
+              "stop": 1665758455791
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665758453938,
+          "stop": 1665758455791
+        },
+        {
+          "name": "GetUserEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665758455795,
+          "stop": 1665758456250
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665758457383,
+              "stop": 1665758458023
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "664289"
+            }
+          ],
+          "start": 1665758456252,
+          "stop": 1665758458023
+        },
+        {
+          "name": "GetDemoLastName",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "invalid selector: Unable to locate an element with the xpath expression Last name because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string 'Last name' is not a valid XPath expression.\n  (Session info: chrome=106.0.5249.119)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.get_FieldInputLastNamePrflPg() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoElements.cs:line 26\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoActions.cs:line 41\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_GetDemoLastName_100663513_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665758458024,
+          "stop": 1665758461136
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f15cd3843612408d99251b387519062a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665758452460,
+      "stop": 1665758464053
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665758452449,
+  "stop": 1665758464063
+}

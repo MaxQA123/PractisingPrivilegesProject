@@ -1164,12 +1164,12 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string nameRoleCompare = Pages.DemoTest.GetDemoFirstNameFromUserProfile();
+            string nameRoleCompare = Pages.DemoTest.GetDemoLastName();
 
             Pages.DemoTest
                 .VerifyDemo(nameRoleCompare);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

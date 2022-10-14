@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PractisingPrivilegesProject.PageObjects.DemoPage
@@ -33,34 +34,17 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
             return firstNameActual;
         }
 
-        [AllureStep("DemoRandom")]
-        public DemoTest DemoRandom()
+        [AllureStep("GetDemoLastName")]
+        public string GetDemoLastName()
         {
-            string[] RandomFirstName = { "sgsg", "dfghfgh", "34543t", "sdf", "3453" };
-            Random random = new Random();
-            random.Next(0, RandomFirstName.Length - 1);
-            //Console.WriteLine("Случайное число = " + a + "\nСоотвертствующая строка = " + RandomFirstName[a]);
-            return this;
-        }
+            WaitUntil.WaitSomeInterval(3000);
+            string getLastName = TextNameRoleOnHeader.Text;
+            Regex regexGetLastName = new Regex(@"[^\s]+$");
+            string lastNameActual = regexGetLastName.Match(getLastName).ToString();
 
-        [AllureStep("RandomPriceMinInteger")]
-        public static string RandomNumberCharacter(int size)
-        {
-            Random random = new Random();
-            const string chars = "1234567890*&^%$#@!";
-            return new string(Enumerable.Repeat(chars, size)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
+            Console.WriteLine(lastNameActual);
 
-        [AllureStep("DemoRandom")]
-        public void button1_Click(object sender, EventArgs e)
-        {
-            string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
-
-            var selectedPeople = people.Where(p => p.ToUpper().StartsWith("T")).OrderBy(p => p);
-
-            foreach (string person in selectedPeople)
-                Console.WriteLine(person);
+            return lastNameActual;
         }
     }
 }

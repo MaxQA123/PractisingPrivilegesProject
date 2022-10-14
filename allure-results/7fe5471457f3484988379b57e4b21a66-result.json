@@ -1,0 +1,269 @@
+{
+  "uuid": "4d2bdabe-063d-4ea0-90a3-045b74bbf8d1-tr-0-1019",
+  "historyId": "AdminTests.WebSiteAdminTests.Demo",
+  "fullName": "AdminTests.WebSiteAdminTests.Demo",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Demo"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Demo"
+    },
+    {
+      "name": "subSuite",
+      "value": "Demo"
+    }
+  ],
+  "links": [],
+  "name": "Demo",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 8 but was 1. Strings differ at index 1.\r\n  Expected: \"Nicholas\"\r\n  But was:  \"N\"\r\n  ------------^\r\n",
+    "trace": "   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.VerifyDemo(String getNameRoleActual)\r\n   at AdminTests.WebSiteAdminTests.Demo() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1169\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Demo",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 8 but was 1. Strings differ at index 1.\r\n  Expected: \"Nicholas\"\r\n  But was:  \"N\"\r\n  ------------^\r\n",
+        "trace": "   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.VerifyDemo(String getNameRoleActual)\r\n   at AdminTests.WebSiteAdminTests.Demo() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 1169\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsClinician",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "pdvrd@xitroo.com"
+                }
+              ],
+              "start": 1665759882657,
+              "stop": 1665759883387
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1665759883388,
+              "stop": 1665759884059
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665759884059,
+              "stop": 1665759884710
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665759882652,
+          "stop": 1665759884710
+        },
+        {
+          "name": "GetUserEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665759884713,
+          "stop": 1665759885295
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1665759886507,
+              "stop": 1665759887182
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "661322"
+            }
+          ],
+          "start": 1665759885297,
+          "stop": 1665759887182
+        },
+        {
+          "name": "GetDemoLastName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665759887182,
+          "stop": 1665759890273
+        },
+        {
+          "name": "VerifyDemo",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 8 but was 1. Strings differ at index 1.\r\n  Expected: \"Nicholas\"\r\n  But was:  \"N\"\r\n  ------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_o(String getNameRoleActual) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\DemoPage\\DemoAssertions.cs:line 20\r\n   at PractisingPrivilegesProject.PageObjects.DemoPage.DemoTest.__a$_around_VerifyDemo_100663514_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "N"
+            }
+          ],
+          "start": 1665759890274,
+          "stop": 1665759892417
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "36b2379a2312476da551c9888a0d994b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665759880420,
+      "stop": 1665759895545
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665759880416,
+  "stop": 1665759895565
+}

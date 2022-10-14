@@ -22,5 +22,8 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
 
         public IWebElement TextNameRoleOnHeader => Browser._Driver.FindElement(_TextNameRoleOnHeader);
         public readonly static By _TextNameRoleOnHeader = By.XPath("//div[@class = 'mat-menu-trigger avatar']//span");
+
+        IWebElement FieldInputLastNamePrflPg => Browser._Driver.FindElement(_FieldInputLastNamePrflPg);
+        public static readonly By _FieldInputLastNamePrflPg = By.XPath("Last name");
     }
 }
