@@ -56,12 +56,26 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
             return this;
         }
 
-        [AllureStep("VerifyFirstNameRandom")]
-        public Header VerifyFirstNameRandom(string firstNameExpected,string firstNameActual)
+        [AllureStep("VerifyFirstLastNameRandom")]
+        public Header VerifyFirstLastNameRandom(string firstNameExpected, string firstNameActual, string lastNameExpected, string lastNameActual)
         {
-            Assert.AreEqual(firstNameExpected, firstNameActual);
+            WaitUntil.WaitSomeInterval(500);
+
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(lastNameExpected, lastNameActual);
+                Assert.AreEqual(firstNameExpected, firstNameActual);
+
+                Console.WriteLine($"First name expected: {firstNameExpected}");
+                Console.WriteLine($"First name actual: {firstNameActual}");
+
+                Console.WriteLine($"Last name expected: {lastNameExpected}");
+                Console.WriteLine($"Last name actual: {lastNameActual}");
+                
+            });
 
             return this;
+
         }
 
         [AllureStep("VerifyNameRoleApprover")]

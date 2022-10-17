@@ -83,7 +83,7 @@ namespace AdminTests
             Pages.Header
                 .VerifyNameRoleAdmin(nameRoleCompare);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -119,6 +119,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -166,12 +167,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -214,6 +216,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -242,12 +245,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -283,6 +287,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -310,12 +315,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -355,6 +361,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -382,12 +389,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -425,6 +433,8 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg()
                 .EnterPersonalIdentificationNumberPrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -475,7 +485,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            Thread.Sleep(5000);
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
+
+            Pages.Header
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
+
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -519,6 +535,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -567,12 +584,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -607,6 +625,8 @@ namespace AdminTests
                 .CloseDropDownMenuSelectorRolesPrflPg()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -657,7 +677,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            Thread.Sleep(5000);
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
+
+            Pages.Header
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
+
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -700,6 +726,7 @@ namespace AdminTests
                 .EnterFirstLastNameEmailPhonePrflPg();
 
             string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -728,12 +755,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(approverResponseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeadere();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
             Pages.Header
-                .VerifyFirstNameRandom(firstNameExpected, firstNameActual);
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            Thread.Sleep(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -769,6 +797,8 @@ namespace AdminTests
                 .SelectRoleViewerViaDropDown()
                 .EnterFirstLastNameEmailPhonePrflPg();
 
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
             Pages.ProfileDetails
@@ -817,7 +847,13 @@ namespace AdminTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            Thread.Sleep(5000);
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
+
+            Pages.Header
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
+
+            WaitUntil.WaitSomeInterval(3000);
         }
 
         [Test]
@@ -1154,22 +1190,57 @@ namespace AdminTests
 
         public void Demo()
         {
-            Pages.DemoTest
-                .SigningInAsClinician();
+            Pages.LogIn
+                .SigningInAsSuperAdmin();
 
-            var email = TestDataClinician.EMAIL_DEMO_TEST;
+            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 
-            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneral.generalPassword);
+            Pages.Header
+                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            Pages.UsersManagement
+                .ClickButtonCreateNewUserUsersMngmntPg();
+            Pages.ProfileDetails
+                .OpenDropDownMenuSelectorRolesPrflPg()
+                .SelectRoleAdminViaDropDown()
+                .SelectRoleViewerViaDropDown()
+                .EnterFirstLastNameEmailPhonePrflPg();
+
+            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
+            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnteredDataSelectedData();
+            Pages.Header
+               .LoggedFromAccountOnHeader();
+            Pages.SwitchingJScriptExecutorHelper
+                .OpenNewTab();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            Pages.EmailXitroo
+                .EnterEmail(emailCopy)
+                .ClickSearchButton()
+                .OpenNewlyLetter()
+                .ClickButtonConfirmEmailFromEmail();
+            Pages.SetPassword
+                .EnterPasswordRepeatPassword()
+                .ClickButtonSetPassworSetPassworddPg()
+                .VerifyMessageChangePasswordSetPasswordPg();
+            Pages.LogIn
+                .SigningInNewUserAfterCreating(emailCopy);
+
+            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string nameRoleCompare = Pages.DemoTest.GetDemoLastName();
+            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
-            Pages.DemoTest
-                .VerifyDemo(nameRoleCompare);
+            Pages.Header
+                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(3000);
         }
     }
 }

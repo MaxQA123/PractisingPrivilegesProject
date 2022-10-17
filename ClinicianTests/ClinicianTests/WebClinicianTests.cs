@@ -48,7 +48,7 @@ namespace ClinicianTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstName = Pages.Header.GetFirstNameFromHeadere();
+            string firstName = Pages.Header.GetFirstNameFromHeader();
 
             Pages.Header
                 .VerifyFirstNameClinician(firstName);

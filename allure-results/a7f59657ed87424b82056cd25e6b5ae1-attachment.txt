@@ -1,0 +1,5 @@
+Your password has been successfully changed
+First name expected: Lucie
+First name actual: Lucie
+Last name expected: Thiel
+Last name actual: Thiel

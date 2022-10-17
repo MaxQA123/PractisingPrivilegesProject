@@ -321,5 +321,15 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
             return firstName;
         }
+
+        [AllureStep("GetLastNameFromRrofDtlsPg")]
+        public string GetLastNameFromRrofDtlsPg()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getLastName = Browser._Driver.FindElement(_FieldInputLastNamePrflPg).GetAttribute("value");
+            string lastNameExpected = getLastName.ToString();
+
+            return lastNameExpected;
+        }
     }
 }

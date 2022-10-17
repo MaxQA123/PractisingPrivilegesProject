@@ -1,0 +1,137 @@
+{
+  "uuid": "4b1e0e8e-d115-4888-9f0c-8e40fe894a7c-tr-0-1008",
+  "historyId": "AdminTests.WebSiteAdminTests.AdminCreateUserClinicianApproverVieewer",
+  "fullName": "AdminTests.WebSiteAdminTests.AdminCreateUserClinicianApproverVieewer",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AdminTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AdminCreateUserClinicianApproverVieewer"
+    },
+    {
+      "name": "testClass",
+      "value": "WebSiteAdminTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AdminCreateUserClinicianApproverVieewer"
+    }
+  ],
+  "links": [],
+  "name": "AdminCreateUserClinicianApproverVieewer",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds\r\n  ----> OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=106.0.5249.119)\r\nTearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=106.0.5249.119)",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 23\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_o(IWebElement element, String text) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 20\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 29\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 18\r\n   at AdminTests.WebSiteAdminTests.AdminCreateUserClinicianApproverVieewer() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 510\r\n--NoSuchWindowException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass7_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at PractisingPrivilegesProject.Helpers.ScreenShotHelper.MakeScreenShot() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\ScreenShotHelper.cs:line 19\r\n   at PractisingPrivileges.Helpers.BaseWeb.DoAfterEach() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\BaseWeb.cs:line 31"
+  },
+  "stage": "finished",
+  "description": "\nDoAfterEach TearDown method failed\n",
+  "steps": [
+    {
+      "name": "AdminCreateUserClinicianApproverVieewer",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds\r\n  ----> OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=106.0.5249.119)\r\nTearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=106.0.5249.119)",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 23\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_o(IWebElement element, String text) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 20\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 29\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.SigningInAsAdmin() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInAssertions.cs:line 18\r\n   at AdminTests.WebSiteAdminTests.AdminCreateUserClinicianApproverVieewer() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\AdminTests\\WebAdminTests.cs:line 510\r\n--NoSuchWindowException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass7_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at PractisingPrivilegesProject.Helpers.ScreenShotHelper.MakeScreenShot() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\ScreenShotHelper.cs:line 19\r\n   at PractisingPrivileges.Helpers.BaseWeb.DoAfterEach() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\BaseWeb.cs:line 31"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 23\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_o(IWebElement element, String text) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 20\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_w_0(Object[] )\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text)\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_o() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\LogInPage\\LogInActions.cs:line 29\r\n   at PractisingPrivilegesProject.PageObjects.LogInPage.LogIn.__a$_around_SigningInAsAdmin_100663446_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "Timed out after 10 seconds",
+                "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at PractisingPrivilegesProject.Helpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\WaitUntil.cs:line 23\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_o(IWebElement element, String text) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\MethodsHelper.cs:line 20\r\n   at PractisingPrivilegesProject.Helpers.InputGeneral.__a$_around_InputFunctionWithClear_100663542_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "qatester91311@xitroo.com"
+                }
+              ],
+              "start": 1665991201250,
+              "stop": 1665991212016
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665991201248,
+          "stop": 1665991212017
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "33d622745c0b4b789efb7c5976af6bc5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665991199860,
+      "stop": 1665991212050
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665991199855,
+  "stop": 1665991212060
+}

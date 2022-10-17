@@ -35,8 +35,11 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         IWebElement FieldInputFirstNamePrflPg => Browser._Driver.FindElement(_FieldInputFirstNamePrflPg);
         public static readonly By _FieldInputFirstNamePrflPg = By.XPath("//input[@name = 'First name']");
 
-        [FindsBy(How = How.XPath, Using = "//input[@name = 'Last name']")]
-        public IWebElement FieldInputLastNamePrflPg;
+        IWebElement FieldInputLastNamePrflPg => Browser._Driver.FindElement(_FieldInputLastNamePrflPg);
+        public static readonly By _FieldInputLastNamePrflPg = By.XPath("//input[@name = 'Last name']");
+
+        //[FindsBy(How = How.XPath, Using = "//input[@name = 'Last name']")]
+        //public IWebElement FieldInputLastNamePrflPg;
 
         [FindsBy(How = How.XPath, Using = "//input[@name = 'Email address']")]
         public IWebElement FieldInputEmailAddressPrflPg;
