@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using PractisingPrivileges.Helpers;
 using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,15 @@ namespace PractisingPrivilegesProject.PageObjects.UsersManagementPage
 
         [FindsBy(How = How.XPath, Using = "//h1[text() = 'Users management']")]
         public IWebElement TitleUsersManagmentUsrsMngmntPg;
+
+        [FindsBy(How = How.XPath, Using = "//table//tbody//tr[last()]")]
+        public IWebElement LastUserInListUserstUsrsMngmntPg;
+
+        //[FindsBy(How = How.XPath, Using = "//input[contains(@id, 'mat-input')]")]
+        //public IWebElement FieldInputSearchUsrsMngmntPg;
+
+        IWebElement FieldInputSearchUsrsMngmntPg => Browser._Driver.FindElement(_FieldInputSearchUsrsMngmntPg);
+        public static readonly By _FieldInputSearchUsrsMngmntPg = By.XPath("//input[contains(@id, 'mat-input')]");
+
     }
 }

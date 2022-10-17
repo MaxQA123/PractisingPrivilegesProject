@@ -1010,7 +1010,7 @@ namespace AdminTests
                 .ClickButtonAddMdlWndwAddNewLctnPg()
                 .VerifyMessageLocationCreatedMdlWndwAddNewLctnPg();
             Pages.SelectorNumberPagesForAllPages
-                .ClickDropDownSelectorNumber()
+                .ClickDropDownSelectorNumberForLocationEmployersDocsRolesPgs()
                 .SelectNumberPage(TestDataForDropDownNumberPage.oneHundredItem, "");
             Pages.Locations
                 .VerifyNewNameLocationMdlWndwAddNewLctnPg(getNameForCompare);
@@ -1184,13 +1184,14 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(5)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Demo")]
         [AllureSubSuite("Demo")]
 
         public void Demo()
         {
-            Pages.LogIn
+            Pages.DemoTest
                 .SigningInAsSuperAdmin();
 
             string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
@@ -1198,49 +1199,64 @@ namespace AdminTests
             Pages.Header
                 .VerifyNameRoleSuperAdmin(nameRoleCompare);
             Pages.UsersManagement
-                .ClickButtonCreateNewUserUsersMngmntPg();
-            Pages.ProfileDetails
-                .OpenDropDownMenuSelectorRolesPrflPg()
-                .SelectRoleAdminViaDropDown()
-                .SelectRoleViewerViaDropDown()
-                .EnterFirstLastNameEmailPhonePrflPg();
+                .ClickFieldInputSearchUsrsMngmntPg();
+            KeyBoardActions
+                .EnterData();
+            WaitUntil.WaitSomeInterval(1000);
+            KeyBoardActions
+                .ClearValue();
+            //Pages.SelectorNumberPagesForAllPages
+            //    .ClickDropDownSelectorNumberForUsersMngmntPg()
+            //    .SelectNumberPage(TestDataForDropDownNumberPage.oneHundredItem, "");
+            //WaitUntil.WaitSomeInterval(5000);
+            //KeyBoardActions
+            //    .ScrollToElement(Pages.UsersManagement.LastUserInListUserstUsrsMngmntPg);
+            //KeyBoardActions
+            //    .ScrollToUp();
+            //Pages.UsersManagement
+            //    .ClickButtonCreateNewUserUsersMngmntPg();
+            //Pages.ProfileDetails
+            //    .OpenDropDownMenuSelectorRolesPrflPg()
+            //    .SelectRoleAdminViaDropDown()
+            //    .SelectRoleViewerViaDropDown()
+            //    .EnterFirstLastNameEmailPhonePrflPg();
 
-            string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
-            string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
-            string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
+            //string firstNameExpected = Pages.ProfileDetails.GetFirstNameFromProfileDetails();
+            //string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
+            //string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
-            Pages.ProfileDetails
-                .ClickButtonCreatePrflPg()
-                .VerifyEnteredDataSelectedData();
-            Pages.Header
-               .LoggedFromAccountOnHeader();
-            Pages.SwitchingJScriptExecutorHelper
-                .OpenNewTab();
-            Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
-            Pages.EmailXitroo
-                .EnterEmail(emailCopy)
-                .ClickSearchButton()
-                .OpenNewlyLetter()
-                .ClickButtonConfirmEmailFromEmail();
-            Pages.SetPassword
-                .EnterPasswordRepeatPassword()
-                .ClickButtonSetPassworSetPassworddPg()
-                .VerifyMessageChangePasswordSetPasswordPg();
-            Pages.LogIn
-                .SigningInNewUserAfterCreating(emailCopy);
+            //Pages.ProfileDetails
+            //    .ClickButtonCreatePrflPg()
+            //    .VerifyEnteredDataSelectedData();
+            //Pages.Header
+            //   .LoggedFromAccountOnHeader();
+            //Pages.SwitchingJScriptExecutorHelper
+            //    .OpenNewTab();
+            //Browser._Driver.Navigate().GoToUrl(EndPoints.urlRandomEmail);
+            //Pages.EmailXitroo
+            //    .EnterEmail(emailCopy)
+            //    .ClickSearchButton()
+            //    .OpenNewlyLetter()
+            //    .ClickButtonConfirmEmailFromEmail();
+            //Pages.SetPassword
+            //    .EnterPasswordRepeatPassword()
+            //    .ClickButtonSetPassworSetPassworddPg()
+            //    .VerifyMessageChangePasswordSetPasswordPg();
+            //Pages.LogIn
+            //    .SigningInNewUserAfterCreating(emailCopy);
 
-            var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
+            //var responseLogIn = LogInApi.ExecuteLogIn(emailCopy, TestDataGeneral.generalPassword);
 
-            Pages.VerificationCode
-                .ConfirmVerificationCode(responseLogIn.code);
+            //Pages.VerificationCode
+            //    .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstNameActual = Pages.Header.GetFirstNameFromHeader();
-            string lastNameActual = Pages.Header.GetLastNameFromHeader();
+            //string firstNameActual = Pages.Header.GetFirstNameFromHeader();
+            //string lastNameActual = Pages.Header.GetLastNameFromHeader();
 
-            Pages.Header
-                .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
+            //Pages.Header
+            //    .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

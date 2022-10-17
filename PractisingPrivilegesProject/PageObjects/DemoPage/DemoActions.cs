@@ -1,4 +1,6 @@
 ﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using PractisingPrivileges.Helpers;
 using PractisingPrivilegesProject.Helpers;
 using System;
@@ -12,13 +14,20 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
 {
     public partial class DemoTest
     {
-        [AllureStep("SigningInAsClinician")]
-        public DemoTest SigningInAsClinician()
+        [AllureStep("SigningInAsSuperAdmin")]
+        public DemoTest SigningInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataClinician.EMAIL_DEMO_TEST);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminQatester);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
             Button.Click(ButtonSignInLogInPg);
+            if (MessageInvaldLoginAttempLogInPg.Displayed == true)
+            {
 
+                InputGeneral.InputFunctionWithClear(Browser._Driver.FindElement(_FieldInputEmailLogInPg), TestDataAdmin.emailAdminQatester);
+                InputGeneral.InputFunctionWithClear(Browser._Driver.FindElement(_FieldInputPasswordLogInPg), TestDataAdmin.passwordNewAdminQatester);
+                WaitUntil.WaitSomeInterval(250);
+                Button.Click(Browser._Driver.FindElement(_ButtonSignInLogInPg));
+            }
             return this;
         }
 
@@ -45,6 +54,42 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
             Console.WriteLine(lastNameActual);
 
             return lastNameActual;
+        }
+
+        public static void DemoCustomElementIsInVisible(IWebElement element, int seconds = 10)
+        {
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(100);
+            try
+            {
+                wait.Until(e =>
+                {
+                    try
+                    {
+                        if (element.Enabled == true)
+                        {
+                            Console.WriteLine(element.Text);
+                            //InputGeneral.InputFunctionWithClear(Browser._Driver.FindElement(_FieldInputEmailLogInPg), TestDataAdmin.emailAdminQatester);
+                            //InputGeneral.InputFunctionWithClear(Browser._Driver.FindElement(_FieldInputPasswordLogInPg), TestDataAdmin.passwordNewAdminQatester);
+                            //WaitUntil.WaitSomeInterval(250);
+                            //Button.Click(Browser._Driver.FindElement(_ButtonSignInLogInPg));
+                            return true;
+                        }
+                        return false;
+                    }
+                    catch (NoSuchElementException)
+                    {
+                        return true;
+                    }
+                    catch (StaleElementReferenceException)
+                    {
+                        return true;
+                    }
+
+                });
+            }
+            catch (NoSuchElementException) { }
+            catch (StaleElementReferenceException) { }
         }
     }
 }

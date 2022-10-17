@@ -11,6 +11,10 @@ namespace PractisingPrivilegesProject.PageObjects.SelectorNumberPage
     public partial class SelectorNumberPagesForAllPages
     {
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'mat-select-trigger')]")]
-        public IWebElement DropDownSelectorNumber;
+        public IWebElement DropDownSelectorNumberForLocationEmployersDocsRolesPgs;
+
+        [FindsBy(How = How.XPath, Using = "//mat-paginator[@class = 'mat-paginator']//div[contains(@class, 'mat-select-trigger')]")]
+        public IWebElement DropDownSelectorNumberForUsersMngmnt;
+        
     }
 }

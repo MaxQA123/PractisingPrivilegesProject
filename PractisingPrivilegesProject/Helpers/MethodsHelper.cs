@@ -43,11 +43,11 @@ namespace PractisingPrivilegesProject.Helpers
 
     public class KeyBoardActions
     {
-        [AllureStep("ClickArrowRight")]
-        public static void ClickArrowRight()
+        [AllureStep("ClickArrowUpt")]
+        public static void ClickArrowUpt()
         {
             new Actions(Browser._Driver)
-                .SendKeys(Keys.ArrowRight)
+                .SendKeys(Keys.ArrowUp)
                 .Build()
                 .Perform();
         }
@@ -57,6 +57,24 @@ namespace PractisingPrivilegesProject.Helpers
         {
             new Actions(Browser._Driver)
                 .SendKeys(Keys.ArrowDown)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClickArrowLeft")]
+        public static void ClickArrowLeft()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.ArrowLeft)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClickArrowRight")]
+        public static void ClickArrowRight()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.ArrowRight)
                 .Build()
                 .Perform();
         }
@@ -86,6 +104,60 @@ namespace PractisingPrivilegesProject.Helpers
                 .ScrollToElement(element)
                 .Build()
                 .Perform(); 
+        }
+
+        [AllureStep("ScrollToDown")]
+        public static void ScrollToDown()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.End)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ScrollToUp")]
+        public static void ScrollToUp()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.Home)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("EnterData")]
+        public static void EnterData()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(TestDataForFieldSearch.ENTER_NAME_ROLE_ADMIN)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClickBackspace")]
+        public static void ClickBackspace()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.Backspace)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClickInsert")]
+        public static void ClickInsert()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.Insert)
+                .Build()
+                .Perform();
+        }
+
+        [AllureStep("ClearValue")]
+        public static void ClearValue()
+        {
+            new Actions(Browser._Driver)
+                .SendKeys(Keys.Delete)
+                .Build()
+                .Perform();
         }
     }
 
@@ -136,5 +208,4 @@ namespace PractisingPrivilegesProject.Helpers
             catch (StaleElementReferenceException) { return false; }
         }
     }
-
 }

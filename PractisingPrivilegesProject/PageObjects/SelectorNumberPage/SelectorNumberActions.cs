@@ -12,10 +12,18 @@ namespace PractisingPrivilegesProject.PageObjects.SelectorNumberPage
 {
     public partial class SelectorNumberPagesForAllPages
     {
-        [AllureStep("ClickDropDownSelectorNumber")]
-        public SelectorNumberPagesForAllPages ClickDropDownSelectorNumber()
+        [AllureStep("ClickDropDownSelectorNumberForLocationEmployersDocsRolesPgs")]
+        public SelectorNumberPagesForAllPages ClickDropDownSelectorNumberForLocationEmployersDocsRolesPgs()
         {
-            Button.Click(DropDownSelectorNumber);
+            Button.Click(DropDownSelectorNumberForLocationEmployersDocsRolesPgs);
+
+            return this;
+        }
+
+        [AllureStep("ClickDropDownSelectorNumberForUsersMngmntPg")]
+        public SelectorNumberPagesForAllPages ClickDropDownSelectorNumberForUsersMngmntPg()
+        {
+            Button.Click(DropDownSelectorNumberForUsersMngmnt);
 
             return this;
         }

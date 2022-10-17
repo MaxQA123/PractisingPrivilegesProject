@@ -135,6 +135,11 @@ namespace PractisingPrivilegesProject.Helpers
         public const string months = "1";
     }
 
+    public class TestDataForFieldSearch
+    {
+        public const string ENTER_NAME_ROLE_ADMIN = "Admin";
+    }
+
     public class TestDataEmailDomen
     {
         public const string domenEmailXitroo = "@xitroo.com";

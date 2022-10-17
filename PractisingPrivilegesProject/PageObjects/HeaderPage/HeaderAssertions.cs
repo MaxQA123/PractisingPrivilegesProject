@@ -75,7 +75,6 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
             });
 
             return this;
-
         }
 
         [AllureStep("VerifyNameRoleApprover")]

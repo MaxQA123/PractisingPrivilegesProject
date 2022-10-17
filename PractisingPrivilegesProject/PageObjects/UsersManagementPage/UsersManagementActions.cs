@@ -17,5 +17,14 @@ namespace PractisingPrivilegesProject.PageObjects.UsersManagementPage
 
             return this;
         }
+
+        [AllureStep("ClickFieldInputSearchUsrsMngmntPg")]
+        public UsersManagement ClickFieldInputSearchUsrsMngmntPg()
+        {
+            //Button.Click(FieldInputSearchUsrsMngmntPg);
+            FieldInputSearchUsrsMngmntPg.Click();
+
+            return this;
+        }
     }
 }

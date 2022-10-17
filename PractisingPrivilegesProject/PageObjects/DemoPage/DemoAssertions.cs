@@ -21,5 +21,22 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
 
             return this;
         }
+
+        //[AllureStep("VerifyDemoRepeat")]
+        //public DemoTest VerifyDemoRepeat()
+        //{
+        //    WaitUntil.WaitSomeInterval(2000);
+
+        //    Assert.IsTrue(DemoTest.DemoCustomElementIsInVisible(_MessageInvaldLoginAttempLogInPg));
+
+        //    return this;
+        //}
+
+        //[AllureStep("VerifyDemoExeptionFail")]
+        //public DemoTest VerifyDemoExeptionFail()
+        //{
+        //    Assert.That(() => DoSomethingThatMayNotWork(), Throws.Nothing);
+        //}
+
     }
 }
