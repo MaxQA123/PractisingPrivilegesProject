@@ -30,5 +30,8 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
 
         [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'Invalid login attempt.')]")]
         public IWebElement MessageInvaldLoginAttempLogInPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(@aria-label, 'Error')]")]
+        public IWebElement MessageErrorNeedDoneRetryLogInPg;
     }
 }

@@ -28,7 +28,6 @@ namespace AdminTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [Retry(2)]
         [AllureSuite("Admin")]
         [AllureSubSuite("LogInAsSuperAdmin")]
 
@@ -1210,7 +1209,8 @@ namespace AdminTests
         public void Demo()
         {
             Pages.DemoTest
-                .SigningInAsSuperAdmin();
+                .SigningInAsSuperAdmin()
+                .VerifyDemoLogin();
 
             //string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 

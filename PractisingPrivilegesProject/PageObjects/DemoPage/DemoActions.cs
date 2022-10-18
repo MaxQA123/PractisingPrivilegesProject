@@ -17,15 +17,15 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
         [AllureStep("SigningInAsSuperAdmin")]
         public DemoTest SigningInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailSuperAdmin);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordSuperAdmin);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminQatester);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataAdmin.passwordNewAdminQatester);
             Button.Click(ButtonSignInLogInPg);
-            //if (MessageInvaldLoginAttempLogInPg.Displayed == true)
+            //if (ButtonSignInLogInPg.Displayed == true)
             //{
 
             //    InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataAdmin.emailAdminQatester);
             //    InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
-            //    Button.Click(Browser._Driver.FindElement(_ButtonSignInLogInPg));
+            //    Button.Click(ButtonSignInLogInPg);
             //}
             return this;
         }

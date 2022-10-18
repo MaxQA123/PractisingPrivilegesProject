@@ -19,7 +19,7 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
                 Button.Click(IconShowPasswordLogInPg);
                 Button.Click(ButtonSignInLogInPg);
                 VerifySuccessLogIn();
-            
+                ErrorNeedDoneRetry();
             return this;
         }
 

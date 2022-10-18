@@ -20,5 +20,13 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
                 Assert.IsTrue(Errors.IsInvisible(MessageInvaldLoginAttempLogInPg));
             });
         }
+
+        [AllureStep("ErrorNeedDoneRetry")]
+        public LogIn ErrorNeedDoneRetry()
+        {
+            Assert.IsTrue(Errors.IsInvisible(MessageErrorNeedDoneRetryLogInPg));
+
+            return this;
+        }
     }
 }

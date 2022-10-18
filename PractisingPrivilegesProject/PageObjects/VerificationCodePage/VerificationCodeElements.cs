@@ -15,5 +15,9 @@ namespace PractisingPrivilegesProject.PageObjects.VerificationCodePage
 
         [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator w100 mat-flat-button mat-button-base mat-primary']")]
         public IWebElement ButtomSubmitVrfctnCdPg;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Invalid login attempt. ']")]
+        public IWebElement MessageInvalidLoginAttemptVrfctnCdPg;
+        
     }
 }
