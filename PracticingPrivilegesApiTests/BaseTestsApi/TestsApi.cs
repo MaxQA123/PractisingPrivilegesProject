@@ -3,9 +3,11 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using PracticingPrivilegesApiTests.ApiHelpers;
+using PracticingPrivilegesApiTests.ApiPagesObjects.AdminPages.CreateUserAdminPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
 using PractisingPrivilegesProject.Helpers;
+using RimuTec.Faker;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +73,42 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var responseTwoStep = TwoStepApiAdmin.ExecuteTwoStepLogIn(code, email, CredentialsApiAdmin.type);
 
             TwoStepApiAdmin.VerifyingLoggedUserConst(responseTwoStep);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("ApiAdmin")]
+        [AllureSubSuite("CreateUserAdmin")]
+
+        //Date of publication:
+        //Version\Build:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The user in the role of admin had been created successfully.
+        //Comment: 
+        //Path to cheking's: 
+
+        public void SuperAdminCreateUserAdmin()
+        {
+            var email = CredentialsApiSuperAdmin.emailSuperAdmin;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, CredentialsApiSuperAdmin.passwordSuperAdmin);
+
+            LogInApi.VerifyingLoggedUserConst(responseLogIn);
+
+            var emailAdmin = GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo;
+            var firstName = Name.FirstName();
+            var lastName = Name.LastName();
+            var phoneNumber = GenerateRandomDataHelper.RandomPhoneNumber(10);
+            List<int> numberRoles = CreateUserAdmin.CreateListRoles(TestDataForSelectRole.ROLE_ADMIN);
+            var type = TestDataForCreateNewUser.TYPE_DATA_FOR_CREATE_USER;
+
+            var responseCreateAdmin = CreateUserAdmin.ExecuteCreateAdmin(responseLogIn, numberRoles, emailAdmin, firstName, lastName, phoneNumber, type);
+
+            CreateUserAdmin.VerifyingCreateUserRandom(responseCreateAdmin);
         }
     }
 }

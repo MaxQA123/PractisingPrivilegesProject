@@ -13,6 +13,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
 {
     public partial class LogInApi
     {
+        [AllureStep("RequestBody")]
         public static RequestLogIn RequestBody(string email, string password)
         {
             var payload = new RequestLogIn();
@@ -22,7 +23,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
             return payload;
         }
 
-        [AllureStep("GetUserEmail")]
+        [AllureStep("ExecuteLogIn")]
         public static ResponseLogIn ExecuteLogIn(string email, string password)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
@@ -46,6 +47,5 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
 
             return dtoObject;
         }
-
     }
 }

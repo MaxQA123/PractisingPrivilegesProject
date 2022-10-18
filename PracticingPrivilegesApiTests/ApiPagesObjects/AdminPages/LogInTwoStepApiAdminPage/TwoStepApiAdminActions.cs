@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using NUnit.Allure.Attributes;
 using PracticingPrivilegesApiTests.ApiHelpers;
 using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
 using RestSharp;
@@ -12,6 +13,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage
 {
     public partial class TwoStepApiAdmin
     {
+        [AllureStep("RequestBody")]
         public static RequestTwoStepAsAdmin RequestBody(string code, string email, string type)
         {
             var payload = new RequestTwoStepAsAdmin();
@@ -22,6 +24,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage
             return payload;
         }
 
+        [AllureStep("ExecuteTwoStepLogIn")]
         public static ResponceTwoStepAdmin ExecuteTwoStepLogIn(string code, string email, string type)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);

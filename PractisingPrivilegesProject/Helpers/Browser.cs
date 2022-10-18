@@ -29,7 +29,7 @@ namespace PractisingPrivileges.Helpers
         }
         public static void Initialize()
         {
-            AllureConfigFilesHelper.CopyJsonConfigFile();
+            AllureConfigFilesHelper.CreateJsonConfigFile();
             new DriverManager().SetUpDriver(new ChromeConfig());
             _webDriver = new ChromeDriver();
             _Driver.Manage().Cookies.DeleteAllCookies();

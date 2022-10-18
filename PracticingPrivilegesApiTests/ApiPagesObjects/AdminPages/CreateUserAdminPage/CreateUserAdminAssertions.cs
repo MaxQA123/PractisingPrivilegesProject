@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage
+namespace PracticingPrivilegesApiTests.ApiPagesObjects.AdminPages.CreateUserAdminPage
 {
-    public partial class LogInApi
+    public partial class CreateUserAdmin
     {
-        [AllureStep("VerifyingLoggedUserConst")]
-        public static void VerifyingLoggedUserConst(ResponseLogIn response)
+        [AllureStep("VerifyingCreateUserRandom")]
+        public static void VerifyingCreateUserRandom(ResponseCreateAdmin response)
         {
             Assert.AreEqual("Successful operation.", response.message);
         }

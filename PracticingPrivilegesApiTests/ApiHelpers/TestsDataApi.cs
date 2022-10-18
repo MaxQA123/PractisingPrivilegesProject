@@ -10,6 +10,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
     {
         
         public const string apiHost = "https://practicingprivilegesapi.azurewebsites.net";
+        //https://practicingprivilegesapi.azurewebsites.net
     }
 
     public class TestDataGeneralApi
@@ -32,5 +33,18 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
     public class ResponseTestsData
     {
         public const string responseForSignUpStudent = "Account created";
+    }
+
+    public class TestDataForSelectRole
+    {
+        public const int ROLE = 0;
+        public const int ROLE_NEXT= 1;
+        public const int ROLE_ADMIN = 2;
+        public const int nextWithTopOfListThird = 3;
+    }
+
+    public class TestDataForCreateNewUser
+    {
+        public const string TYPE_DATA_FOR_CREATE_USER = "[USERS MANAGEMENT] [API] user create";
     }
 }
