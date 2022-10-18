@@ -48,7 +48,7 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(5)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("ApiAdmin")]
         [AllureSubSuite("LoginConstDataAsAdmin")]

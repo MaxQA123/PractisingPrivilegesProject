@@ -26,6 +26,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [Retry(2)]
         [AllureSuite("Admin")]
@@ -55,6 +56,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("LogInAsAdmin")]
@@ -90,6 +92,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateClinician")]
@@ -180,6 +183,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AdminCreateApprover")]
@@ -258,6 +262,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateAdmin")]
@@ -328,6 +333,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AdminCreateViewer")]
@@ -402,6 +408,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateUserWithAllRoles")]
@@ -498,6 +505,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AdminCreateUserClinicianApproverVieewer")]
@@ -597,6 +605,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateUserClinicianViewer")]
@@ -690,6 +699,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AdminCreateApproverViewer")]
@@ -768,6 +778,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminCreateUserApproverClinician")]
@@ -860,6 +871,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("SuperAdminForgotPassword")]
@@ -880,6 +892,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AdminForgotPassword")]
@@ -929,6 +942,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("VerifySidebar")]
@@ -968,6 +982,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AddNewLocationAsSuperAdmin")]
@@ -1022,6 +1037,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AddNewEmployerAsAdmin")]
@@ -1080,6 +1096,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AddNewDocWithoutRequiresRenewal")]
@@ -1134,6 +1151,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Admin")]
         [AllureSubSuite("AddNewRole")]
@@ -1184,7 +1202,7 @@ namespace AdminTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(5)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Demo")]
         [AllureSubSuite("Demo")]
@@ -1194,27 +1212,12 @@ namespace AdminTests
             Pages.DemoTest
                 .SigningInAsSuperAdmin();
 
-            string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
+            //string nameRoleCompare = Pages.Header.GetNameRoleFromHeader();
 
-            Pages.Header
-                .VerifyNameRoleSuperAdmin(nameRoleCompare);
+            //Pages.Header
+            //    .VerifyNameRoleSuperAdmin(nameRoleCompare);
             Pages.UsersManagement
-                .ClickFieldInputSearchUsrsMngmntPg();
-            KeyBoardActions
-                .EnterData();
-            WaitUntil.WaitSomeInterval(1000);
-            KeyBoardActions
-                .ClearValue();
-            //Pages.SelectorNumberPagesForAllPages
-            //    .ClickDropDownSelectorNumberForUsersMngmntPg()
-            //    .SelectNumberPage(TestDataForDropDownNumberPage.oneHundredItem, "");
-            //WaitUntil.WaitSomeInterval(5000);
-            //KeyBoardActions
-            //    .ScrollToElement(Pages.UsersManagement.LastUserInListUserstUsrsMngmntPg);
-            //KeyBoardActions
-            //    .ScrollToUp();
-            //Pages.UsersManagement
-            //    .ClickButtonCreateNewUserUsersMngmntPg();
+                .ClickButtonCreateNewUserUsersMngmntPg();
             //Pages.ProfileDetails
             //    .OpenDropDownMenuSelectorRolesPrflPg()
             //    .SelectRoleAdminViaDropDown()
@@ -1225,9 +1228,9 @@ namespace AdminTests
             //string lastNameExpected = Pages.ProfileDetails.GetLastNameFromRrofDtlsPg();
             //string emailCopy = Pages.ProfileDetails.CopyEmailFromProfileDetails();
 
-            //Pages.ProfileDetails
-            //    .ClickButtonCreatePrflPg()
-            //    .VerifyEnteredDataSelectedData();
+            Pages.ProfileDetails
+                .ClickButtonCreatePrflPg()
+                .VerifyEnteredDataSelectedData();
             //Pages.Header
             //   .LoggedFromAccountOnHeader();
             //Pages.SwitchingJScriptExecutorHelper
@@ -1256,7 +1259,7 @@ namespace AdminTests
             //Pages.Header
             //    .VerifyFirstLastNameRandom(firstNameExpected, firstNameActual, lastNameExpected, lastNameActual);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(3000);
         }
     }
 }

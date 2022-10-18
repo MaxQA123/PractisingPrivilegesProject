@@ -25,6 +25,7 @@ namespace ViewerTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Viewer")]
         [AllureSubSuite("LogInAsViewer")]
@@ -48,7 +49,7 @@ namespace ViewerTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstName = Pages.Header.GetFirstNameFromHeadere();
+            string firstName = Pages.Header.GetFirstNameFromHeader();
 
             Pages.Header
                 .VerifyNameRoleViewer(firstName);
@@ -60,6 +61,7 @@ namespace ViewerTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Viewer")]
         [AllureSubSuite("ForgotPasswordViewer")]

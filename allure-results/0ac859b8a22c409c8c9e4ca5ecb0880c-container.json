@@ -1,0 +1,80 @@
+{
+  "uuid": "5286f469-08e6-4762-b945-276a6742464a-tc-0-1000",
+  "name": "AdminTests.WebSiteAdminTests.Demo",
+  "children": [
+    "35c34f3c-109d-49cd-b41a-f6ab560a0fbf-tr-0-1019"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1666074727404,
+      "stop": 1666074727404
+    },
+    {
+      "name": "SetUp",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at AdminTests.WebBaseAdmin.SetUp() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\BaseAdmin\\WebBaseAdmin.cs:line 17\r\n--TearDown\r\n   at PractisingPrivilegesProject.Helpers.ScreenShotHelper.MakeScreenShot() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\ScreenShotHelper.cs:line 19\r\n   at PractisingPrivileges.Helpers.BaseWeb.DoAfterEach() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\BaseWeb.cs:line 31"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1666074727408,
+      "stop": 1666074727408
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at AdminTests.WebBaseAdmin.SetUp() in C:\\Automation\\PractisingPrivilegesProject\\AdminTests\\BaseAdmin\\WebBaseAdmin.cs:line 17\r\n--TearDown\r\n   at PractisingPrivilegesProject.Helpers.ScreenShotHelper.MakeScreenShot() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\ScreenShotHelper.cs:line 19\r\n   at PractisingPrivileges.Helpers.BaseWeb.DoAfterEach() in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\Helpers\\BaseWeb.cs:line 31"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1666074727408,
+      "stop": 1666074727408
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1666074727409,
+      "stop": 1666074727409
+    }
+  ],
+  "links": [],
+  "start": 1666074727241,
+  "stop": 1666074727583
+}

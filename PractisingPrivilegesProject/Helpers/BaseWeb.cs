@@ -12,7 +12,7 @@ namespace PractisingPrivileges.Helpers
         [OneTimeSetUp]
         public void DobeforeAllTheTests()
         {
-            Browser.Initialize();
+            
         }
 
         [OneTimeTearDown]

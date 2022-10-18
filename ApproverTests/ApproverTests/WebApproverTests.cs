@@ -25,6 +25,7 @@ namespace ApproverTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Approver")]
         [AllureSubSuite("LogInAsApprover")]
@@ -48,7 +49,7 @@ namespace ApproverTests
             Pages.VerificationCode
                 .ConfirmVerificationCode(responseLogIn.code);
 
-            string firstName = Pages.Header.GetFirstNameFromHeadere();
+            string firstName = Pages.Header.GetFirstNameFromHeader();
 
             Pages.Header
                 .VerifyNameRoleApprover(firstName);
@@ -60,6 +61,7 @@ namespace ApproverTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Approver")]
         [AllureSubSuite("ForgotPasswordApprover")]

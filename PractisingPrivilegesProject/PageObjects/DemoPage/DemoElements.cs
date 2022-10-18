@@ -11,17 +11,17 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
 {
     public partial class DemoTest
     {
-        //[FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Email']")]
-        //public IWebElement FieldInputEmailLogInPg;
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Email']")]
+        public IWebElement FieldInputEmailLogInPg;
 
-        IWebElement FieldInputEmailLogInPg => Browser._Driver.FindElement(_FieldInputEmailLogInPg);
-        public static readonly By _FieldInputEmailLogInPg = By.XPath("//input[@placeholder = 'Email']");
+        //IWebElement FieldInputEmailLogInPg => Browser._Driver.FindElement(_FieldInputEmailLogInPg);
+        //public static readonly By _FieldInputEmailLogInPg = By.XPath("//input[@placeholder = 'Email']");
 
-        //[FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Password']")]
-        //public IWebElement FieldInputPasswordLogInPg;
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Password']")]
+        public IWebElement FieldInputPasswordLogInPg;
 
-        IWebElement FieldInputPasswordLogInPg => Browser._Driver.FindElement(_FieldInputPasswordLogInPg);
-        public static readonly By _FieldInputPasswordLogInPg = By.XPath("//input[@placeholder = 'Password']");
+        //IWebElement FieldInputPasswordLogInPg => Browser._Driver.FindElement(_FieldInputPasswordLogInPg);
+        //public static readonly By _FieldInputPasswordLogInPg = By.XPath("//input[@placeholder = 'Password']");
 
         //[FindsBy(How = How.XPath, Using = "//button[@class= 'mat-focus-indicator w100 mat-flat-button mat-button-base mat-primary']")]
         //public IWebElement ButtonSignInLogInPg;
@@ -33,7 +33,7 @@ namespace PractisingPrivilegesProject.PageObjects.DemoPage
         public readonly static By _TextNameRoleOnHeader = By.XPath("//div[@class = 'mat-menu-trigger avatar']//span");
 
         IWebElement FieldInputLastNamePrflPg => Browser._Driver.FindElement(_FieldInputLastNamePrflPg);
-        public static readonly By _FieldInputLastNamePrflPg = By.XPath("Last name");
+        public static readonly By _FieldInputLastNamePrflPg = By.XPath("//input[@name = 'Last name']");
 
         IWebElement MessageInvaldLoginAttempLogInPg => Browser._Driver.FindElement(_MessageInvaldLoginAttempLogInPg);
         public static readonly By _MessageInvaldLoginAttempLogInPg = By.XPath("//div[contains(@aria-label, 'Invalid login attempt.')]");

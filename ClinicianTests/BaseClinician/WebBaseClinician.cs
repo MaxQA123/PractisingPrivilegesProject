@@ -14,6 +14,8 @@ namespace ClinicianTests
         [SetUp]
         public void SetUp()
         {
+            Browser.Initialize();
+
             Browser._Driver.Navigate().GoToUrl(EndPoints.urlWebSite);
         }
     }

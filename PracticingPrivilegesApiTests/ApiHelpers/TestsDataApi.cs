@@ -15,6 +15,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
     public class TestDataGeneralApi
     {
         public const string passwordGeneralCurrent = "Qwerty123!";
+        public const string passwordGeneralNew = "!123Qwerty";
     }
     public class CredentialsApiSuperAdmin
     {
