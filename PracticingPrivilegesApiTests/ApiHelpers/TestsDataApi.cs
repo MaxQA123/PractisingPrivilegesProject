@@ -40,7 +40,15 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
         public const int ROLE = 0;
         public const long ROLE_CLINICIAN= 1;
         public const int ROLE_ADMIN = 2;
-        public const int nextWithTopOfListThird = 3;
+        public const long ROLE_APPROVER = 3;
+    }
+
+    public class TestDataForSelectRoleArray
+    {
+        public const long ROLE = 0;
+        public const long ROLE_CLINICIAN = 1;
+        public const long ROLE_ADMIN = 2;
+        public const long ROLE_APPROVER = 3;
     }
 
     public class TestDataForCreateNewUser
@@ -65,5 +73,12 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
         public const string SPECIALTIES_SPECIALTY_LABEL = "General Surgery";
         public const long LOCATIONS = 1;
         public const long SPECIALITIES = 1;
+    }
+
+    public class TestDataUserProfileForApprover
+    {
+        public const string APPROVER = "Approver";
+        public const long PERSONAL_IDENTIFICATION_NUMBER = 1111;
+        public const long PHONE_NUMBER = 1231234444;
     }
 }

@@ -78,5 +78,28 @@ namespace PractisingPrivilegesProject.Helpers
             }
             return data;
         }
+
+        [AllureStep("GetNameRole")]
+        public static string DeleteDataFromUserProfile()
+        {
+            string data = null;
+            using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
+            {
+                string nameRole = TestDataNameRoles.ROLE_TESTING;
+                SqlCommand command = new("SELECT Name" +
+                    " FROM DocumentRoles" + " WHERE Name = 'Role testing'", db);
+                db.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        data = reader.GetValue(0).ToString();
+                    }
+                }
+            }
+            return data;
+        }
     }
 }

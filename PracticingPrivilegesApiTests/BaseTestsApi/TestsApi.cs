@@ -4,6 +4,7 @@ using NUnit.Allure.Core;
 using NUnit.Framework;
 using PracticingPrivilegesApiTests.ApiHelpers;
 using PracticingPrivilegesApiTests.ApiPagesObjects.AdminPages.CreateUserAdminPage;
+using PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserApproverPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.ClinicianPages.CreateUserClinicianPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
@@ -186,6 +187,42 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var responseCreateClinician = CreateUserClinician.ExecuteCreateClinicianAsAdmin(responseTwoStep, numberRoles, emailAdmin, firstName, lastName, phoneNumber, type);
 
             CreateUserClinician.VerifyingCreateUserRandom(responseCreateClinician);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("ApiAdmin")]
+        [AllureSubSuite("AsSuperAdminCreateUserClinician")]
+
+        //Date of publication:
+        //Version\Build:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The user in the role of clinician had been created successfully.
+        //Comment: 
+        //Path to cheking's: 
+
+        public void AsSuperAdminCreateUserApprover()
+        {
+            var email = CredentialsApiSuperAdmin.emailSuperAdmin;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, CredentialsApiSuperAdmin.passwordSuperAdmin);
+
+            LogInApi.VerifyingLoggedUserConst(responseLogIn);
+
+            var emailApprover = GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo;
+            var firstName = Name.FirstName();
+            var lastName = Name.LastName();
+            var phoneNumber = TestDataUserProfileForApprover.PHONE_NUMBER;
+            long[] numberRoles = CreateUserApprover.CreateArrayRoles(TestDataForSelectRoleArray.ROLE_APPROVER);
+            var type = TestDataForCreateNewUser.TYPE_DATA_FOR_CREATE_USER;
+
+            var responseCreateApprover = CreateUserApprover.ExecuteCreateApproverAsSuperAdmin(responseLogIn, numberRoles, emailApprover, firstName, lastName, phoneNumber, type);
+
+            CreateUserApprover.VerifyingCreateUserRandom(responseCreateApprover);
         }
     }
 }
