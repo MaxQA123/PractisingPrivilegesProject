@@ -16,14 +16,16 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.AdminPages.CreateUserAdmi
         [AllureStep("RequestBody")]
         public static RequestCreateAdmin RequestBody(List<int> numberRoles, string emailAdmin, string firstName, string lastName, string phoneNumber, string type)
         {
-            var payload = new RequestCreateAdmin();
-            payload.email = emailAdmin;
-            payload.firstName = firstName;
-            payload.lastName = lastName;
-            payload.phoneNumber = phoneNumber;
-            payload.userRoles = numberRoles;
-            payload.userProfiles = new() { };
-            payload.type = type;
+            RequestCreateAdmin payload = new()
+            {
+                email = emailAdmin,
+                firstName = firstName,
+                lastName = lastName,
+                phoneNumber = phoneNumber,
+                userRoles = numberRoles,
+                userProfiles = new() { },
+                type = type
+            };
 
             return payload;
         }
