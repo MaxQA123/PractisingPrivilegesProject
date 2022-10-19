@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NUnit.Allure.Attributes;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,10 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ClinicianPages.CreateUser
 {
     public partial class CreateUserClinician
     {
+        [AllureStep("VerifyingCreateUserRandom")]
+        public static void VerifyingCreateUserRandom(ResponseCreateClinician response)
+        {
+            Assert.AreEqual("Successful operation.", response.Message);
+        }
     }
 }

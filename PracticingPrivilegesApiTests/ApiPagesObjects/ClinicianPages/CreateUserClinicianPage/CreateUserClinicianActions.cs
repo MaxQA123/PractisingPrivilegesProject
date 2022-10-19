@@ -2,6 +2,7 @@
 using NUnit.Allure.Attributes;
 using PracticingPrivilegesApiTests.ApiHelpers;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
+using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -48,15 +49,13 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ClinicianPages.CreateUser
                         Label = TestDataUserProfileForClinician.SPECIALTIES_SPECIALTY_LABEL,
                     }
                 },
-                Type = type
-                
+                Type = type  
             };
-
             return payload;
         }
 
-        [AllureStep("ExecuteCreateClinician")]
-        public static ResponseCreateClinician ExecuteCreateAdmin(ResponseLogIn responseLogIn, List<long> numberRoles, string email, string firstName, string lastName, string phoneNumber, string type)
+        [AllureStep("ExecuteCreateClinicianAsSuperAdmin")]
+        public static ResponseCreateClinician ExecuteCreateClinicianAsSuperAdmin(ResponseLogIn responseLogIn, List<long> numberRoles, string email, string firstName, string lastName, string phoneNumber, string type)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
 
@@ -82,9 +81,36 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ClinicianPages.CreateUser
             return dtoObject;
         }
 
-        public static List<int> CreateListRoles(int item)
+        [AllureStep("ExecuteCreateClinicianAsAdmin")]
+        public static ResponseCreateClinician ExecuteCreateClinicianAsAdmin(ResponceTwoStepAdmin responseTwoStep, List<long> numberRoles, string email, string firstName, string lastName, string phoneNumber, string type)
         {
-            List<int> role = new List<int>();
+            var restClient = new RestClient(EndPointsApi.apiHost);
+
+            var restRequest = new RestRequest("/api/user/create", Method.Post);
+
+            restRequest.AddHeaders(Headers.HeadersCommon());
+
+            restRequest.AddHeader("Authorization", "Bearer " + responseTwoStep.accessToken);
+
+            restRequest.AddJsonBody(RequestBody(numberRoles, email, firstName, lastName, phoneNumber, type));
+
+            var response = restClient.Execute(restRequest);
+
+            var content = response.Content;
+
+            if (response.StatusDescription == "Bad Request")
+            {
+                Console.WriteLine(response.Content);
+            }
+
+            var dtoObject = JsonConvert.DeserializeObject<ResponseCreateClinician>(content);
+
+            return dtoObject;
+        }
+
+        public static List<long> CreateListRoles(long item)
+        {
+            List<long> role = new List<long>();
 
             role.Add(item);
 
