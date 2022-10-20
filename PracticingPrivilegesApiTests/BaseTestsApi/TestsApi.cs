@@ -237,16 +237,16 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("ApiAdmin")]
-        [AllureSubSuite("Demo")]
+        [AllureSubSuite("AsSuperAdminCreateUserApprover")]
 
         //Date of publication:
         //Version\Build:
         //Willingness for testing: Done.
-        //This test case is doing checking: The user in the role of clinician had been created successfully.
+        //This test case is doing checking: The user in the role of approver had been created successfully.
         //Comment: 
         //Path to cheking's: 
 
-        public void Demo()
+        public void AsSuperAdminCreateUserApprover()
         {
             var email = CredentialsApiSuperAdmin.emailSuperAdmin;
 
@@ -264,6 +264,27 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var responseCreateApprover = CreateUserApprover.ExecuteCreateApproverAsSuperAdmin(responseLogIn, numberRoles, emailApprover, firstName, lastName, phoneNumber, type, payload);
 
             CreateUserApprover.VerifyingCreateUserRandom(responseCreateApprover);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("ApiAdmin")]
+        [AllureSubSuite("AsSuperAdminCreateUserApprover")]
+
+        //Date of publication:
+        //Version\Build:
+        //Willingness for testing:
+        //This test case is doing checking:
+        //Comment: 
+        //Path to cheking's: 
+
+        public void Demo()
+        {
+
         }
     }
 }
