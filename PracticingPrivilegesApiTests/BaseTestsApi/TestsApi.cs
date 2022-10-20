@@ -8,6 +8,7 @@ using PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserAppro
 using PracticingPrivilegesApiTests.ApiPagesObjects.ClinicianPages.CreateUserClinicianPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.LogInApiPage;
 using PracticingPrivilegesApiTests.ApiPagesObjects.TwoStepApiAdminPage;
+using PracticingPrivilegesApiTests.ApiPagesObjects.ViewerPages;
 using PractisingPrivilegesProject.Helpers;
 using RimuTec.Faker;
 using System;
@@ -196,6 +197,46 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("ApiAdmin")]
+        [AllureSubSuite("AsAdminCreateUserViewer")]
+
+        //Date of publication:
+        //Version\Build:
+        //Willingness for testing: Done.
+        //This test case is doing checking: The user in the role of clinician had been created successfully.
+        //Comment: 
+        //Path to cheking's: 
+
+        public void AsAdminCreateUserViewer()
+        {
+            var email = CredentialsApiAdmin.emailAdminQatester;
+
+            var responseLogIn = LogInApi.ExecuteLogIn(email, TestDataGeneralApi.passwordGeneralCurrent);
+
+            string code = responseLogIn.code;
+
+            var responseTwoStep = TwoStepApiAdmin.ExecuteTwoStepLogIn(code, email, CredentialsApiAdmin.type);
+
+            TwoStepApiAdmin.VerifyingLoggedUserConst(responseTwoStep);
+
+            var emailViewer = GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo;
+            var firstName = Name.FirstName();
+            var lastName = Name.LastName();
+            var phoneNumber = TestDataUserProfileForApprover.PHONE_NUMBER;
+            List<long> numberRoles = CreateUserViewer.CreateListRoles(TestDataForSelectRole.ROLE_VIEWER);
+            var type = TestDataForCreateNewUser.TYPE_DATA_FOR_CREATE_USER;
+
+            var responseCreateViewer = CreateUserViewer.ExecuteCreateViewer(responseTwoStep, numberRoles, emailViewer, firstName, lastName, phoneNumber, type);
+
+            CreateUserViewer.VerifyingCreateUserRandom(responseCreateViewer);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("ApiAdmin")]
         [AllureSubSuite("Demo")]
 
         //Date of publication:
@@ -217,7 +258,6 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var firstName = Name.FirstName();
             var lastName = Name.LastName();
             var phoneNumber = TestDataUserProfileForApprover.PHONE_NUMBER;
-            //long[] numberRoles = CreateUserApprover.CreateArrayRoles(TestDataForSelectRoleArray.ROLE_APPROVER);
             List<long> numberRoles = CreateUserApprover.CreateListRoles(TestDataForSelectRole.ROLE_APPROVER);
             var type = TestDataForCreateNewUser.TYPE_DATA_FOR_CREATE_USER;
             var payload = CreateUserApprover.RequestBody(numberRoles, emailApprover, firstName, lastName, phoneNumber, type);

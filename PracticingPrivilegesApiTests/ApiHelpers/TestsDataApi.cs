@@ -41,6 +41,7 @@ namespace PracticingPrivilegesApiTests.ApiHelpers
         public const long ROLE_CLINICIAN= 1;
         public const int ROLE_ADMIN = 2;
         public const long ROLE_APPROVER = 3;
+        public const long ROLE_VIEWER = 4;
     }
 
     public class TestDataForSelectRoleArray

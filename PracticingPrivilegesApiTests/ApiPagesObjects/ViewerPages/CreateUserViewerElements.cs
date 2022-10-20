@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserApproverPage
+namespace PracticingPrivilegesApiTests.ApiPagesObjects.ViewerPages
 {
-    public partial class RequestCreateApprover
+    public partial class RequestCreateViewer
     {
         [JsonProperty("email")]
         public string Email { get; set; }
@@ -25,23 +25,13 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
         public List<long> UserRoles { get; set; }
 
         [JsonProperty("userProfiles")]
-        public List<UserProfile> UserProfiles { get; set; }
+        public List<object> UserProfiles { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
     }
 
-    
-    public partial class UserProfile
-    {
-        [JsonProperty("profileType")]
-        public string ProfileType { get; set; }
-
-        [JsonProperty("personalIdentificationNumber")]
-        public long PersonalIdentificationNumber { get; set; }
-    }
-
-    public partial class ResponseCreateApprover
+    public partial class ResponsetCreateViewer
     {
         [JsonProperty("isSuccessful")]
         public bool IsSuccessful { get; set; }

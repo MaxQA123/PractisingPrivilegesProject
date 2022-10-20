@@ -14,29 +14,33 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
     public partial class CreateUserApprover
     {
         [AllureStep("RequestBody")]
-        public static string RequestBody(/*long[]*/ List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type)
+        public static string RequestBody(List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type)
         {
-            RequestCreateApprover payload = new()
+            RequestCreateApprover payload = new RequestCreateApprover()
             {
                 Email = emailApprover,
                 FirstName = firstName,
                 LastName = lastName,
                 PhoneNumber = phoneNumber,
                 UserRoles = numberRoles,
-                UserProfiles = new()
+                UserProfiles = new List<UserProfile>()
                 {
+                    new UserProfile()
+                    {
                     PersonalIdentificationNumber = TestDataUserProfileForApprover.PERSONAL_IDENTIFICATION_NUMBER,
                     ProfileType = TestDataUserProfileForApprover.APPROVER,
+                    }
+                    
                 },
                 Type = type
             };
-            return JsonConvert.SerializeObject(payload);
+            var payloadJson = JsonConvert.SerializeObject(payload);
+
+            return payloadJson;
         }
 
-        
-
         [AllureStep("ExecuteCreateApproverAsSuperAdmin")]
-        public static ResponseCreateApprover ExecuteCreateApproverAsSuperAdmin(ResponseLogIn responseLogIn, List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type, string payload)
+        public static ResponseCreateApprover ExecuteCreateApproverAsSuperAdmin(ResponseLogIn responseLogIn, List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type, string payloadJson)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
 
@@ -47,9 +51,6 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
             restRequest.AddHeader("Authorization", "Bearer " + responseLogIn.accessToken);
 
             restRequest.AddJsonBody(RequestBody(numberRoles, emailApprover, firstName, lastName, phoneNumber, type));
-
-            
-            Console.WriteLine(payload);
             
             var response = restClient.Execute(restRequest);
 
@@ -65,33 +66,6 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
             return dtoObject;
         }
 
-        //[AllureStep("ExecuteDemoCreateApprover")]
-        //public static ResponseCreateApprover ExecuteDemoCreateApprover(ResponseLogIn responseLogIn, List<long> numberRoles, string email, string firstName, string lastName, long phoneNumber, string type)
-        //{
-        //    var restClient = new RestClient(EndPointsApi.apiHost);
-
-        //    var restRequest = new RestRequest("/api/user/create", Method.Post);
-
-        //    restRequest.AddHeaders(Headers.HeadersCommon());
-
-        //    restRequest.AddHeader("Authorization", "Bearer " + responseLogIn.accessToken);
-
-        //    restRequest.AddJsonBody(RequestBody(numberRoles, email, firstName, lastName, phoneNumber, type));
-
-        //    var response = restClient.Execute(restRequest);
-
-        //    var content = response.Content;
-
-        //    if (response.StatusDescription == "Bad Request")
-        //    {
-        //        Console.WriteLine(response.Content);
-        //    }
-
-        //    var dtoObject = JsonConvert.DeserializeObject<ResponseCreateApprover>(content);
-
-        //    return dtoObject;
-        //}
-
         public static List<long> CreateListRoles(long item)
         {
             List<long> role = new List<long>();
@@ -99,14 +73,6 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
             role.Add(item);
 
             return role;
-        }
-
-        public static long[] CreateArrayRoles(long item)
-        {
-            long[] numberRole = new long[] { item };
-            
-            return numberRole;
-
         }
     }
 }
