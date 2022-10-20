@@ -14,7 +14,7 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
     public partial class CreateUserApprover
     {
         [AllureStep("RequestBody")]
-        public static RequestCreateApprover RequestBody(long[] numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type)
+        public static string RequestBody(/*long[]*/ List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type)
         {
             RequestCreateApprover payload = new()
             {
@@ -25,16 +25,18 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
                 UserRoles = numberRoles,
                 UserProfiles = new()
                 {
+                    PersonalIdentificationNumber = TestDataUserProfileForApprover.PERSONAL_IDENTIFICATION_NUMBER,
                     ProfileType = TestDataUserProfileForApprover.APPROVER,
-                    PersonalIdentificationNumber = TestDataUserProfileForApprover.PERSONAL_IDENTIFICATION_NUMBER
                 },
                 Type = type
             };
-            return payload;
+            return JsonConvert.SerializeObject(payload);
         }
 
+        
+
         [AllureStep("ExecuteCreateApproverAsSuperAdmin")]
-        public static ResponseCreateApprover ExecuteCreateApproverAsSuperAdmin(ResponseLogIn responseLogIn, long[] numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type)
+        public static ResponseCreateApprover ExecuteCreateApproverAsSuperAdmin(ResponseLogIn responseLogIn, List<long> numberRoles, string emailApprover, string firstName, string lastName, long phoneNumber, string type, string payload)
         {
             var restClient = new RestClient(EndPointsApi.apiHost);
 
@@ -46,6 +48,9 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
 
             restRequest.AddJsonBody(RequestBody(numberRoles, emailApprover, firstName, lastName, phoneNumber, type));
 
+            
+            Console.WriteLine(payload);
+            
             var response = restClient.Execute(restRequest);
 
             var content = response.Content;
@@ -59,6 +64,33 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
 
             return dtoObject;
         }
+
+        //[AllureStep("ExecuteDemoCreateApprover")]
+        //public static ResponseCreateApprover ExecuteDemoCreateApprover(ResponseLogIn responseLogIn, List<long> numberRoles, string email, string firstName, string lastName, long phoneNumber, string type)
+        //{
+        //    var restClient = new RestClient(EndPointsApi.apiHost);
+
+        //    var restRequest = new RestRequest("/api/user/create", Method.Post);
+
+        //    restRequest.AddHeaders(Headers.HeadersCommon());
+
+        //    restRequest.AddHeader("Authorization", "Bearer " + responseLogIn.accessToken);
+
+        //    restRequest.AddJsonBody(RequestBody(numberRoles, email, firstName, lastName, phoneNumber, type));
+
+        //    var response = restClient.Execute(restRequest);
+
+        //    var content = response.Content;
+
+        //    if (response.StatusDescription == "Bad Request")
+        //    {
+        //        Console.WriteLine(response.Content);
+        //    }
+
+        //    var dtoObject = JsonConvert.DeserializeObject<ResponseCreateApprover>(content);
+
+        //    return dtoObject;
+        //}
 
         public static List<long> CreateListRoles(long item)
         {

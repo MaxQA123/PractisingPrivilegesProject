@@ -196,7 +196,7 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("ApiAdmin")]
-        [AllureSubSuite("AsSuperAdminCreateUserClinician")]
+        [AllureSubSuite("Demo")]
 
         //Date of publication:
         //Version\Build:
@@ -205,7 +205,7 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         //Comment: 
         //Path to cheking's: 
 
-        public void AsSuperAdminCreateUserApprover()
+        public void Demo()
         {
             var email = CredentialsApiSuperAdmin.emailSuperAdmin;
 
@@ -217,10 +217,11 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
             var firstName = Name.FirstName();
             var lastName = Name.LastName();
             var phoneNumber = TestDataUserProfileForApprover.PHONE_NUMBER;
-            long[] numberRoles = CreateUserApprover.CreateArrayRoles(TestDataForSelectRoleArray.ROLE_APPROVER);
+            //long[] numberRoles = CreateUserApprover.CreateArrayRoles(TestDataForSelectRoleArray.ROLE_APPROVER);
+            List<long> numberRoles = CreateUserApprover.CreateListRoles(TestDataForSelectRole.ROLE_APPROVER);
             var type = TestDataForCreateNewUser.TYPE_DATA_FOR_CREATE_USER;
-
-            var responseCreateApprover = CreateUserApprover.ExecuteCreateApproverAsSuperAdmin(responseLogIn, numberRoles, emailApprover, firstName, lastName, phoneNumber, type);
+            var payload = CreateUserApprover.RequestBody(numberRoles, emailApprover, firstName, lastName, phoneNumber, type);
+            var responseCreateApprover = CreateUserApprover.ExecuteCreateApproverAsSuperAdmin(responseLogIn, numberRoles, emailApprover, firstName, lastName, phoneNumber, type, payload);
 
             CreateUserApprover.VerifyingCreateUserRandom(responseCreateApprover);
         }

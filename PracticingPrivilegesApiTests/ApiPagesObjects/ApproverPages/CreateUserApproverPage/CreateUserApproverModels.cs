@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserApproverPage
 {
+    [JsonObject]
     public partial class RequestCreateApprover
     {
         [JsonProperty("email")]
@@ -19,14 +20,19 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
         public string LastName { get; set; }
 
         [JsonProperty("phoneNumber")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long PhoneNumber { get; set; }
 
+        //[JsonProperty("userRoles")]
+        //public long[] UserRoles { get; set; }
+
         [JsonProperty("userRoles")]
-        public long[] UserRoles { get; set; }
+        public List<long> UserRoles { get; set; }
 
         [JsonProperty("userProfiles")]
         public UserProfile UserProfiles { get; set; }
+
+        //[JsonProperty("userProfiles")]
+        //public List<UserProfile> UserProfiles { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -39,7 +45,6 @@ namespace PracticingPrivilegesApiTests.ApiPagesObjects.ApproverPages.CreateUserA
         public string ProfileType { get; set; }
 
         [JsonProperty("personalIdentificationNumber")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long PersonalIdentificationNumber { get; set; }
     }
 
