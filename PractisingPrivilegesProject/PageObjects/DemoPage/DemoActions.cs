@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace PractisingPrivilegesProject.PageObjects.DemoPage
+namespace PractisingPrivilegesProject.PageObjects
 {
     public partial class DemoTest
     {

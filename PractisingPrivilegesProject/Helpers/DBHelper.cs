@@ -79,15 +79,15 @@ namespace PractisingPrivilegesProject.Helpers
             return data;
         }
 
-        [AllureStep("GetNameRole")]
-        public static string DeleteDataFromUserProfile()
+        [AllureStep("Demo")]
+        public static string Demo()
         {
             string data = null;
             using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
             {
-                string nameRole = TestDataNameRoles.ROLE_TESTING;
-                SqlCommand command = new("SELECT Name" +
-                    " FROM DocumentRoles" + " WHERE Name = 'Role testing'", db);
+                string nameEmail = TestDataClinician.emailJaneClinician;
+                SqlCommand command = new("SELECT Email" +
+                    " FROM Users" + $" WHERE Email = '{nameEmail}'", db);
                 db.Open();
 
                 SqlDataReader reader = command.ExecuteReader();

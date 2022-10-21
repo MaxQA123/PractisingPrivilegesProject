@@ -26,7 +26,6 @@ using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewEmployerPage;
 using PractisingPrivilegesProject.PageObjects.SelectorNumberPage;
 using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewDocumentsPage;
 using PractisingPrivilegesProject.PageObjects.MdlWndwAddNewRolePage;
-using PractisingPrivilegesProject.PageObjects.DemoPage;
 
 namespace PractisingPrivilegesProject.PageObjects
 {

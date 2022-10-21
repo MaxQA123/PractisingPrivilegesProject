@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PractisingPrivilegesProject.PageObjects.DemoPage
+namespace PractisingPrivilegesProject.PageObjects
 {
     public partial class DemoTest
     {
