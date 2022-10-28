@@ -66,7 +66,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         public IWebElement FieldInputFourthPersonalIdentificationNumberPrflPg;
 
         [FindsBy(How = How.XPath, Using = "//form//div[@class = 'column'][2]//div[@class = 'gmc']//input")]
-        public IWebElement FieldInputGmcPrflPg;
+        public IWebElement FieldInputGmcProfessionalBodyNumberPrflPg;
 
         [FindsBy(How = How.XPath, Using = "//form//div[@class = 'column']//div[@class = 'gmc']//mat-icon")]
         public IWebElement IconForSaveGmcPrflPg;
@@ -81,7 +81,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         public IWebElement FieldInputIJobTitlePrflPg;
 
         [FindsBy(How = How.XPath, Using = "//textarea[@id = 'restriction']")]
-        public IWebElement FieldInputIRestrictionPrflPg;
+        public IWebElement FieldInputICliniciansPreferencesPrflPg;
 
         #endregion
 

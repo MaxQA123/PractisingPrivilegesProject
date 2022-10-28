@@ -144,7 +144,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         [AllureStep("SetGmcNumberPrflPg")]
         public ProfileDetails SetGmcNumberPrflPg()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputGmcPrflPg, GenerateRandomDataHelper.RandomGmcNumber(7));
+            InputGeneral.InputFunctionWithClear(FieldInputGmcProfessionalBodyNumberPrflPg, GenerateRandomDataHelper.RandomGmcNumber(7));
             Button.Click(IconForSaveGmcPrflPg);
 
             return this;
@@ -289,7 +289,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         public ProfileDetails EnterDataJobTitleRestriction()
         {
             InputGeneral.InputFunctionWithClear(FieldInputIJobTitlePrflPg, Lorem.Word());
-            InputGeneral.InputFunctionWithClear(FieldInputIRestrictionPrflPg, Lorem.Sentence() + GenerateRandomDataHelper.RandomNumberCharacter(10));
+            InputGeneral.InputFunctionWithClear(FieldInputICliniciansPreferencesPrflPg, Lorem.Sentence() + GenerateRandomDataHelper.RandomNumberCharacter(10));
 
             return this;
         }
