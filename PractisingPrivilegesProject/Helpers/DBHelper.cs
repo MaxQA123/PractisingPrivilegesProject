@@ -64,7 +64,7 @@ namespace PractisingPrivilegesProject.Helpers
             {
                 string nameRole = TestDataNameRoles.ROLE_TESTING;
                 SqlCommand command = new("SELECT Name" +
-                    " FROM DocumentRoles" + " WHERE Name = 'Role testing'", db);
+                    " FROM DocumentRoles" + " WHERE Name = 'Example Clinician Role'", db);
                 db.Open();
 
                 SqlDataReader reader = command.ExecuteReader();

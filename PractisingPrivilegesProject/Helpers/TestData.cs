@@ -106,7 +106,7 @@ namespace PractisingPrivilegesProject.Helpers
 
     public class TestDataNameRoles
     {
-        public const string ROLE_TESTING = "Role testing";
+        public const string ROLE_TESTING = "Example Clinician Role";
 
         public const string ROLE_TESTING_WITHOUT_TIME_INFO_ONLY = "Role Testing 8 7 15 Without time Info Only";
         public const string ROLE_MULTI_DOCUMENTS = "Role Multi Documents";
