@@ -42,6 +42,8 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
 
             Assert.AreEqual(nameRoleExpected, getNameRoleActual);
 
+            Console.WriteLine($"EX: {nameRoleExpected} AC: {getNameRoleActual}");
+
             return this;
         }
 
@@ -66,12 +68,9 @@ namespace PractisingPrivilegesProject.PageObjects.HeaderPage
                 Assert.AreEqual(lastNameExpected, lastNameActual);
                 Assert.AreEqual(firstNameExpected, firstNameActual);
 
-                Console.WriteLine($"First name expected: {firstNameExpected}");
-                Console.WriteLine($"First name actual: {firstNameActual}");
+                Console.WriteLine($"First name EX: {firstNameExpected} First name AC: {firstNameActual}");
 
-                Console.WriteLine($"Last name expected: {lastNameExpected}");
-                Console.WriteLine($"Last name actual: {lastNameActual}");
-                
+                Console.WriteLine($"Last name EX: {lastNameExpected} Last name AC: {lastNameActual}");   
             });
 
             return this;

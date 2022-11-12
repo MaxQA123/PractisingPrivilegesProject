@@ -77,7 +77,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             InputGeneral.InputFunctionWithClear(FieldInputFirstNamePrflPg, Name.FirstName());
             InputGeneral.InputFunctionWithClear(FieldInputLastNamePrflPg, Name.LastName());
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddressPrflPg, GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo);
-            InputGeneral.InputFunctionWithClear(FieldInputContactTelephoneNumberPrflPg, GenerateRandomDataHelper.RandomPhoneNumber(10));
+            InputGeneral.InputFunctionWithClear(FieldInputContactTelephoneNumberPrflPg, TestDataCodePhoneNumber.CODE_UK + GenerateRandomDataHelper.RandomPhoneNumber(7));
 
             return this;
         }
@@ -89,7 +89,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
             InputGeneral.InputFunctionWithClear(FieldInputFirstNamePrflPg, TestDataClinician.firstNameClinician);
             InputGeneral.InputFunctionWithClear(FieldInputLastNamePrflPg, TestDataClinician.lastNameClinician);
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddressPrflPg, GenerateRandomDataHelper.RandomEmail(5) + TestDataEmailDomen.domenEmailXitroo);
-            InputGeneral.InputFunctionWithClear(FieldInputContactTelephoneNumberPrflPg, GenerateRandomDataHelper.RandomPhoneNumber(10));
+            InputGeneral.InputFunctionWithClear(FieldInputContactTelephoneNumberPrflPg, TestDataCodePhoneNumber.CODE_UK + GenerateRandomDataHelper.RandomPhoneNumber(7));
 
             return this;
         }

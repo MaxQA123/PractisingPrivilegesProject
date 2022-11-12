@@ -50,7 +50,7 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
         IWebElement FieldInputFirstNamePrflPgForGet => Browser._Driver.FindElement(_FieldInputFirstNamePrflPgForGet);
         public static readonly By _FieldInputFirstNamePrflPgForGet = By.XPath("//input[@name = 'First name']");
 
-        [FindsBy(How = How.XPath, Using = "//input[@name = 'Contact telephone number']")]
+        [FindsBy(How = How.XPath, Using = "//input[@id= 'phone']")]
         public IWebElement FieldInputContactTelephoneNumberPrflPg;
 
         [FindsBy(How = How.XPath, Using = "//code-input/span/input")]

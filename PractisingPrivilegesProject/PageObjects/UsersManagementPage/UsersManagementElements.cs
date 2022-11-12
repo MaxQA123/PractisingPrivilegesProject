@@ -11,7 +11,7 @@ namespace PractisingPrivilegesProject.PageObjects.UsersManagementPage
 {
     public partial class UsersManagement
     {
-        [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator mat-flat-button mat-button-base mat-primary']")]
+        [FindsBy(How = How.XPath, Using = "//button[@class = 'mat-focus-indicator mat-flat-button mat-button-base mat-primary ng-star-inserted']")]
         public IWebElement ButtonCreateNewUserUsersMngmntPg;
 
         [FindsBy(How = How.XPath, Using = "//h1[text() = 'Users management']")]

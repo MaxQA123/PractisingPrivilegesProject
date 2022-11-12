@@ -1,0 +1,3 @@
+Your password has been successfully changed
+First name EX: Jacquelyn First name AC: Jacquelyn
+Last name EX: Raynor Last name AC: Raynor

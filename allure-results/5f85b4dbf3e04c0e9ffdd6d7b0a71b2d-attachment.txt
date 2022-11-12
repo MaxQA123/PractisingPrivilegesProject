@@ -1,0 +1,4 @@
+EX: Admin Adminovich AC: Admin Adminovich
+Your password has been successfully changed
+First name EX: Edythe First name AC: Edythe
+Last name EX: Bernhard Last name AC: Bernhard

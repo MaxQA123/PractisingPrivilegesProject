@@ -37,7 +37,7 @@ namespace PractisingPrivilegesProject.Helpers
         public const string emailAdminQatester = "qatester91311@xitroo.com";
         public const string passwordNewAdminQatester = "!Qaz12345";
 
-        public const string userNameRoleAdmin = "Admin Admin";
+        public const string userNameRoleAdmin = "Admin Adminovich";
         public const string userNameRoleSuperAdmin = "Super Admin";
 
         public const string emailAdminForTestingFrgtPsswrd = "eilhs@xitroo.com";
@@ -144,6 +144,12 @@ namespace PractisingPrivilegesProject.Helpers
     {
         public const string domenEmailXitroo = "@xitroo.com";
         public const string PUTS_BOX = "@putsbox.com";
+    }
+
+    public class TestDataCodePhoneNumber
+    {
+        public const string CODE_UK = "113";
+        public const string CODE_ROI = "83";
     }
 
     public class UploadImages
