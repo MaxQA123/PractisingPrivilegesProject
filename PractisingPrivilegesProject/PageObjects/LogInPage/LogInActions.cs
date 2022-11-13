@@ -46,7 +46,7 @@ namespace PractisingPrivilegesProject.PageObjects.LogInPage
         [AllureStep("SigningInAsApprover")]
         public LogIn SigningInAsApprover()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataApprover.emailJaneApprover);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataApprover.emailApproverForTestingFrgtPsswrd);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, TestDataGeneral.generalPassword);
             Button.Click(ButtonSignInLogInPg);
 

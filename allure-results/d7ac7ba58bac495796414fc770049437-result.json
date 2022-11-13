@@ -1,0 +1,229 @@
+{
+  "uuid": "c29f097d-ef07-4945-ae83-c6ddd34f1ab8-tr-0-1001",
+  "historyId": "ApproverTests.WebApproverTests.LogInAsApprover",
+  "fullName": "ApproverTests.WebApproverTests.LogInAsApprover",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ApproverTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogInAsApprover"
+    },
+    {
+      "name": "testClass",
+      "value": "WebApproverTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Approver"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogInAsApprover"
+    }
+  ],
+  "links": [],
+  "name": "LogInAsApprover",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@class = 'ng-untouched ng-pristine ng-invalid ng-star-inserted']",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_o(String _verificationCode) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\VerificationCodePage\\VerificationCodeActions.cs:line 17\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.ConfirmVerificationCode(String _verificationCode) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\VerificationCodePage\\VerificationCodeActions.cs:line 16\r\n   at ApproverTests.WebApproverTests.LogInAsApprover() in C:\\Automation\\PractisingPrivilegesProject\\ApproverTests\\ApproverTests\\WebApproverTests.cs:line 49"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogInAsApprover",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@class = 'ng-untouched ng-pristine ng-invalid ng-star-inserted']",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_o(String _verificationCode) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\VerificationCodePage\\VerificationCodeActions.cs:line 17\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_w_0(Object[] )\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.ConfirmVerificationCode(String _verificationCode) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\VerificationCodePage\\VerificationCodeActions.cs:line 16\r\n   at ApproverTests.WebApproverTests.LogInAsApprover() in C:\\Automation\\PractisingPrivilegesProject\\ApproverTests\\ApproverTests\\WebApproverTests.cs:line 49"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "SigningInAsApprover",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "syeni@xitroo.com"
+                }
+              ],
+              "start": 1668333419692,
+              "stop": 1668333420293
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1668333420293,
+              "stop": 1668333420842
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1668333420842,
+              "stop": 1668333421471
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1668333419691,
+          "stop": 1668333421471
+        },
+        {
+          "name": "ExecuteLogIn",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "RequestBody",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1668333421663,
+              "stop": 1668333421664
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1668333421477,
+          "stop": 1668333422853
+        },
+        {
+          "name": "ConfirmVerificationCode",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Could not find element by: By.XPath: //input[@class = 'ng-untouched ng-pristine ng-invalid ng-star-inserted']",
+            "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_o(String _verificationCode) in C:\\Automation\\PractisingPrivilegesProject\\PractisingPrivilegesProject\\PageObjects\\VerificationCodePage\\VerificationCodeActions.cs:line 17\r\n   at PractisingPrivilegesProject.PageObjects.VerificationCodePage.VerificationCode.__a$_around_ConfirmVerificationCode_100663338_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "896099"
+            }
+          ],
+          "start": 1668333422854,
+          "stop": 1668333424019
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fb698c4f98274c848e0ea261010b2e07-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1668333411409,
+      "stop": 1668333426740
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1668333411408,
+  "stop": 1668333426755
+}
