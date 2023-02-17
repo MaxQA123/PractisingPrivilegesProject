@@ -143,6 +143,5 @@ namespace PractisingPrivilegesProject.PageObjects.ProfileDetailsPage
 
         [FindsBy(How = How.XPath, Using = "//div[@aria-label = 'User successfully created']")]
         public IWebElement SuccessfullyMessageUserSuccessfullyCreatedPrflPg;
-
     }
 }

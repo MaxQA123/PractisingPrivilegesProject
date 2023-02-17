@@ -40,13 +40,15 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         //Comment: 
         //Path to cheking's: 
 
-        public void MakeLogInAsSuperAdmin()
+        public void LogInAsSuperAdmin()
         {
             var email = CredentialsApiSuperAdmin.emailSuperAdmin;
 
             var responseLogIn = LogInApi.ExecuteLogIn(email, CredentialsApiSuperAdmin.passwordSuperAdmin);
 
             LogInApi.VerifyingLoggedUserConst(responseLogIn);
+
+            Console.WriteLine(responseLogIn);
         }
 
         [Test]
@@ -65,7 +67,7 @@ namespace PracticingPrivilegesApiTests.BaseTestsApi
         //Comment: 
         //Path to cheking's: 
 
-        public void MakeLogInAsAdmin()
+        public void LogInAsAdmin()
         {
             var email = CredentialsApiAdmin.emailAdminQatester;
 
